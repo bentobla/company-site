@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Jetzt &amp; Dahanna Technologies entwickelt kindgerechte, sorgfältig gestaltete digitale Erlebnisse für Kinder – mit Fokus auf Sicherheit, Orientierung und pädagogische Qualität.">
+    <style>
+        :root {
+            --navy: #0b1c3d;
+            --navy-light: #122956;
+            --cream: #faf4e8;
+            --accent: #ffb653;
+            --text-main: #1f2430;
+            --text-muted: #606575;
+            --border-subtle: rgba(11, 28, 61, 0.08);
+            --radius-lg: 18px;
+            --radius-pill: 999px;
+            --shadow-soft: 0 18px 40px rgba(6, 19, 46, 0.16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: radial-gradient(circle at top left, #ffffff 0, #faf4e8 55%, #f2ecdf 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .page {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 120px 1.25rem 3rem; /* Platz für festen Header */
+        }
+
+        /* ------------------------- */
+        /* Sticky Navy Header        */
+        /* ------------------------- */
+
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background: var(--navy);
+            padding: 0.8rem 1.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.9rem;
+        }
+
+        .brand-logo img {
+            height: 52px;
+            width: auto;
+            border-radius: 12px;
+        }
+
+        .brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.15rem;
+        }
+
+        .brand-name {
+            color: #f9fafb;
+            font-size: 0.95rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .brand-tagline {
+            color: rgba(241, 245, 249, 0.78);
+            font-size: 0.82rem;
+            font-weight: 400;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 1.4rem;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        .main-nav a {
+            color: #e5e7eb;
+            position: relative;
+            padding-bottom: 0.2rem;
+            transition: opacity 0.2s ease;
+        }
+
+        .main-nav a:hover {
+            opacity: 0.85;
+        }
+
+        .main-nav a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 2px;
+            border-radius: 999px;
+            transform: scaleX(0);
+            transform-origin: center;
+            background: var(--accent);
+            transition: transform 0.18s ease-out;
+        }
+
+        .main-nav a:hover::after {
+            transform: scaleX(1);
+        }
+
+        .nav-cta {
+            background: var(--accent);
+            color: #111827;
+            padding: 0.55rem 1.2rem;
+            border-radius: var(--radius-pill);
+            font-weight: 500;
+            box-shadow: 0 4px 18px rgba(255,182,83,0.35);
+        }
+
+        .main-nav select#lang-switch {
+            border-radius: var(--radius-pill);
+            padding: 0.35rem 0.9rem;
+            font-size: 0.78rem;
+            background: rgba(255, 255, 255, 0.08);
+            color: #f9fafb;
+            border: 1px solid rgba(248, 250, 252, 0.45);
+            outline: none;
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+        .main-nav select#lang-switch:focus {
+            border-color: var(--accent);
+        }
+
+        /* ------------------------- */
+        /* Hero & Sections           */
+        /* ------------------------- */
+
+        main {
+            display: grid;
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2.6fr);
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.2rem 0.75rem 0.2rem 0.25rem;
+            border-radius: var(--radius-pill);
+            background: rgba(11, 28, 61, 0.04);
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .hero-eyebrow-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            background: #3bd086;
+            box-shadow: 0 0 0 4px rgba(59, 208, 134, 0.18);
+        }
+
+        .hero-title {
+            font-size: clamp(2.1rem, 4vw, 2.8rem);
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 1rem;
+            color: var(--navy);
+        }
+
+        .hero-highlight {
+            background: linear-gradient(120deg, #ffb653, #ffd08e);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-text {
+            font-size: 0.98rem;
+            color: var(--text-muted);
+            max-width: 32rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-pill {
+            border-radius: var(--radius-pill);
+            border: 1px solid var(--border-subtle);
+            padding: 0.4rem 0.85rem;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            align-items: center;
+        }
+
+        .btn-primary {
+            background: var(--navy);
+            color: #ffffff;
+            border-radius: var(--radius-pill);
+            padding: 0.75rem 1.4rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: none;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .btn-secondary {
+            border-radius: var(--radius-pill);
+            padding: 0.7rem 1.35rem;
+            font-size: 0.88rem;
+            border: 1px solid var(--border-subtle);
+            background: rgba(255, 255, 255, 0.85);
+            color: var(--text-muted);
+        }
+
+        .hero-note {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .hero-card {
+            border-radius: 24px;
+            background: radial-gradient(circle at top, #101d3b, #050814);
+            color: #f9fafb;
+            padding: 1.8rem 1.6rem 1.7rem;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: "";
+            position: absolute;
+            inset: -30%;
+            background:
+                radial-gradient(circle at top left, rgba(255, 203, 133, 0.17), transparent 55%),
+                radial-gradient(circle at bottom right, rgba(102, 178, 255, 0.14), transparent 55%);
+            opacity: 0.9;
+        }
+
+        .hero-card-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-card-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.28rem 0.75rem;
+            border-radius: var(--radius-pill);
+            background: rgba(8, 24, 64, 0.9);
+            border: 1px solid rgba(248, 250, 252, 0.12);
+            font-size: 0.76rem;
+            margin-bottom: 1.1rem;
+        }
+
+        .hero-card-badge span {
+            font-size: 0.85rem;
+        }
+
+        .hero-card-title {
+            font-size: 1.1rem;
+            font-weight: 550;
+            margin-bottom: 0.2rem;
+        }
+
+        .hero-card-subtitle {
+            font-size: 0.86rem;
+            color: rgba(241, 245, 249, 0.82);
+            margin-bottom: 1rem;
+        }
+
+        .hero-card-list {
+            list-style: none;
+            font-size: 0.82rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-card-list li {
+            display: flex;
+            gap: 0.5rem;
+            align-items: flex-start;
+            margin-bottom: 0.35rem;
+        }
+
+        .hero-card-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 999px;
+            margin-top: 0.35rem;
+            background: #ffd08e;
+        }
+
+        .hero-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.76rem;
+            color: rgba(226, 232, 240, 0.8);
+            gap: 0.6rem;
+        }
+
+        .hero-card-tag {
+            padding: 0.25rem 0.7rem;
+            border-radius: var(--radius-pill);
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(148, 163, 184, 0.5);
+        }
+
+        section {
+            margin-top: 3.2rem;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.75rem;
+        }
+
+        .section-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.2rem;
+        }
+
+        .card {
+            padding: 1.1rem 1.1rem 1.05rem;
+            border-radius: var(--radius-lg);
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid var(--border-subtle);
+        }
+
+        .card h3 {
+            font-size: 0.95rem;
+            margin-bottom: 0.4rem;
+            color: var(--navy);
+        }
+
+        .card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .values-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.7rem 1.2rem;
+            margin-top: 0.4rem;
+        }
+
+        .values-list li {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .contact-box {
+            padding: 1.1rem 1.1rem 1.0rem;
+            border-radius: var(--radius-lg);
+            background: rgba(255, 255, 255, 0.98);
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .contact-box p {
+            font-size: 0.86rem;
+            color: var(--text-muted);
+        }
+
+        .contact-box a {
+            font-weight: 500;
+            color: var(--navy);
+        }
+
+        footer {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-subtle);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            flex-wrap: wrap;
+            gap: 0.8rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        @media (max-width: 880px) {
+            .site-header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0.9rem 1.25rem;
+            }
+
+            .main-nav {
+                margin-top: 0.7rem;
+                flex-wrap: wrap;
+                row-gap: 0.6rem;
+            }
+
+            .page {
+                padding-top: 160px; /* Header höher bei zwei Zeilen */
+                padding-inline: 1rem;
+            }
+
+            main {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .hero-card {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .section-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .values-list {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+<header class="site-header">
+    <a href="#top" class="brand">
+        <div class="brand-logo">
+            <img src="../company_logo.png" alt="Jetzt &amp; Dahanna Logo">
+        </div>
+        <div class="brand-text">
+            <span class="brand-name">JETZT &amp; DAHANNA TECHNOLOGIES</span>
+            <span class="brand-tagline">Digitale Erlebnisse für Kinder – verantwortungsvoll gestaltet</span>
+        </div>
+    </a>
+
+    <nav class="main-nav">
+        <a href="#mission">Mission</a>
+        <a href="#ansatz">Unser Ansatz</a>
+        <a href="#werte">Werte</a>
+        <a href="#arbeit">Unsere Arbeit</a>
+        <a href="#kontakt" class="nav-cta">Kontakt</a>
+
+        <select id="lang-switch" aria-label="Sprache wählen">
+            <option value="de" selected>DE</option>
+            <option value="en">EN</option>
+            <option value="it">IT</option>
+            <option value="es">ES</option>
+            <option value="fr">FR</option>
+        </select>
+    </nav>
+</header>
+
+<div class="page">
+    <main id="top">
+        <div>
+            <div class="hero-eyebrow">
+                <span class="hero-eyebrow-dot"></span>
+                <span>Digitale Angebote mit Ruhe, Orientierung und Qualität</span>
+            </div>
+            <h1 class="hero-title">
+                Digitale Inhalte, <span class="hero-highlight">die Kindern guttun.</span>
+            </h1>
+            <p class="hero-text">
+                Wir entwickeln kindgerechte, klare und sorgfältig gestaltete digitale Erlebnisse –
+                mit einem hohen Anspruch an Sicherheit, Orientierung und pädagogische Qualität.
+                Inhalte, die begleiten statt antreiben und Familien ein gutes Gefühl geben.
+            </p>
+
+            <div class="hero-pill-list">
+                <div class="hero-pill">Sicher &amp; altersgerecht</div>
+                <div class="hero-pill">Klar strukturiert &amp; verständlich</div>
+                <div class="hero-pill">Gestaltet mit pädagogischem Anspruch</div>
+                <div class="hero-pill">Ruhige, hochwertige Ästhetik</div>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#kontakt" class="btn-primary">Kontakt aufnehmen</a>
+                <a href="https://echoquest.app" class="btn-secondary" target="_blank" rel="noopener">
+                    Mehr zu aktuellen Projekten
+                </a>
+                <span class="hero-note">
+                    Für Familien, pädagogische Fachkräfte und Partner, die digitale Angebote bewusst gestalten möchten.
+                </span>
+            </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Kurzübersicht">
+            <div class="hero-card-inner">
+                <div class="hero-card-badge">
+                    <span>●</span>
+                    <span>Studio für kindgerechte digitale Inhalte</span>
+                </div>
+                <div class="hero-card-title">Worum es uns geht</div>
+                <div class="hero-card-subtitle">
+                    Digitale Medien sollen Kinder stärken, nicht überfordern. Daran orientieren wir unsere Arbeit.
+                </div>
+                <ul class="hero-card-list">
+                    <li>
+                        <span class="hero-card-dot"></span>
+                        <span>Entwicklungsorientierte Gestaltung mit Blick auf unterschiedliche Altersstufen.</span>
+                    </li>
+                    <li>
+                        <span class="hero-card-dot"></span>
+                        <span>Ruhige, konsistente Ästhetik statt permanenter Reizüberflutung.</span>
+                    </li>
+                    <li>
+                        <span class="hero-card-dot"></span>
+                        <span>Klare Nutzungsszenarien, die Familien Orientierung geben.</span>
+                    </li>
+                </ul>
+                <div class="hero-card-footer">
+                    <span class="hero-card-tag">Kinder im Mittelpunkt</span>
+                    <span>Mit Verantwortung und Sorgfalt entwickelt.</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <section id="mission">
+        <h2 class="section-title">Unsere Mission</h2>
+        <p class="hero-text">
+            Digitale Medien können Kinder inspirieren, neugierig machen und stärken – wenn sie bewusst gestaltet sind.
+            Unsere Mission ist es, Erlebnisse zu entwickeln, die Orientierung bieten, Ruhe zulassen und Kinder in ihrer
+            Entwicklung begleiten. Wir möchten zeigen, wie digitale Inhalte im besten Sinne wirken können – als Ergänzung,
+            nicht als Ersatz für andere wichtige Erfahrungen.
+        </p>
+    </section>
+
+    <section id="ansatz">
+        <h2 class="section-title">Wie wir arbeiten</h2>
+        <div class="section-grid">
+            <article class="card">
+                <h3>Kindgerechte Gestaltung</h3>
+                <p>
+                    Unsere Inhalte orientieren sich an entwicklungspsychologischen und medienpädagogischen Grundsätzen.
+                    Wir achten auf klare Strukturen, verständliche Abläufe und Elemente, die Kinder intuitiv erfassen können.
+                </p>
+            </article>
+            <article class="card">
+                <h3>Sorgfältiges, ruhiges Design</h3>
+                <p>
+                    Wir setzen auf eine reduzierte Gestaltung, die nicht überfordert. Farben, Formen und Interaktionen sind
+                    bewusst gewählt und folgen einer ruhigen, konsistenten Ästhetik.
+                </p>
+            </article>
+            <article class="card">
+                <h3>Transparente Nutzung</h3>
+                <p>
+                    Kinder brauchen Orientierung – und Erwachsene Verlässlichkeit. Unsere Angebote ermöglichen klare
+                    Nutzungsdauern, nachvollziehbare Funktionen und verständliche Entscheidungen, ohne Überraschungen
+                    oder unnötige Ablenkung.
+                </p>
+            </article>
+        </div>
+    </section>
+
+    <section id="werte">
+        <h2 class="section-title">Werte, die uns leiten</h2>
+        <ul class="values-list">
+            <li>Würde und Respekt gegenüber Kindern.</li>
+            <li>Verlässlichkeit und Sicherheit in der Nutzung.</li>
+            <li>Qualität vor Quantität.</li>
+            <li>Barrierearme Gestaltung und klare Sprache.</li>
+            <li>Transparenz gegenüber Familien.</li>
+            <li>Verantwortungsvoller Einsatz von Technologie.</li>
+        </ul>
+    </section>
+
+    <section id="arbeit">
+        <h2 class="section-title">Unsere Arbeit</h2>
+        <p class="hero-text">
+            Wir arbeiten an digitalen Formaten, die Geschichten erzählen, zum Entdecken einladen und Räume für Fantasie
+            öffnen. Erzählerische Ansätze und interaktive Elemente werden mit moderner Technologie verbunden – immer mit dem
+            Ziel, ein hochwertiges, geborgenes Nutzungserlebnis zu schaffen.
+        </p>
+        <p class="hero-text">
+            Ein aktuelles Beispiel ist <strong>EchoQuest</strong>, ein interaktives Audio-Erlebnis für Kinder.
+            Weitere Informationen finden Sie unter
+            <a href="https://echoquest.app" target="_blank" rel="noopener">echoquest.app</a>.
+        </p>
+    </section>
+
+    <section id="kontakt">
+        <h2 class="section-title">Kontakt</h2>
+        <div class="contact-box">
+            <p>
+                Wenn Sie mehr über unsere Arbeit erfahren oder mit uns ins Gespräch kommen möchten, freuen wir uns über eine Nachricht.
+                Wir tauschen uns gerne zu medienpädagogischen Fragen, digitalen Angeboten für Kinder und möglichen Kooperationen aus.
+            </p>
+            <p>
+                E-Mail:&nbsp;
+                <a href="mailto:info@jetztunddahanna.com">info@jetztunddahanna.com</a>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <span>© <span id="year"></span> Jetzt &amp; Dahanna Technologies.</span>
+        <div class="footer-links">
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+        </div>
+    </footer>
+</div>
+
+<script>
+    // Aktuelles Jahr im Footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Sprachwechsel
+    (function () {
+        var select = document.getElementById("lang-switch");
+        if (!select) return;
+
+        try {
+            var stored = localStorage.getItem("jd_lang");
+            if (stored && select.querySelector('option[value="' + stored + '"]')) {
+                select.value = stored;
+            }
+        } catch (e) {}
+
+        select.addEventListener("change", function () {
+            var lang = select.value || "en";
+
+            try {
+                localStorage.setItem("jd_lang", lang);
+            } catch (e) {}
+
+            var target = "/" + lang + "/";
+            window.location.href = target;
+        });
+    })();
+</script>
+</body>
+</html>
