@@ -106,30 +106,6 @@
         .main-nav a {
             color: #e5e7eb;
             position: relative;
-            padding-bottom: 0.2rem;
-            transition: opacity 0.2s ease;
-        }
-
-        .main-nav a:hover {
-            opacity: 0.85;
-        }
-
-        .main-nav a::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            height: 2px;
-            border-radius: 999px;
-            transform: scaleX(0);
-            transform-origin: center;
-            background: var(--accent);
-            transition: transform 0.18s ease-out;
-        }
-
-        .main-nav a:hover::after {
-            transform: scaleX(1);
         }
 
         .nav-cta {
@@ -139,6 +115,14 @@
             border-radius: var(--radius-pill);
             font-weight: 500;
             box-shadow: 0 4px 18px rgba(255,182,83,0.35);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-cta:hover {
+            opacity: 0.9;
         }
 
         .main-nav select#lang-switch {
@@ -493,10 +477,6 @@
     </a>
 
     <nav class="main-nav">
-        <a href="#mission">Mission</a>
-        <a href="#ansatz">Unser Ansatz</a>
-        <a href="#werte">Werte</a>
-        <a href="#arbeit">Unsere Arbeit</a>
         <a href="#kontakt" class="nav-cta">Kontakt</a>
 
         <select id="lang-switch" aria-label="Sprache wählen">
@@ -671,15 +651,22 @@
         var select = document.getElementById("lang-switch");
         if (!select) return;
 
+        // Aktuelle Sprache aus URL erkennen (z.B. /de/ -> "de")
+        var pathParts = window.location.pathname.split('/').filter(Boolean);
+        var currentLang = pathParts[0] || "de"; // Fallback auf "de"
+        
+        // Selector auf aktuelle Sprache setzen
+        if (select.querySelector('option[value="' + currentLang + '"]')) {
+            select.value = currentLang;
+        }
+
+        // Sprachwahl im localStorage speichern
         try {
-            var stored = localStorage.getItem("jd_lang");
-            if (stored && select.querySelector('option[value="' + stored + '"]')) {
-                select.value = stored;
-            }
+            localStorage.setItem("jd_lang", currentLang);
         } catch (e) {}
 
         select.addEventListener("change", function () {
-            var lang = select.value || "en";
+            var lang = select.value || "de";
 
             try {
                 localStorage.setItem("jd_lang", lang);

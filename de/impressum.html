@@ -57,11 +57,11 @@
         .brand {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.9rem;
         }
 
         .brand-logo img {
-            height: 50px;
+            height: 52px;
             width: auto;
             border-radius: 12px;
         }
@@ -289,15 +289,22 @@
         const select = document.getElementById("lang-switch");
         if (!select) return;
 
+        // Aktuelle Sprache aus URL erkennen (z.B. /de/impressum.html -> "de")
+        const pathParts = window.location.pathname.split('/').filter(Boolean);
+        const currentLang = pathParts[0] || "de"; // Fallback auf "de"
+        
+        // Selector auf aktuelle Sprache setzen
+        if (select.querySelector(`option[value="${currentLang}"]`)) {
+            select.value = currentLang;
+        }
+
+        // Sprachwahl im localStorage speichern
         try {
-            const stored = localStorage.getItem("jd_lang");
-            if (stored && select.querySelector(`option[value="${stored}"]`)) {
-                select.value = stored;
-            }
+            localStorage.setItem("jd_lang", currentLang);
         } catch(e) {}
 
         select.addEventListener("change", () => {
-            const lang = select.value || "en";
+            const lang = select.value || "de";
             try { localStorage.setItem("jd_lang", lang); } catch(e) {}
             window.location.href = "/" + lang + "/";
         });
