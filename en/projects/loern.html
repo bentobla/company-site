@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lœrn – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="A learning application built around bringing your own content and using thoughtful methods.">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="../index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="../about.html">About</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../principles.html">Principles</a>
+            <a href="../contact.html">Contact</a>
+
+            <select id="lang-switch" aria-label="Choose language">
+                <option value="de">DE</option>
+                <option value="en" selected>EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow">
+        <span class="status-badge">Coming soon to Play Store &amp; App Store</span>
+        <h1>lœrn</h1>
+        
+        <section>
+            <h2>Concept</h2>
+            <p>lœrn is a learning application built around a simple idea: you bring the content, we provide the methods.</p>
+            <p>Instead of prescribing what to learn, lœrn focuses on how to learn. It offers structured approaches to working with material you choose.</p>
+        </section>
+
+        <section>
+            <h2>AI as assistance</h2>
+            <p>AI is used where it can help clarify or organize, not where it replaces understanding. The application assists with structure and suggestions while keeping you in control of the learning process.</p>
+            <p>There are no black boxes. When AI is involved, its role is clear and its output is transparent.</p>
+        </section>
+
+        <section>
+            <h2>Philosophy</h2>
+            <p>Learning requires focus and agency. lœrn is designed to support both.</p>
+            <p>No distracting features. No gamification for its own sake. No pressure to engage daily. The application exists to serve your learning goals, not to create dependency.</p>
+        </section>
+
+        <section>
+            <h2>Availability</h2>
+            <p>lœrn is currently in development and will be released on the Play Store and App Store. No subscription required.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="../legal/imprint.html">Imprint</a>
+            <a href="../legal/privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../../de/projects/loern.html",
+        "en": "../../en/projects/loern.html",
+        "fr": "../../fr/projects/loern.html",
+        "es": "../../es/projects/loern.html",
+        "it": "../../it/projects/loern.html",
+        "nl": "../../nl/projects/loern.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

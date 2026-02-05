@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principes – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="De principes die leiden hoe we applicaties bouwen.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="about.html">Over ons</a>
+            <a href="projects.html">Projecten</a>
+            <a href="principles.html">Principes</a>
+            <a href="contact.html">Contact</a>
+
+            <select id="lang-switch" aria-label="Kies taal">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl" selected>NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow">
+        <h1>Principes</h1>
+        <p class="lead">Deze principes leiden hoe we applicaties bouwen. Ze zijn geen aspiraties. Ze zijn beslissingen die weerspiegeld worden in elk product dat we creëren.</p>
+        
+        <ul class="principles-list">
+            <li>
+                <h3>Geen abonnementen</h3>
+                <p>We rekenen voor applicaties wanneer dat gepast is, maar we vergrendelen functies niet achter terugkerende betalingen. Als je iets koopt, bezit je het.</p>
+            </li>
+            
+            <li>
+                <h3>Geen dark patterns</h3>
+                <p>Elke interactie is ontworpen om duidelijk en eerlijk te zijn. We manipuleren gebruikers niet naar beslissingen die ze niet willen nemen.</p>
+            </li>
+            
+            <li>
+                <h3>Geen dataverzameling</h3>
+                <p>We verzamelen geen gebruikersgegevens voor profilering of doorverkoop. Als gegevens moeten worden opgeslagen, zijn we expliciet over wat, waarom en voor hoe lang.</p>
+            </li>
+            
+            <li>
+                <h3>Transparante monetisatie</h3>
+                <p>Als een applicatie geld kost, zijn we daar direct over. Geen verborgen kosten, geen verrassingskosten, geen op advertenties gebaseerde bedrijfsmodellen.</p>
+            </li>
+            
+            <li>
+                <h3>Gebruikers behouden controle</h3>
+                <p>Functies zijn ontworpen om gebruikersdoelen te ondersteunen, niet om betrokkenheidsmetrieken te creëren. Mensen moeten controle behouden over hun ervaring en hun gegevens.</p>
+            </li>
+            
+            <li>
+                <h3>AI alleen waar nuttig</h3>
+                <p>We gebruiken AI waar het duidelijke, begrijpelijke waarde biedt. We gebruiken het niet om functionaliteit te verdoezelen of echt begrip te vervangen door benadering.</p>
+            </li>
+            
+            <li>
+                <h3>Standaard terughoudend</h3>
+                <p>Applicaties moeten kalm en gericht zijn. Geen onnodige meldingen, geen gamificatie voor betrokkenheid, geen functies ontworpen om afhankelijkheid te creëren.</p>
+            </li>
+            
+            <li>
+                <h3>Duidelijke grenzen</h3>
+                <p>Elke applicatie heeft een specifiek doel. We bouwen geen platforms die eindeloos uitbreiden. We bouwen hulpmiddelen die één ding goed doen.</p>
+            </li>
+        </ul>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Colofon</a>
+            <a href="legal/privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/principles.html",
+        "en": "../en/principles.html",
+        "fr": "../fr/principles.html",
+        "es": "../es/principles.html",
+        "it": "../it/principles.html",
+        "nl": "../nl/principles.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

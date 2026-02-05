@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principes – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Les principes qui guident la façon dont nous construisons des applications.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="about.html">À propos</a>
+            <a href="projects.html">Projets</a>
+            <a href="principles.html">Principes</a>
+            <a href="contact.html">Contact</a>
+
+            <select id="lang-switch" aria-label="Choisir la langue">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr" selected>FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow">
+        <h1>Principes</h1>
+        <p class="lead">Ces principes guident la façon dont nous construisons des applications. Ce ne sont pas des aspirations. Ce sont des décisions reflétées dans chaque produit que nous créons.</p>
+        
+        <ul class="principles-list">
+            <li>
+                <h3>Pas d'abonnements</h3>
+                <p>Nous facturons les applications lorsque cela est approprié, mais nous ne verrouillons pas les fonctionnalités derrière des paiements récurrents. Si vous achetez quelque chose, vous le possédez.</p>
+            </li>
+            
+            <li>
+                <h3>Pas de dark patterns</h3>
+                <p>Chaque interaction est conçue pour être claire et honnête. Nous ne manipulons pas les utilisateurs vers des décisions qu'ils ne veulent pas prendre.</p>
+            </li>
+            
+            <li>
+                <h3>Pas de collecte de données</h3>
+                <p>Nous ne collectons pas de données utilisateur pour le profilage ou la revente. Si des données doivent être stockées, nous sommes explicites sur quoi, pourquoi et pour combien de temps.</p>
+            </li>
+            
+            <li>
+                <h3>Monétisation transparente</h3>
+                <p>Si une application coûte de l'argent, nous sommes directs à ce sujet. Pas de frais cachés, pas de frais surprises, pas de modèles commerciaux basés sur la publicité.</p>
+            </li>
+            
+            <li>
+                <h3>Les utilisateurs gardent le contrôle</h3>
+                <p>Les fonctionnalités sont conçues pour soutenir les objectifs des utilisateurs, pas pour créer des métriques d'engagement. Les gens devraient rester maîtres de leur expérience et de leurs données.</p>
+            </li>
+            
+            <li>
+                <h3>IA uniquement où utile</h3>
+                <p>Nous utilisons l'IA là où elle apporte une valeur claire et compréhensible. Nous ne l'utilisons pas pour obscurcir la fonctionnalité ou remplacer une véritable compréhension par une approximation.</p>
+            </li>
+            
+            <li>
+                <h3>Retenue par défaut</h3>
+                <p>Les applications doivent être calmes et ciblées. Pas de notifications inutiles, pas de gamification pour l'engagement, pas de fonctionnalités conçues pour créer une dépendance.</p>
+            </li>
+            
+            <li>
+                <h3>Limites claires</h3>
+                <p>Chaque application a un objectif spécifique. Nous ne construisons pas de plateformes qui s'étendent sans fin. Nous construisons des outils qui font bien une chose.</p>
+            </li>
+        </ul>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Mentions légales</a>
+            <a href="legal/privacy.html">Confidentialité</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/principles.html",
+        "en": "../en/principles.html",
+        "fr": "../fr/principles.html",
+        "es": "../es/principles.html",
+        "it": "../it/principles.html",
+        "nl": "../nl/principles.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

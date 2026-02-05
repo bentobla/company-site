@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Una pequeña empresa independiente que construye aplicaciones enfocadas con uso reflexivo de IA.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="about.html">Acerca de</a>
+            <a href="projects.html">Proyectos</a>
+            <a href="principles.html">Principios</a>
+            <a href="contact.html">Contacto</a>
+
+            <select id="lang-switch" aria-label="Elegir idioma">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es" selected>ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow">
+        <h1>Acerca de</h1>
+        
+        <section>
+            <h2>Perspectiva</h2>
+            <p>Jetzt &amp; Dahanna Technologies es una pequeña empresa independiente. Construimos aplicaciones, no servicios. Cada producto refleja una decisión sobre cómo debe funcionar la tecnología.</p>
+            <p>Creemos que el buen software respeta a los usuarios. Eso significa sin patrones oscuros, sin trampas de suscripción y sin recopilación de datos. Significa ser claro sobre lo que hace una herramienta y dejar que las personas mantengan el control.</p>
+        </section>
+
+        <section>
+            <h2>IA como herramienta</h2>
+            <p>La IA puede ser útil cuando se aplica con cuidado. Puede ayudar a aclarar, organizar y reducir el trabajo repetitivo. Pero no es apropiada en todas partes.</p>
+            <p>Usamos IA donde aporta valor claro y comprensible. La evitamos donde agrega complejidad, quita autonomía o reemplaza la comprensión genuina con aproximación.</p>
+            <p>No se trata de estar a favor o en contra de la IA. Se trata de criterio.</p>
+        </section>
+
+        <section>
+            <h2>Cómo construimos</h2>
+            <p>Nos enfocamos en un proyecto a la vez. No aceptamos trabajos de clientes ni construimos por encargo. Esto nos permite tomar decisiones basadas en lo que tiene sentido, no en lo que se vende.</p>
+            <p>Nuestras aplicaciones son productos con límites claros. Cobramos por ellas de manera transparente cuando es apropiado. No dependemos de publicidad o datos de usuario como modelo de negocio.</p>
+        </section>
+
+        <section>
+            <h2>Lo que no hacemos</h2>
+            <p>No somos una agencia de software, estudio de desarrollo o consultoría. No construimos soluciones personalizadas ni ofrecemos servicios técnicos. Construimos aplicaciones enfocadas y las lanzamos como productos.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Aviso legal</a>
+            <a href="legal/privacy.html">Privacidad</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/about.html",
+        "en": "../en/about.html",
+        "fr": "../fr/about.html",
+        "es": "../es/about.html",
+        "it": "../it/about.html",
+        "nl": "../nl/about.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

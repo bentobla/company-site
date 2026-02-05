@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lœrn – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Eine Lernanwendung, die darauf basiert, eigene Inhalte mitzubringen und durchdachte Methoden zu nutzen.">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="../index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="../about.html">Über uns</a>
+            <a href="../projects.html">Projekte</a>
+            <a href="../principles.html">Prinzipien</a>
+            <a href="../contact.html">Kontakt</a>
+
+            <select id="lang-switch" aria-label="Sprache wählen">
+                <option value="de" selected>DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow">
+        <span class="status-badge">Demnächst im Play Store &amp; App Store</span>
+        <h1>lœrn</h1>
+        
+        <section>
+            <h2>Konzept</h2>
+            <p>lœrn ist eine Lernanwendung, die auf einer einfachen Idee basiert: Du bringst die Inhalte mit, wir stellen die Methoden bereit.</p>
+            <p>Anstatt vorzuschreiben, was du lernen sollst, konzentriert sich lœrn darauf, wie du lernst. Es bietet strukturierte Ansätze für die Arbeit mit Material, das du selbst auswählst.</p>
+        </section>
+
+        <section>
+            <h2>KI als Unterstützung</h2>
+            <p>KI wird dort eingesetzt, wo sie helfen kann, Dinge zu klären oder zu organisieren – nicht dort, wo sie Verstehen ersetzt. Die Anwendung unterstützt bei Struktur und Vorschlägen, während du die Kontrolle über den Lernprozess behältst.</p>
+            <p>Es gibt keine Black Boxes. Wenn KI beteiligt ist, ist ihre Rolle klar und ihre Ausgabe transparent.</p>
+        </section>
+
+        <section>
+            <h2>Philosophie</h2>
+            <p>Lernen erfordert Fokus und Handlungsfähigkeit. lœrn ist darauf ausgelegt, beides zu unterstützen.</p>
+            <p>Keine ablenkenden Features. Keine Gamification um ihrer selbst willen. Kein Druck, täglich aktiv zu sein. Die Anwendung existiert, um deine Lernziele zu unterstützen – nicht um Abhängigkeit zu schaffen.</p>
+        </section>
+
+        <section>
+            <h2>Verfügbarkeit</h2>
+            <p>lœrn befindet sich derzeit in der Entwicklung und wird im Play Store und App Store veröffentlicht. Kein Abo erforderlich.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="../legal/imprint.html">Impressum</a>
+            <a href="../legal/privacy.html">Datenschutz</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../../de/projects/loern.html",
+        "en": "../../en/projects/loern.html",
+        "fr": "../../fr/projects/loern.html",
+        "es": "../../es/projects/loern.html",
+        "it": "../../it/projects/loern.html",
+        "nl": "../../nl/projects/loern.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

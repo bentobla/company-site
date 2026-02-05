@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principi – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="I principi che guidano come costruiamo le applicazioni.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="about.html">Chi siamo</a>
+            <a href="projects.html">Progetti</a>
+            <a href="principles.html">Principi</a>
+            <a href="contact.html">Contatto</a>
+
+            <select id="lang-switch" aria-label="Scegli lingua">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it" selected>IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow">
+        <h1>Principi</h1>
+        <p class="lead">Questi principi guidano come costruiamo le applicazioni. Non sono aspirazioni. Sono decisioni riflesse in ogni prodotto che creiamo.</p>
+        
+        <ul class="principles-list">
+            <li>
+                <h3>Niente abbonamenti</h3>
+                <p>Facciamo pagare le applicazioni quando appropriato, ma non blocchiamo le funzionalità dietro pagamenti ricorrenti. Se acquisti qualcosa, è tuo.</p>
+            </li>
+            
+            <li>
+                <h3>Niente dark pattern</h3>
+                <p>Ogni interazione è progettata per essere chiara e onesta. Non manipoliamo gli utenti verso decisioni che non vogliono prendere.</p>
+            </li>
+            
+            <li>
+                <h3>Niente raccolta dati</h3>
+                <p>Non raccogliamo dati utente per profilazione o rivendita. Se i dati devono essere archiviati, siamo espliciti su cosa, perché e per quanto tempo.</p>
+            </li>
+            
+            <li>
+                <h3>Monetizzazione trasparente</h3>
+                <p>Se un'applicazione costa denaro, siamo diretti al riguardo. Niente tariffe nascoste, niente costi sorpresa, niente modelli di business basati su pubblicità.</p>
+            </li>
+            
+            <li>
+                <h3>Gli utenti mantengono il controllo</h3>
+                <p>Le funzionalità sono progettate per supportare gli obiettivi degli utenti, non per creare metriche di coinvolgimento. Le persone dovrebbero mantenere il controllo della loro esperienza e dei loro dati.</p>
+            </li>
+            
+            <li>
+                <h3>IA solo dove utile</h3>
+                <p>Usiamo l'IA dove apporta valore chiaro e comprensibile. Non la usiamo per oscurare la funzionalità o sostituire una vera comprensione con un'approssimazione.</p>
+            </li>
+            
+            <li>
+                <h3>Moderato per impostazione predefinita</h3>
+                <p>Le applicazioni dovrebbero essere calme e mirate. Niente notifiche inutili, niente gamification per il coinvolgimento, niente funzionalità progettate per creare dipendenza.</p>
+            </li>
+            
+            <li>
+                <h3>Confini chiari</h3>
+                <p>Ogni applicazione ha uno scopo specifico. Non costruiamo piattaforme che si espandono all'infinito. Costruiamo strumenti che fanno bene una cosa.</p>
+            </li>
+        </ul>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Note legali</a>
+            <a href="legal/privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/principles.html",
+        "en": "../en/principles.html",
+        "fr": "../fr/principles.html",
+        "es": "../es/principles.html",
+        "it": "../it/principles.html",
+        "nl": "../nl/principles.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

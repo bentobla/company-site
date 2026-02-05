@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principles – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="The principles that guide how we build applications.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="principles.html">Principles</a>
+            <a href="contact.html">Contact</a>
+
+            <select id="lang-switch" aria-label="Choose language">
+                <option value="de">DE</option>
+                <option value="en" selected>EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow">
+        <h1>Principles</h1>
+        <p class="lead">These principles guide how we build applications. They are not aspirations. They are decisions reflected in every product we create.</p>
+        
+        <ul class="principles-list">
+            <li>
+                <h3>No subscriptions</h3>
+                <p>We charge for applications when appropriate, but we don't lock features behind recurring payments. If you buy something, you own it.</p>
+            </li>
+            
+            <li>
+                <h3>No dark patterns</h3>
+                <p>Every interaction is designed to be clear and honest. We don't manipulate users into decisions they don't want to make.</p>
+            </li>
+            
+            <li>
+                <h3>No data harvesting</h3>
+                <p>We don't collect user data for profiling or resale. If data needs to be stored, we're explicit about what, why, and for how long.</p>
+            </li>
+            
+            <li>
+                <h3>Transparent monetization</h3>
+                <p>If an application costs money, we're direct about it. No hidden fees, no surprise charges, no ad-based business models.</p>
+            </li>
+            
+            <li>
+                <h3>Users stay in control</h3>
+                <p>Features are designed to support user goals, not to create engagement metrics. People should remain in control of their experience and their data.</p>
+            </li>
+            
+            <li>
+                <h3>AI only where useful</h3>
+                <p>We use AI where it provides clear, understandable value. We don't use it to obscure functionality or replace genuine understanding with approximation.</p>
+            </li>
+            
+            <li>
+                <h3>Restrained by default</h3>
+                <p>Applications should be calm and focused. No unnecessary notifications, no gamification for engagement, no features designed to create dependency.</p>
+            </li>
+            
+            <li>
+                <h3>Clear boundaries</h3>
+                <p>Each application has a specific purpose. We don't build platforms that expand endlessly. We build tools that do one thing well.</p>
+            </li>
+        </ul>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Imprint</a>
+            <a href="legal/privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/principles.html",
+        "en": "../en/principles.html",
+        "fr": "../fr/principles.html",
+        "es": "../es/principles.html",
+        "it": "../it/principles.html",
+        "nl": "../nl/principles.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

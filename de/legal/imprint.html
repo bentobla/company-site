@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Impressum und rechtliche Informationen.">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="../index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="../about.html">Über uns</a>
+            <a href="../projects.html">Projekte</a>
+            <a href="../principles.html">Prinzipien</a>
+            <a href="../contact.html">Kontakt</a>
+
+            <select id="lang-switch" aria-label="Sprache wählen">
+                <option value="de" selected>DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow legal-content">
+        <h1>Impressum</h1>
+        
+        <section>
+            <h2>Angaben gemäß § 5 TMG</h2>
+            <p>
+                Tobias Blankenhorn<br>
+                Richard-Wagner-Str. 17/1<br>
+                71116 Gärtringen<br>
+                Deutschland
+            </p>
+        </section>
+
+        <section>
+            <h2>Kontakt</h2>
+            <p>E-Mail: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+
+        <section>
+            <h2>Umsatzsteuer-ID</h2>
+            <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG:<br>
+            DE459368102</p>
+        </section>
+
+        <section>
+            <h2>Verantwortlich für den Inhalt</h2>
+            <p>Tobias Blankenhorn (Anschrift wie oben)</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="imprint.html">Impressum</a>
+            <a href="privacy.html">Datenschutz</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../../de/legal/imprint.html",
+        "en": "../../en/legal/imprint.html",
+        "fr": "../../fr/legal/imprint.html",
+        "es": "../../es/legal/imprint.html",
+        "it": "../../it/legal/imprint.html",
+        "nl": "../../nl/legal/imprint.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

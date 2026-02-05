@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Privacybeleid voor jetztunddahanna.com.">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="../index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="../about.html">Over ons</a>
+            <a href="../projects.html">Projecten</a>
+            <a href="../principles.html">Principes</a>
+            <a href="../contact.html">Contact</a>
+
+            <select id="lang-switch" aria-label="Kies taal">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl" selected>NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow legal-content">
+        <h1>Privacybeleid</h1>
+        
+        <section>
+            <h2>Algemeen</h2>
+            <p>Dit privacybeleid is van toepassing op de website jetztunddahanna.com.</p>
+            <p>Verantwoordelijk voor gegevensverwerking:<br>
+            Tobias Blankenhorn<br>
+            Richard-Wagner-Str. 17/1<br>
+            71116 Gaertringen<br>
+            Duitsland<br>
+            E-mail: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+
+        <section>
+            <h2>Gegevensverzameling op deze website</h2>
+            <p>Deze website is een statische site gehost op GitHub Pages. We verzamelen, bewaren of verwerken geen persoonlijke gegevens via deze website.</p>
+            <p>We gebruiken geen cookies, analysetools of trackingmechanismen.</p>
+        </section>
+
+        <section>
+            <h2>Server logbestanden</h2>
+            <p>De hostingprovider (GitHub) kan automatisch informatie verzamelen en opslaan in server logbestanden. Dit kan omvatten:</p>
+            <ul>
+                <li>Browsertype en -versie</li>
+                <li>Besturingssysteem</li>
+                <li>Verwijzende URL</li>
+                <li>Hostnaam van de toegang zoekende computer</li>
+                <li>Tijd van het serververzoek</li>
+                <li>IP-adres</li>
+            </ul>
+            <p>Deze gegevens worden niet gecombineerd met andere gegevensbronnen en worden door GitHub opgeslagen volgens hun privacybeleid.</p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>Als u contact met ons opneemt via e-mail, worden uw bericht en de gegevens die u verstrekt (inclusief e-mailadres en naam) opgeslagen met als doel uw vraag te verwerken en voor mogelijke vervolgvragen. We delen deze gegevens niet zonder uw toestemming.</p>
+        </section>
+
+        <section>
+            <h2>Uw rechten</h2>
+            <p>U heeft het recht om:</p>
+            <ul>
+                <li>Informatie te vragen over opgeslagen persoonlijke gegevens</li>
+                <li>Correctie van onjuiste gegevens te vragen</li>
+                <li>Verwijdering van uw gegevens te vragen</li>
+                <li>Beperking van gegevensverwerking te vragen</li>
+                <li>Bezwaar te maken tegen gegevensverwerking</li>
+                <li>Gegevensoverdraagbaarheid te vragen</li>
+            </ul>
+            <p>Om deze rechten uit te oefenen, neem contact op: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="imprint.html">Colofon</a>
+            <a href="privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../../de/legal/privacy.html",
+        "en": "../../en/legal/privacy.html",
+        "fr": "../../fr/legal/privacy.html",
+        "es": "../../es/legal/privacy.html",
+        "it": "../../it/legal/privacy.html",
+        "nl": "../../nl/legal/privacy.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

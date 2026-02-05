@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Kontakt zu Jetzt & Dahanna Technologies.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="about.html">Über uns</a>
+            <a href="projects.html">Projekte</a>
+            <a href="principles.html">Prinzipien</a>
+            <a href="contact.html">Kontakt</a>
+
+            <select id="lang-switch" aria-label="Sprache wählen">
+                <option value="de" selected>DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow">
+        <h1>Kontakt</h1>
+        
+        <section>
+            <p>Für Fragen, Feedback oder Anfragen zu unseren Anwendungen:</p>
+            
+            <div class="contact-info">
+                <p><a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Hinweis</h2>
+            <p>Wir bieten keine individuelle Entwicklung, Beratungsleistungen oder Kundenaufträge an. Wir entwickeln fokussierte Anwendungen als Produkte.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Impressum</a>
+            <a href="legal/privacy.html">Datenschutz</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/contact.html",
+        "en": "../en/contact.html",
+        "fr": "../fr/contact.html",
+        "es": "../es/contact.html",
+        "it": "../it/contact.html",
+        "nl": "../nl/contact.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

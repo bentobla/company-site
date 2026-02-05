@@ -1,0 +1,326 @@
+PRIVACY STATEMENT FOR LŒRN APP
+
+Last Updated: February 5, 2026
+
+---
+
+INTRODUCTION
+
+This privacy statement describes how lœrn ("we", "our", or "the app") handles your information. lœrn is designed with privacy as a core principle. We believe your learning data should remain yours and yours alone.
+
+---
+
+CORE PRIVACY PRINCIPLES
+
+Privacy-First Design
+lœrn is built from the ground up to protect your privacy:
+- Zero cloud dependencies: All your data stays on your device
+- No user accounts: No registration, no login, no tracking
+- No personal data collection: Your learning content is anonymous by default
+- Offline-first: The app is fully functional without an internet connection
+
+---
+
+DATA WE DO NOT COLLECT
+
+We explicitly do NOT collect, store, or transmit:
+- Personal information (name, email, phone number, address)
+- User accounts or login credentials
+- Learning content or study materials you create or import
+- Learning progress or statistics
+- Usage analytics or telemetry data
+- Device information or unique identifiers (except as required by ad networks for free users)
+- Crash reports or diagnostic data
+- Location data
+- Contact lists or social connections
+
+---
+
+DATA STORAGE
+
+Local Storage Only
+All of your data is stored exclusively on your device:
+- Learning decks and flashcards
+- Study progress and statistics
+- User preferences and settings
+- Profile information (name, icon, language preference)
+- Review history and spaced repetition data
+
+This data is stored in a local SQLite database on your device and is protected by your device's built-in security (iOS Data Protection, Android Keystore).
+
+No Cloud Sync
+We do not offer cloud synchronization or backup services. Your data never leaves your device through our app.
+
+---
+
+INTERNET CONNECTIVITY
+
+Network Isolation
+The app is designed with strict network isolation:
+- Core learning features work 100% offline
+- Only the advertising module (for free users) can access the internet
+- The learning core has no network access whatsoever
+
+When Internet Is Used (Free Version Only)
+If you are using the free version of lœrn, the app displays advertisements. The advertising module requires internet access to:
+- Load advertisement content
+- Report ad impressions and clicks to ad networks
+- Comply with advertising network requirements
+
+The ad networks we use (Google AdMob) may collect certain data according to their own privacy policies, which may include:
+- Device advertising identifier
+- IP address
+- Device type and operating system
+- Ad interaction data
+
+For detailed information about how Google processes advertising data, please visit:
+https://policies.google.com/privacy
+
+Premium Version
+If you purchase the premium version (one-time purchase):
+- All advertising is completely removed
+- The ad module is not initialized
+- The app has zero network access
+- Your device remains completely offline while using lœrn
+
+---
+
+IN-APP PURCHASES
+
+Purchase Processing
+When you purchase the premium version:
+- The transaction is processed entirely by Apple App Store or Google Play Store
+- We do not collect or store your payment information
+- We only receive a confirmation that the purchase was completed
+- Premium status is stored locally on your device only
+
+The purchase is tied to your App Store or Play Store account, not to lœrn. Your payment information is handled exclusively by Apple or Google according to their respective privacy policies.
+
+---
+
+IMPORT AND EXPORT
+
+File-Based Data Exchange
+You can import and export learning decks as JSON or ZIP files:
+- Imported files are processed locally on your device
+- Exported files contain only learning content (flashcards, questions, answers)
+- No personal information is included in exported files
+- You are solely responsible for the content you import and how you share exported files
+
+Copyright and Content Responsibility
+lœrn is a tool, not a content provider. You are responsible for:
+- Ensuring you have the right to use any content you import
+- Complying with copyright laws when sharing exported decks
+- The legality of any materials you store in the app
+
+---
+
+PROFILES
+
+Multi-Profile Support
+lœrn supports multiple user profiles on a single device:
+- Each profile has isolated learning data
+- Profiles are identified only by a name and icon you choose
+- Profile data never leaves your device
+- Deleting a profile permanently removes all associated data from your device
+
+Premium Status
+Premium purchase status applies to all profiles on a device (it is tied to the App Store/Play Store account, not individual profiles).
+
+---
+
+NOTIFICATIONS (OPTIONAL)
+
+Learning Reminders
+You may optionally enable learning reminders:
+- Reminders are scheduled locally on your device
+- No data is sent to external servers for reminder scheduling
+- You can disable reminders at any time in settings
+- Reminder permissions can be revoked in your device settings
+
+---
+
+PERMISSIONS
+
+The app may request the following permissions:
+
+Storage (Android)
+- Purpose: To import deck files from your device and export deck files
+- Required: Only when you use import/export features
+- Data access: Only the files you explicitly select
+
+Internet (Free Version Only)
+- Purpose: To display advertisements
+- Required: Only for free version users
+- Not used: In premium version
+
+Notifications (Optional)
+- Purpose: To send learning reminders
+- Required: Only if you enable reminders
+- You control: Frequency and timing of notifications
+
+---
+
+THIRD-PARTY SERVICES
+
+Advertising (Free Version Only)
+The free version uses Google AdMob for advertisements. AdMob may collect and process certain data as described in their privacy policy. For more information:
+- Google AdMob: https://support.google.com/admob/answer/6128543
+- Google Privacy Policy: https://policies.google.com/privacy
+
+No Other Third-Party Services
+We do not use:
+- Analytics services (no Google Analytics, no Firebase Analytics, no Mixpanel, etc.)
+- Crash reporting services (no Crashlytics, no Sentry, etc.)
+- Cloud storage providers
+- Social media integrations
+- Any other third-party tracking or data collection services
+
+---
+
+CHILDREN'S PRIVACY
+
+lœrn is designed for university students and older learners. We do not knowingly collect personal information from children under 13 (or the applicable age in your jurisdiction). Because we do not collect personal information from any users, we are compliant with children's privacy regulations including COPPA (Children's Online Privacy Protection Act).
+
+---
+
+DATA SECURITY
+
+Local Device Security
+Your data is protected by:
+- Your device's built-in encryption (iOS Data Protection, Android Keystore)
+- Your device's lock screen and authentication
+- SQLite database stored in your app's private storage area
+
+No Cloud Storage
+Because your data never leaves your device through our systems, there is no risk of:
+- Server breaches
+- Data transmission interception
+- Unauthorized cloud access
+- Third-party data leaks
+
+Your Responsibility
+You are responsible for:
+- Protecting your device with a strong passcode/password
+- Keeping your device's operating system updated
+- Managing device backups (if you use iCloud or Google backup)
+- Securely storing any deck files you export
+
+---
+
+YOUR RIGHTS AND CHOICES
+
+Data Control
+You have complete control over your data:
+- All data is stored locally on your device
+- You can export your decks at any time
+- You can delete individual decks or entire profiles
+- You can uninstall the app to remove all data
+
+Premium Purchase
+- You can purchase premium to remove all ads and network access
+- Premium is a one-time purchase (no subscription)
+- Premium status can be restored on new devices through your App Store/Google Play account
+
+No Data Portability Issues
+Since all data is stored locally in open JSON format:
+- You can export your data at any time
+- Exported files are in standard JSON format
+- You can process your data with other tools if desired
+
+---
+
+DATA RETENTION
+
+On Your Device
+Data remains on your device until you:
+- Delete specific decks
+- Delete a profile
+- Clear all data in settings
+- Uninstall the app
+
+No Server Retention
+We do not store your data on any servers, so there are no server-side retention policies.
+
+Device Backups
+If you use iCloud (iOS) or Google Drive backup (Android), your device may back up the app's data according to your device settings. This is controlled by Apple/Google, not by lœrn. Refer to their privacy policies for details.
+
+---
+
+CHANGES TO THIS PRIVACY STATEMENT
+
+We may update this privacy statement from time to time to reflect changes in the app or legal requirements. We will notify you of any material changes by:
+- Updating the "Last Updated" date at the top of this statement
+- Posting the new statement on our website
+- Displaying a notice in the app (for significant changes)
+
+Your continued use of the app after changes indicates your acceptance of the updated privacy statement.
+
+---
+
+LEGAL BASIS FOR PROCESSING (GDPR)
+
+For users in the European Economic Area (EEA):
+- We do not collect personal data, so GDPR data processing requirements do not apply to most app functions
+- For free users, advertising is based on legitimate interest in monetizing the app
+- You can opt out of advertising by purchasing the premium version
+
+---
+
+CALIFORNIA PRIVACY RIGHTS (CCPA)
+
+For California residents:
+- We do not sell personal information
+- We do not share personal information with third parties for their direct marketing purposes
+- Because we do not collect personal information, most CCPA requirements do not apply
+
+---
+
+INTERNATIONAL DATA TRANSFERS
+
+Your data is not transferred internationally because:
+- All data is stored locally on your device
+- We do not operate servers
+- We do not transmit your learning content or progress data
+
+---
+
+CONTACT INFORMATION
+
+If you have questions or concerns about this privacy statement or our privacy practices, please contact us at:
+
+Email: [Your contact email]
+Website: [Your website]
+
+Please note that we cannot access your learning data or device information, as all data is stored locally on your device.
+
+---
+
+COMMITMENT TO PRIVACY
+
+lœrn is built on the principle that your learning journey is yours alone. We believe that:
+- Education should be private and personal
+- Your study habits and progress should not be tracked or monetized (beyond optional advertising for free users)
+- You should have complete control over your learning data
+- Privacy should be the default, not an option
+
+This commitment drives every technical and product decision we make.
+
+---
+
+SUMMARY
+
+In Plain English:
+- Your learning data stays on your phone, always
+- We don't collect your personal information
+- We don't track what you study or how you learn
+- Free version shows ads (Google AdMob may collect ad-related data)
+- Premium version has zero network access and no ads
+- You can export your data anytime in standard JSON format
+- Uninstalling the app deletes all data from your device
+
+Thank you for choosing lœrn for your learning journey.
+
+---
+
+END OF PRIVACY STATEMENT

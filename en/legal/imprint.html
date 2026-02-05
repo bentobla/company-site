@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprint – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Legal information and imprint.">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="../index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="../about.html">About</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../principles.html">Principles</a>
+            <a href="../contact.html">Contact</a>
+
+            <select id="lang-switch" aria-label="Choose language">
+                <option value="de">DE</option>
+                <option value="en" selected>EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow legal-content">
+        <h1>Imprint</h1>
+        
+        <section>
+            <h2>Information according to § 5 TMG</h2>
+            <p>
+                Tobias Blankenhorn<br>
+                Richard-Wagner-Str. 17/1<br>
+                71116 Gaertringen<br>
+                Germany
+            </p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+
+        <section>
+            <h2>VAT ID</h2>
+            <p>VAT identification number according to § 27a UStG:<br>
+            DE459368102</p>
+        </section>
+
+        <section>
+            <h2>Responsible for content</h2>
+            <p>Tobias Blankenhorn (address as above)</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="imprint.html">Imprint</a>
+            <a href="privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../../de/legal/imprint.html",
+        "en": "../../en/legal/imprint.html",
+        "fr": "../../fr/legal/imprint.html",
+        "es": "../../es/legal/imprint.html",
+        "it": "../../it/legal/imprint.html",
+        "nl": "../../nl/legal/imprint.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

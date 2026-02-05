@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Applications we build with thoughtful use of AI.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="principles.html">Principles</a>
+            <a href="contact.html">Contact</a>
+
+            <select id="lang-switch" aria-label="Choose language">
+                <option value="de">DE</option>
+                <option value="en" selected>EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow">
+        <h1>Projects</h1>
+        
+        <section>
+            <div class="project-card">
+                <span class="status-badge">Coming soon to Play Store &amp; App Store</span>
+                <h3>lœrn</h3>
+                <p>A learning application that lets you bring your own content and provides thoughtful methods for working with it. AI assists where it adds clarity.</p>
+                <p><a href="projects/loern.html" class="text-link">More about lœrn</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Imprint</a>
+            <a href="legal/privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/projects.html",
+        "en": "../en/projects.html",
+        "fr": "../fr/projects.html",
+        "es": "../es/projects.html",
+        "it": "../it/projects.html",
+        "nl": "../nl/projects.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

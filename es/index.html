@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Construimos aplicaciones enfocadas y prácticas usando inteligencia artificial. Buena IA significa pragmática, moderada y útil.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="about.html">Acerca de</a>
+            <a href="projects.html">Proyectos</a>
+            <a href="principles.html">Principios</a>
+            <a href="contact.html">Contacto</a>
+
+            <select id="lang-switch" aria-label="Elegir idioma">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es" selected>ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page">
+        <section>
+            <h1>Construir aplicaciones útiles con IA</h1>
+            <p class="lead">Construimos software enfocado y práctico que usa inteligencia artificial donde aporta valor claro. Sin exageraciones. Sin suscripciones. Sin recopilación de datos.</p>
+        </section>
+
+        <section>
+            <h2>Buena IA</h2>
+            <p>Creemos que la IA es una herramienta, no una solución para cada problema. Buena IA significa usarla con criterio y moderación. Significa construir aplicaciones que permanezcan comprensibles y mantengan el control en manos de los usuarios.</p>
+            <p>Nos enfocamos en problemas donde la IA realmente ayuda, no donde crea complejidad o quita autonomía.</p>
+        </section>
+
+        <section>
+            <h2>Proyecto actual</h2>
+            <div class="project-card">
+                <span class="status-badge">Próximamente en Play Store y App Store</span>
+                <h3>lœrn</h3>
+                <p>Una aplicación de aprendizaje basada en la idea de que tú aportas el contenido y nosotros proporcionamos los métodos. La IA asiste donde aporta claridad, no donde reemplaza la comprensión.</p>
+                <p><a href="projects/loern.html" class="text-link">Más sobre lœrn</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Cómo trabajamos</h2>
+            <p>Construimos aplicaciones como productos, no como servicios. No ofrecemos desarrollo personalizado ni consultoría. Cada aplicación que creamos refleja nuestro enfoque hacia la tecnología reflexiva y moderada.</p>
+            <p><a href="principles.html" class="text-link">Leer nuestros principios</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Aviso legal</a>
+            <a href="legal/privacy.html">Privacidad</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/index.html",
+        "en": "../en/index.html",
+        "fr": "../fr/index.html",
+        "es": "../es/index.html",
+        "it": "../it/index.html",
+        "nl": "../nl/index.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

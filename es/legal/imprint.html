@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso legal – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Información legal y aviso legal.">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="../index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="../about.html">Acerca de</a>
+            <a href="../projects.html">Proyectos</a>
+            <a href="../principles.html">Principios</a>
+            <a href="../contact.html">Contacto</a>
+
+            <select id="lang-switch" aria-label="Elegir idioma">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es" selected>ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow legal-content">
+        <h1>Aviso legal</h1>
+        
+        <section>
+            <h2>Información según § 5 TMG</h2>
+            <p>
+                Tobias Blankenhorn<br>
+                Richard-Wagner-Str. 17/1<br>
+                71116 Gaertringen<br>
+                Alemania
+            </p>
+        </section>
+
+        <section>
+            <h2>Contacto</h2>
+            <p>Email: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+
+        <section>
+            <h2>IVA</h2>
+            <p>Número de identificación del IVA según § 27a UStG:<br>
+            DE459368102</p>
+        </section>
+
+        <section>
+            <h2>Responsable del contenido</h2>
+            <p>Tobias Blankenhorn (dirección como arriba)</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="imprint.html">Aviso legal</a>
+            <a href="privacy.html">Privacidad</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../../de/legal/imprint.html",
+        "en": "../../en/legal/imprint.html",
+        "fr": "../../fr/legal/imprint.html",
+        "es": "../../es/legal/imprint.html",
+        "it": "../../it/legal/imprint.html",
+        "nl": "../../nl/legal/imprint.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>
