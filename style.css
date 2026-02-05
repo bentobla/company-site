@@ -114,8 +114,13 @@ a {
     display: none;
     border-radius: 999px;
     padding: 0.55rem 1.2rem;
+    padding-right: 2.5rem;
     font-size: 0.85rem;
-    background: #ffb653;
+    background-color: #ffb653;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23111827" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.5rem center;
+    background-size: 1.2em;
     color: #111827;
     border: none;
     outline: none;
@@ -125,11 +130,6 @@ a {
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    padding-right: 2rem;
-    background-image: url('data:image/svg+xml;utf8,<svg fill="%23111827" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-    background-repeat: no-repeat;
-    background-position: right 0.5rem center;
-    background-size: 1.2em;
 }
 
 /* Orange Contact Button */
@@ -381,23 +381,22 @@ section:last-child {
     
     /* Hide individual page links on mobile */
     .main-nav a {
-        display: none;
+        display: none !important;
     }
     
     /* Show page navigation dropdown on mobile */
     #page-nav-select {
-        display: block;
+        display: block !important;
     }
     
     /* Keep language dropdown visible */
     #lang-switch {
-        display: block;
+        display: block !important;
     }
     
     .main-nav {
         gap: 0.75rem;
         font-size: 0.85rem;
-    }
     }
     
     .brand-logo img {
