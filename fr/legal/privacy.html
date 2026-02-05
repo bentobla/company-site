@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confidentialité – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Politique de confidentialité pour jetztunddahanna.com.">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="../index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="../about.html">À propos</a>
+            <a href="../projects.html">Projets</a>
+            <a href="../principles.html">Principes</a>
+            <a href="../contact.html">Contact</a>
+
+            <select id="lang-switch" aria-label="Choisir la langue">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr" selected>FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow legal-content">
+        <h1>Politique de confidentialité</h1>
+        
+        <section>
+            <h2>Général</h2>
+            <p>Cette politique de confidentialité s'applique au site web jetztunddahanna.com.</p>
+            <p>Responsable du traitement des données:<br>
+            Tobias Blankenhorn<br>
+            Richard-Wagner-Str. 17/1<br>
+            71116 Gaertringen<br>
+            Allemagne<br>
+            Email: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+
+        <section>
+            <h2>Collecte de données sur ce site web</h2>
+            <p>Ce site web est un site statique hébergé sur GitHub Pages. Nous ne collectons, ne stockons ni ne traitons de données personnelles via ce site web.</p>
+            <p>Nous n'utilisons pas de cookies, d'outils d'analyse ni de mécanismes de suivi.</p>
+        </section>
+
+        <section>
+            <h2>Fichiers journaux du serveur</h2>
+            <p>Le fournisseur d'hébergement (GitHub) peut automatiquement collecter et stocker des informations dans les fichiers journaux du serveur. Cela peut inclure:</p>
+            <ul>
+                <li>Type et version du navigateur</li>
+                <li>Système d'exploitation</li>
+                <li>URL de référence</li>
+                <li>Nom d'hôte de l'ordinateur accédant</li>
+                <li>Heure de la demande du serveur</li>
+                <li>Adresse IP</li>
+            </ul>
+            <p>Ces données ne sont pas combinées avec d'autres sources de données et sont stockées par GitHub selon leur politique de confidentialité.</p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>Si vous nous contactez par email, votre message et les données que vous fournissez (y compris l'adresse email et le nom) seront stockés dans le but de traiter votre demande et pour d'éventuelles questions de suivi. Nous ne partageons pas ces données sans votre consentement.</p>
+        </section>
+
+        <section>
+            <h2>Vos droits</h2>
+            <p>Vous avez le droit de:</p>
+            <ul>
+                <li>Demander des informations sur les données personnelles stockées</li>
+                <li>Demander la correction de données incorrectes</li>
+                <li>Demander la suppression de vos données</li>
+                <li>Demander la restriction du traitement des données</li>
+                <li>S'opposer au traitement des données</li>
+                <li>Demander la portabilité des données</li>
+            </ul>
+            <p>Pour exercer ces droits, contactez: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="imprint.html">Mentions légales</a>
+            <a href="privacy.html">Confidentialité</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../../de/legal/privacy.html",
+        "en": "../../en/legal/privacy.html",
+        "fr": "../../fr/legal/privacy.html",
+        "es": "../../es/legal/privacy.html",
+        "it": "../../it/legal/privacy.html",
+        "nl": "../../nl/legal/privacy.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

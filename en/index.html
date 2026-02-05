@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Building focused, practical applications using artificial intelligence. Good AI means pragmatic, restrained, and useful.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="principles.html">Principles</a>
+            <a href="contact.html">Contact</a>
+
+            <select id="lang-switch" aria-label="Choose language">
+                <option value="de">DE</option>
+                <option value="en" selected>EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page">
+        <section>
+            <h1>Building useful applications with AI</h1>
+            <p class="lead">We build focused, practical software that uses artificial intelligence where it provides clear value. No hype. No subscriptions. No data harvesting.</p>
+        </section>
+
+        <section>
+            <h2>Good AI</h2>
+            <p>We believe AI is a tool, not a solution for every problem. Good AI means using it with judgment and restraint. It means building applications that remain understandable and keep users in control.</p>
+            <p>We focus on problems where AI genuinely helps, not where it creates complexity or removes agency.</p>
+        </section>
+
+        <section>
+            <h2>Current project</h2>
+            <div class="project-card">
+                <span class="status-badge">Coming soon to Play Store &amp; App Store</span>
+                <h3>lœrn</h3>
+                <p>A learning application built around the idea that you bring the content, we provide the methods. AI assists where it adds clarity, not where it replaces understanding.</p>
+                <p><a href="projects/loern.html" class="text-link">Learn more about lœrn</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>How we work</h2>
+            <p>We build applications as products, not services. We don't offer custom development or consulting. Each application we create reflects our approach to thoughtful, restrained technology.</p>
+            <p><a href="principles.html" class="text-link">Read our principles</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Imprint</a>
+            <a href="legal/privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/index.html",
+        "en": "../en/index.html",
+        "fr": "../fr/index.html",
+        "es": "../es/index.html",
+        "it": "../it/index.html",
+        "nl": "../nl/index.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

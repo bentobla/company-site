@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Nous créons des applications ciblées et pratiques utilisant l'intelligence artificielle. Une bonne IA signifie pragmatique, mesurée et utile.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="about.html">À propos</a>
+            <a href="projects.html">Projets</a>
+            <a href="principles.html">Principes</a>
+            <a href="contact.html">Contact</a>
+
+            <select id="lang-switch" aria-label="Choisir la langue">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr" selected>FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page">
+        <section>
+            <h1>Créer des applications utiles avec l'IA</h1>
+            <p class="lead">Nous créons des logiciels ciblés et pratiques qui utilisent l'intelligence artificielle là où elle apporte une valeur claire. Pas de battage médiatique. Pas d'abonnements. Pas de collecte de données.</p>
+        </section>
+
+        <section>
+            <h2>Une bonne IA</h2>
+            <p>Nous considérons l'IA comme un outil, pas comme une solution à tous les problèmes. Une bonne IA signifie l'utiliser avec discernement et retenue. Cela signifie créer des applications qui restent compréhensibles et laissent le contrôle aux utilisateurs.</p>
+            <p>Nous nous concentrons sur les problèmes où l'IA aide réellement, et non là où elle crée de la complexité ou retire l'autonomie.</p>
+        </section>
+
+        <section>
+            <h2>Projet actuel</h2>
+            <div class="project-card">
+                <span class="status-badge">Bientôt sur Play Store &amp; App Store</span>
+                <h3>lœrn</h3>
+                <p>Une application d'apprentissage basée sur l'idée que vous apportez le contenu et nous fournissons les méthodes. L'IA assiste là où elle apporte de la clarté, pas là où elle remplace la compréhension.</p>
+                <p><a href="projects/loern.html" class="text-link">En savoir plus sur lœrn</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Notre façon de travailler</h2>
+            <p>Nous créons des applications en tant que produits, pas en tant que services. Nous ne proposons pas de développement personnalisé ni de conseil. Chaque application que nous créons reflète notre approche d'une technologie réfléchie et mesurée.</p>
+            <p><a href="principles.html" class="text-link">Lire nos principes</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Mentions légales</a>
+            <a href="legal/privacy.html">Confidentialité</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/index.html",
+        "en": "../en/index.html",
+        "fr": "../fr/index.html",
+        "es": "../es/index.html",
+        "it": "../it/index.html",
+        "nl": "../nl/index.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

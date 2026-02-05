@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Informativa sulla privacy per jetztunddahanna.com.">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="../index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="../about.html">Chi siamo</a>
+            <a href="../projects.html">Progetti</a>
+            <a href="../principles.html">Principi</a>
+            <a href="../contact.html">Contatto</a>
+
+            <select id="lang-switch" aria-label="Scegli lingua">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it" selected>IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow legal-content">
+        <h1>Informativa sulla privacy</h1>
+        
+        <section>
+            <h2>Generale</h2>
+            <p>Questa informativa sulla privacy si applica al sito web jetztunddahanna.com.</p>
+            <p>Responsabile del trattamento dei dati:<br>
+            Tobias Blankenhorn<br>
+            Richard-Wagner-Str. 17/1<br>
+            71116 Gaertringen<br>
+            Germania<br>
+            Email: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+
+        <section>
+            <h2>Raccolta dati su questo sito web</h2>
+            <p>Questo sito web è un sito statico ospitato su GitHub Pages. Non raccogliamo, archiviamo o trattiamo dati personali attraverso questo sito web.</p>
+            <p>Non utilizziamo cookie, strumenti di analisi o meccanismi di tracciamento.</p>
+        </section>
+
+        <section>
+            <h2>File di log del server</h2>
+            <p>Il provider di hosting (GitHub) può raccogliere e archiviare automaticamente informazioni nei file di log del server. Ciò può includere:</p>
+            <ul>
+                <li>Tipo e versione del browser</li>
+                <li>Sistema operativo</li>
+                <li>URL di riferimento</li>
+                <li>Nome host del computer che accede</li>
+                <li>Ora della richiesta del server</li>
+                <li>Indirizzo IP</li>
+            </ul>
+            <p>Questi dati non vengono combinati con altre fonti di dati e vengono archiviati da GitHub secondo la loro informativa sulla privacy.</p>
+        </section>
+
+        <section>
+            <h2>Contatto</h2>
+            <p>Se ci contatti via email, il tuo messaggio e i dati che fornisci (inclusi indirizzo email e nome) verranno archiviati allo scopo di elaborare la tua richiesta e per eventuali domande di follow-up. Non condividiamo questi dati senza il tuo consenso.</p>
+        </section>
+
+        <section>
+            <h2>I tuoi diritti</h2>
+            <p>Hai il diritto di:</p>
+            <ul>
+                <li>Richiedere informazioni sui dati personali archiviati</li>
+                <li>Richiedere la correzione di dati errati</li>
+                <li>Richiedere la cancellazione dei tuoi dati</li>
+                <li>Richiedere la limitazione del trattamento dei dati</li>
+                <li>Opporti al trattamento dei dati</li>
+                <li>Richiedere la portabilità dei dati</li>
+            </ul>
+            <p>Per esercitare questi diritti, contatta: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="imprint.html">Note legali</a>
+            <a href="privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../../de/legal/privacy.html",
+        "en": "../../en/legal/privacy.html",
+        "fr": "../../fr/legal/privacy.html",
+        "es": "../../es/legal/privacy.html",
+        "it": "../../it/legal/privacy.html",
+        "nl": "../../nl/legal/privacy.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

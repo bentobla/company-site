@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über uns – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Ein kleines, unabhängiges Unternehmen, das fokussierte Anwendungen mit durchdachtem KI-Einsatz entwickelt.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="about.html">Über uns</a>
+            <a href="projects.html">Projekte</a>
+            <a href="principles.html">Prinzipien</a>
+            <a href="contact.html">Kontakt</a>
+
+            <select id="lang-switch" aria-label="Sprache wählen">
+                <option value="de" selected>DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow">
+        <h1>Über uns</h1>
+        
+        <section>
+            <h2>Perspektive</h2>
+            <p>Jetzt &amp; Dahanna Technologies ist ein kleines, unabhängiges Unternehmen. Wir entwickeln Anwendungen, keine Dienstleistungen. Jedes Produkt spiegelt eine Entscheidung darüber wider, wie Technologie funktionieren sollte.</p>
+            <p>Wir glauben, dass gute Software Nutzer respektiert. Das bedeutet keine Dark Patterns, keine Abo-Fallen und kein Datensammeln. Es bedeutet, klar zu kommunizieren, was ein Werkzeug tut, und Menschen die Kontrolle zu lassen.</p>
+        </section>
+
+        <section>
+            <h2>KI als Werkzeug</h2>
+            <p>KI kann nützlich sein, wenn sie sorgfältig eingesetzt wird. Sie kann helfen, Dinge zu klären, zu organisieren und repetitive Arbeit zu reduzieren. Aber sie ist nicht überall angebracht.</p>
+            <p>Wir setzen KI dort ein, wo sie klaren, verständlichen Nutzen bringt. Wir vermeiden sie dort, wo sie Komplexität schafft, Handlungsfähigkeit nimmt oder echtes Verstehen durch Annäherung ersetzt.</p>
+            <p>Es geht nicht darum, pro oder contra KI zu sein. Es geht um Urteilsvermögen.</p>
+        </section>
+
+        <section>
+            <h2>Wie wir entwickeln</h2>
+            <p>Wir konzentrieren uns auf jeweils ein Projekt. Wir nehmen keine Kundenaufträge an und entwickeln nicht auf Auftrag. Das erlaubt uns, Entscheidungen danach zu treffen, was sinnvoll ist – nicht danach, was sich verkauft.</p>
+            <p>Unsere Anwendungen sind Produkte mit klaren Grenzen. Wir verlangen transparent Geld dafür, wenn es angemessen ist. Wir stützen uns nicht auf Werbung oder Nutzerdaten als Geschäftsmodell.</p>
+        </section>
+
+        <section>
+            <h2>Was wir nicht tun</h2>
+            <p>Wir sind keine Softwareagentur, kein Entwicklungsstudio und keine Beratung. Wir entwickeln keine maßgeschneiderten Lösungen und bieten keine technischen Dienstleistungen an. Wir entwickeln fokussierte Anwendungen und veröffentlichen sie als Produkte.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Impressum</a>
+            <a href="legal/privacy.html">Datenschutz</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/about.html",
+        "en": "../en/about.html",
+        "fr": "../fr/about.html",
+        "es": "../es/about.html",
+        "it": "../it/about.html",
+        "nl": "../nl/about.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

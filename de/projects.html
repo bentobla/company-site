@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekte – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Anwendungen, die wir mit durchdachtem KI-Einsatz entwickeln.">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="about.html">Über uns</a>
+            <a href="projects.html">Projekte</a>
+            <a href="principles.html">Prinzipien</a>
+            <a href="contact.html">Kontakt</a>
+
+            <select id="lang-switch" aria-label="Sprache wählen">
+                <option value="de" selected>DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow">
+        <h1>Projekte</h1>
+        
+        <section>
+            <div class="project-card">
+                <span class="status-badge">Demnächst im Play Store &amp; App Store</span>
+                <h3>lœrn</h3>
+                <p>Eine Lernanwendung, mit der du deine eigenen Inhalte mitbringst und durchdachte Methoden zur Arbeit damit erhältst. KI unterstützt dort, wo sie Klarheit schafft.</p>
+                <p><a href="projects/loern.html" class="text-link">Mehr über lœrn</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Impressum</a>
+            <a href="legal/privacy.html">Datenschutz</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/projects.html",
+        "en": "../en/projects.html",
+        "fr": "../fr/projects.html",
+        "es": "../es/projects.html",
+        "it": "../it/projects.html",
+        "nl": "../nl/projects.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

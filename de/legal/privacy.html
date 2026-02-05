@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Datenschutzerklärung für jetztunddahanna.com.">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="../index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="../about.html">Über uns</a>
+            <a href="../projects.html">Projekte</a>
+            <a href="../principles.html">Prinzipien</a>
+            <a href="../contact.html">Kontakt</a>
+
+            <select id="lang-switch" aria-label="Sprache wählen">
+                <option value="de" selected>DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow legal-content">
+        <h1>Datenschutzerklärung</h1>
+        
+        <section>
+            <h2>Allgemein</h2>
+            <p>Diese Datenschutzerklärung gilt für die Website jetztunddahanna.com.</p>
+            <p>Verantwortlich für die Datenverarbeitung:<br>
+            Tobias Blankenhorn<br>
+            Richard-Wagner-Str. 17/1<br>
+            71116 Gärtringen<br>
+            Deutschland<br>
+            E-Mail: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+
+        <section>
+            <h2>Datenerfassung auf dieser Website</h2>
+            <p>Diese Website ist eine statische Seite, die auf GitHub Pages gehostet wird. Wir erfassen, speichern oder verarbeiten keine personenbezogenen Daten über diese Website.</p>
+            <p>Wir verwenden keine Cookies, Analytics-Tools oder Tracking-Mechanismen.</p>
+        </section>
+
+        <section>
+            <h2>Server-Logdateien</h2>
+            <p>Der Hosting-Anbieter (GitHub) kann automatisch Informationen in Server-Logdateien erfassen und speichern. Dazu gehören möglicherweise:</p>
+            <ul>
+                <li>Browsertyp und -version</li>
+                <li>Betriebssystem</li>
+                <li>Referrer-URL</li>
+                <li>Hostname des zugreifenden Rechners</li>
+                <li>Uhrzeit der Serveranfrage</li>
+                <li>IP-Adresse</li>
+            </ul>
+            <p>Diese Daten werden nicht mit anderen Datenquellen zusammengeführt und von GitHub gemäß deren Datenschutzerklärung gespeichert.</p>
+        </section>
+
+        <section>
+            <h2>Kontakt</h2>
+            <p>Wenn Sie uns per E-Mail kontaktieren, werden Ihre Nachricht und die von Ihnen angegebenen Daten (einschließlich E-Mail-Adresse und Name) zum Zweck der Bearbeitung Ihrer Anfrage und für mögliche Rückfragen gespeichert. Wir geben diese Daten nicht ohne Ihre Einwilligung weiter.</p>
+        </section>
+
+        <section>
+            <h2>Ihre Rechte</h2>
+            <p>Sie haben das Recht:</p>
+            <ul>
+                <li>Auskunft über gespeicherte personenbezogene Daten zu verlangen</li>
+                <li>Berichtigung unrichtiger Daten zu verlangen</li>
+                <li>Löschung Ihrer Daten zu verlangen</li>
+                <li>Einschränkung der Datenverarbeitung zu verlangen</li>
+                <li>Der Datenverarbeitung zu widersprechen</li>
+                <li>Datenübertragbarkeit zu verlangen</li>
+            </ul>
+            <p>Zur Ausübung dieser Rechte kontaktieren Sie: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="imprint.html">Impressum</a>
+            <a href="privacy.html">Datenschutz</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../../de/legal/privacy.html",
+        "en": "../../en/legal/privacy.html",
+        "fr": "../../fr/legal/privacy.html",
+        "es": "../../es/legal/privacy.html",
+        "it": "../../it/legal/privacy.html",
+        "nl": "../../nl/legal/privacy.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>

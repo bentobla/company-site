@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Privacy policy for jetztunddahanna.com.">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="../index.html" class="brand">
+            <div class="brand-logo">
+                <img src="../../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            <a href="../about.html">About</a>
+            <a href="../projects.html">Projects</a>
+            <a href="../principles.html">Principles</a>
+            <a href="../contact.html">Contact</a>
+
+            <select id="lang-switch" aria-label="Choose language">
+                <option value="de">DE</option>
+                <option value="en" selected>EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow legal-content">
+        <h1>Privacy Policy</h1>
+        
+        <section>
+            <h2>General</h2>
+            <p>This privacy policy applies to the website jetztunddahanna.com.</p>
+            <p>Responsible for data processing:<br>
+            Tobias Blankenhorn<br>
+            Richard-Wagner-Str. 17/1<br>
+            71116 Gaertringen<br>
+            Germany<br>
+            Email: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+
+        <section>
+            <h2>Data collection on this website</h2>
+            <p>This website is a static site hosted on GitHub Pages. We do not collect, store, or process personal data through this website.</p>
+            <p>We do not use cookies, analytics tools, or any tracking mechanisms.</p>
+        </section>
+
+        <section>
+            <h2>Server log files</h2>
+            <p>The hosting provider (GitHub) may automatically collect and store information in server log files. This may include:</p>
+            <ul>
+                <li>Browser type and version</li>
+                <li>Operating system</li>
+                <li>Referrer URL</li>
+                <li>Hostname of accessing computer</li>
+                <li>Time of server request</li>
+                <li>IP address</li>
+            </ul>
+            <p>This data is not combined with other data sources and is stored by GitHub according to their privacy policy.</p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>If you contact us via email, your message and the data you provide (including email address and name) will be stored for the purpose of processing your inquiry and for potential follow-up questions. We do not share this data without your consent.</p>
+        </section>
+
+        <section>
+            <h2>Your rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Request information about stored personal data</li>
+                <li>Request correction of incorrect data</li>
+                <li>Request deletion of your data</li>
+                <li>Request restriction of data processing</li>
+                <li>Object to data processing</li>
+                <li>Request data portability</li>
+            </ul>
+            <p>To exercise these rights, contact: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="imprint.html">Imprint</a>
+            <a href="privacy.html">Privacy</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../../de/legal/privacy.html",
+        "en": "../../en/legal/privacy.html",
+        "fr": "../../fr/legal/privacy.html",
+        "es": "../../es/legal/privacy.html",
+        "it": "../../it/legal/privacy.html",
+        "nl": "../../nl/legal/privacy.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+</script>
+</body>
+</html>
