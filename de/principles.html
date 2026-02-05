@@ -20,6 +20,14 @@
         </a>
 
         <nav class="main-nav">
+            
+            <select id="page-nav-select" aria-label="Startseite">
+                <option value="index.html">Startseite</option>
+                <option value="about.html">Über uns</option>
+                <option value="projects.html">Projekte</option>
+                <option value="principles.html" selected>Prinzipien</option>
+                <option value="contact.html">Kontakt</option>
+            </select>
             <a href="about.html">Über uns</a>
             <a href="projects.html">Projekte</a>
             <a href="principles.html">Prinzipien</a>
@@ -106,6 +114,14 @@ document.getElementById("lang-switch").addEventListener("change", function() {
         window.location.href = pages[lang];
     }
 });
+
+// Page navigation
+var pageNav = document.getElementById("page-nav-select");
+if (pageNav) {
+    pageNav.addEventListener("change", function() {
+        window.location.href = this.value;
+    });
+}
 </script>
 </body>
 </html>

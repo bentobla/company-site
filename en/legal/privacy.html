@@ -20,6 +20,14 @@
         </a>
 
         <nav class="main-nav">
+            
+            <select id="page-nav-select" aria-label="Home">
+                <option value="../index.html">Home</option>
+                <option value="../about.html">About</option>
+                <option value="../projects.html">Projects</option>
+                <option value="../principles.html">Principles</option>
+                <option value="../contact.html">Contact</option>
+            </select>
             <a href="../about.html">About</a>
             <a href="../projects.html">Projects</a>
             <a href="../principles.html">Principles</a>
@@ -113,6 +121,14 @@ document.getElementById("lang-switch").addEventListener("change", function() {
         window.location.href = pages[lang];
     }
 });
+
+// Page navigation
+var pageNav = document.getElementById("page-nav-select");
+if (pageNav) {
+    pageNav.addEventListener("change", function() {
+        window.location.href = this.value;
+    });
+}
 </script>
 </body>
 </html>
