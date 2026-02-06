@@ -216,13 +216,13 @@ def main() -> int:
             label="en:about:how-we-build",
         ),
         Replacement(
-            old='            <p>We use AI where it provides clear, understandable value. We avoid it where it adds complexity, removes agency, or replaces genuine understanding with approximation.</p>',
-            new='            <p>We use AI where it provides clear, understandable value—and keep the experience understandable, calm, and under the user\'s control.</p>',
+            old='            <p>AI can be useful when applied with care. It can help clarify, organize, and reduce repetitive work. But it\'s not appropriate everywhere.</p>\n            <p>We use AI where it provides clear, understandable value. We avoid it where it adds complexity, removes agency, or replaces genuine understanding with approximation.</p>\n            <p>This isn\'t about being pro-AI or anti-AI. It\'s about judgment.</p>',
+            new='            <p>AI can be useful when applied with care. It can help clarify, organize, and reduce repetitive work. We use it where it provides clear value, and keep the experience understandable and under the user\'s control.</p>',
             label="en:about:ai-paragraph",
         ),
         Replacement(
             old='            <p>Our applications are products with clear boundaries. We charge for them transparently when appropriate. We don\'t rely on advertising or user data as a business model.</p>',
-            new='            <p>Our applications are products with clear boundaries. We charge for them transparently when appropriate. Our business model is product-first, with no dependence on advertising or user-data brokerage.</p>',
+            new='            <p>Our business model is product-first. We charge transparently when appropriate and may use advertising to support free features, but we don\'t sell user data.</p>',
             label="en:about:business-model",
         ),
     )
@@ -245,13 +245,13 @@ def main() -> int:
             label="de:about:how-we-build",
         ),
         Replacement(
-            old='            <p>Wir setzen KI dort ein, wo sie klaren, verständlichen Nutzen bringt. Wir vermeiden sie dort, wo sie Komplexität schafft, Handlungsfähigkeit nimmt oder echtes Verstehen durch Annäherung ersetzt.</p>',
-            new='            <p>Wir setzen KI dort ein, wo sie klaren, verständlichen Nutzen bringt – und gestalten Anwendungen so, dass sie verständlich bleiben, ruhig wirken und die Kontrolle beim Nutzer lassen.</p>',
+            old='            <p>KI kann nützlich sein, wenn sie sorgfältig eingesetzt wird. Sie kann helfen, Dinge zu klären, zu organisieren und repetitive Arbeit zu reduzieren. Aber sie ist nicht überall angebracht.</p>\n            <p>Wir setzen KI dort ein, wo sie klaren, verständlichen Nutzen bringt. Wir vermeiden sie dort, wo sie Komplexität schafft, Handlungsfähigkeit nimmt oder echtes Verstehen durch Annäherung ersetzt.</p>\n            <p>Es geht nicht darum, pro oder contra KI zu sein. Es geht um Urteilsvermögen.</p>',
+            new='            <p>KI kann nützlich sein, wenn sie sorgfältig eingesetzt wird. Sie kann helfen, Dinge zu klären, zu organisieren und repetitive Arbeit zu reduzieren. Wir setzen sie dort ein, wo sie klaren Nutzen bringt, und gestalten Anwendungen so, dass sie verständlich bleiben und die Kontrolle beim Nutzer lassen.</p>',
             label="de:about:ai-paragraph",
         ),
         Replacement(
             old='            <p>Unsere Anwendungen sind Produkte mit klaren Grenzen. Wir verlangen transparent Geld dafür, wenn es angemessen ist. Wir stützen uns nicht auf Werbung oder Nutzerdaten als Geschäftsmodell.</p>',
-            new='            <p>Unsere Anwendungen sind Produkte mit klaren Grenzen. Wir verlangen transparent Geld dafür, wenn es angemessen ist. Unser Modell ist produktorientiert – ohne Abhängigkeit von Werbung oder dem Handel mit Nutzerdaten.</p>',
+            new='            <p>Unser Modell ist produktorientiert. Wir verlangen transparent Geld, wenn es angemessen ist, und können Werbung nutzen, um kostenlose Funktionen zu unterstützen – verkaufen aber keine Nutzerdaten.</p>',
             label="de:about:business-model",
         ),
     )
@@ -274,13 +274,13 @@ def main() -> int:
             label="fr:about:how-we-build",
         ),
         Replacement(
-            old='            <p>Nous utilisons l\'IA là où elle apporte une valeur claire et compréhensible. Nous l\'évitons là où elle ajoute de la complexité, retire l\'autonomie ou remplace une véritable compréhension par une approximation.</p>',
-            new='            <p>Nous utilisons l\'IA là où elle apporte une valeur claire et compréhensible — tout en gardant l\'expérience compréhensible, calme et sous le contrôle de l\'utilisateur.</p>',
+            old='            <p>L\'IA peut être utile lorsqu\'elle est appliquée avec soin. Elle peut aider à clarifier, organiser et réduire le travail répétitif. Mais elle n\'est pas appropriée partout.</p>\n            <p>Nous utilisons l\'IA là où elle apporte une valeur claire et compréhensible. Nous l\'évitons là où elle ajoute de la complexité, retire l\'autonomie ou remplace une véritable compréhension par une approximation.</p>\n            <p>Il ne s\'agit pas d\'être pour ou contre l\'IA. Il s\'agit de jugement.</p>',
+            new='            <p>L\'IA peut être utile lorsqu\'elle est appliquée avec soin. Elle peut aider à clarifier, organiser et réduire le travail répétitif. Nous l\'utilisons là où elle apporte une valeur claire, tout en gardant l\'expérience compréhensible et sous le contrôle de l\'utilisateur.</p>',
             label="fr:about:ai-paragraph",
         ),
         Replacement(
             old='            <p>Nos applications sont des produits avec des limites claires. Nous les facturons de manière transparente lorsque cela est approprié. Nous ne nous appuyons pas sur la publicité ou les données utilisateur comme modèle commercial.</p>',
-            new='            <p>Nos applications sont des produits avec des limites claires. Nous les facturons de manière transparente lorsque cela est approprié. Notre modèle est orienté produit, sans dépendance à la publicité ni à la monétisation des données utilisateur.</p>',
+            new='            <p>Notre modèle est orienté produit. Nous facturons de manière transparente lorsque c\'est approprié et pouvons utiliser la publicité pour soutenir des fonctionnalités gratuites, mais nous ne vendons pas de données utilisateur.</p>',
             label="fr:about:business-model",
         ),
     )
@@ -303,13 +303,13 @@ def main() -> int:
             label="es:about:how-we-build",
         ),
         Replacement(
-            old='            <p>Usamos IA donde aporta valor claro y comprensible. La evitamos donde agrega complejidad, quita autonomía o reemplaza la comprensión genuina con aproximación.</p>',
-            new='            <p>Usamos IA donde aporta valor claro y comprensible, manteniendo la experiencia entendible, tranquila y bajo control del usuario.</p>',
+            old='            <p>La IA puede ser útil cuando se aplica con cuidado. Puede ayudar a aclarar, organizar y reducir el trabajo repetitivo. Pero no es apropiada en todas partes.</p>\n            <p>Usamos IA donde aporta valor claro y comprensible. La evitamos donde agrega complejidad, quita autonomía o reemplaza la comprensión genuina con aproximación.</p>\n            <p>No se trata de estar a favor o en contra de la IA. Se trata de criterio.</p>',
+            new='            <p>La IA puede ser útil cuando se aplica con cuidado. Puede ayudar a aclarar, organizar y reducir el trabajo repetitivo. La usamos donde aporta valor claro, manteniendo la experiencia entendible y bajo control del usuario.</p>',
             label="es:about:ai-paragraph",
         ),
         Replacement(
             old='            <p>Nuestras aplicaciones son productos con límites claros. Cobramos por ellas de manera transparente cuando es apropiado. No dependemos de publicidad o datos de usuario como modelo de negocio.</p>',
-            new='            <p>Nuestras aplicaciones son productos con límites claros. Cobramos por ellas de manera transparente cuando es apropiado. Nuestro modelo es orientado a producto, sin depender de publicidad ni de la monetización de datos de usuario.</p>',
+            new='            <p>Nuestro modelo es orientado a producto. Cobramos de forma transparente cuando es apropiado y podemos usar publicidad para apoyar funciones gratuitas, pero no vendemos datos de usuario.</p>',
             label="es:about:business-model",
         ),
     )
@@ -332,13 +332,13 @@ def main() -> int:
             label="it:about:how-we-build",
         ),
         Replacement(
-            old='            <p>Usiamo l\'IA dove apporta valore chiaro e comprensibile. La evitiamo dove aggiunge complessità, toglie autonomia o sostituisce una vera comprensione con un\'approssimazione.</p>',
-            new='            <p>Usiamo l\'IA dove apporta valore chiaro e comprensibile, mantenendo l\'esperienza comprensibile, calma e sotto il controllo dell\'utente.</p>',
+            old='            <p>L\'IA può essere utile quando applicata con cura. Può aiutare a chiarire, organizzare e ridurre il lavoro ripetitivo. Ma non è appropriata ovunque.</p>\n            <p>Usiamo l\'IA dove apporta valore chiaro e comprensibile. La evitiamo dove aggiunge complessità, toglie autonomia o sostituisce una vera comprensione con un\'approssimazione.</p>\n            <p>Non si tratta di essere pro o contro l\'IA. Si tratta di giudizio.</p>',
+            new='            <p>L\'IA può essere utile quando applicata con cura. Può aiutare a chiarire, organizzare e ridurre il lavoro ripetitivo. La usiamo dove apporta valore chiaro, mantenendo l\'esperienza comprensibile e sotto il controllo dell\'utente.</p>',
             label="it:about:ai-paragraph",
         ),
         Replacement(
             old='            <p>Le nostre applicazioni sono prodotti con confini chiari. Le facciamo pagare in modo trasparente quando appropriato. Non ci affidiamo a pubblicità o dati utente come modello di business.</p>',
-            new='            <p>Le nostre applicazioni sono prodotti con confini chiari. Le facciamo pagare in modo trasparente quando appropriato. Il nostro modello è orientato al prodotto, senza dipendere da pubblicità o dalla monetizzazione dei dati utente.</p>',
+            new='            <p>Il nostro modello è orientato al prodotto. Facciamo pagare in modo trasparente quando appropriato e possiamo usare pubblicità per supportare funzionalità gratuite, ma non vendiamo dati utente.</p>',
             label="it:about:business-model",
         ),
     )
