@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Kontakta Jetzt & Dahanna Technologies.">
+    <link rel="canonical" href="https://jetztunddahanna.com/sv/contact.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="./" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            
+            <select id="page-nav-select" aria-label="Start">
+                <option value="./">Start</option>
+                <option value="about.html">Om oss</option>
+                <option value="projects.html">Projekt</option>
+                <option value="principles.html">Principer</option>
+                <option value="contact.html" selected>Kontakt</option>
+            </select>
+            <a href="about.html">Om oss</a>
+            <a href="projects.html">Projekt</a>
+            <a href="principles.html">Principer</a>
+            <a href="contact.html">Kontakt</a>
+
+            <select id="lang-switch" aria-label="Välj språk">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+                <option value="sv" selected>SV</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow">
+        <h1>Kontakt</h1>
+        
+        <section>
+            <p>För frågor, feedback eller förfrågningar om våra applikationer:</p>
+            
+            <div class="contact-info">
+                <p><a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Notis</h2>
+            <p>Vi erbjuder inte kundanpassad utveckling, konsulttjänster eller klientarbete. Vi bygger fokuserade applikationer som produkter.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Impressum</a>
+            <a href="legal/privacy.html">Integritet</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/contact.html",
+        "en": "../en/contact.html",
+        "fr": "../fr/contact.html",
+        "es": "../es/contact.html",
+        "it": "../it/contact.html",
+        "nl": "../nl/contact.html",
+        "sv": "../sv/contact.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+
+// Page navigation
+var pageNav = document.getElementById("page-nav-select");
+if (pageNav) {
+    pageNav.addEventListener("change", function() {
+        window.location.href = this.value;
+    });
+}
+</script>
+</body>
+</html>

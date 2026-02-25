@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principer – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Principerna som styr hur vi bygger applikationer.">
+    <link rel="canonical" href="https://jetztunddahanna.com/sv/principles.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="./" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            
+            <select id="page-nav-select" aria-label="Start">
+                <option value="./">Start</option>
+                <option value="about.html">Om oss</option>
+                <option value="projects.html">Projekt</option>
+                <option value="principles.html" selected>Principer</option>
+                <option value="contact.html">Kontakt</option>
+            </select>
+            <a href="about.html">Om oss</a>
+            <a href="projects.html">Projekt</a>
+            <a href="principles.html">Principer</a>
+            <a href="contact.html">Kontakt</a>
+
+            <select id="lang-switch" aria-label="Välj språk">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+                <option value="sv" selected>SV</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow">
+        <h1>Principer</h1>
+        <p class="lead">Dessa principer styr hur vi bygger applikationer. De är inte visioner. De är beslut som syns i varje produkt vi skapar.</p>
+        
+        <ul class="principles-list">
+            <li>
+                <h3>Prissättning som bygger på ägande</h3>
+                <p>När en applikation kostar pengar prissätter vi den så att det känns som att köpa en produkt. Om du köper något, äger du det.</p>
+            </li>
+            
+            <li>
+                <h3>Ärliga gränssnitt</h3>
+                <p>Varje interaktion är utformad för att vara tydlig och ärlig. Människor ska förstå vad som händer och varför.</p>
+            </li>
+            
+            <li>
+                <h3>Dataminimering</h3>
+                <p>Vi minimerar datainsamling och håller den ändamålsstyrd. Om data behöver lagras är vi tydliga med vad, varför och hur länge.</p>
+            </li>
+            
+            <li>
+                <h3>Transparent intäktsmodell</h3>
+                <p>Om en applikation kostar pengar är vi raka: tydlig prissättning, förutsägbara kostnader och en produkt-först-modell.</p>
+            </li>
+            
+            <li>
+                <h3>Användaren behåller kontrollen</h3>
+                <p>Funktioner utformas för att stödja användarens mål, inte för att skapa engagemangsmått. Människor ska ha kontroll över sin upplevelse och sina data.</p>
+            </li>
+            
+            <li>
+                <h3>AI bara där det är användbart</h3>
+                <p>Vi använder AI för att skapa tydligt, begripligt värde. Funktionaliteten förblir transparent och användaren behåller kontrollen.</p>
+            </li>
+            
+            <li>
+                <h3>Återhållsam som standard</h3>
+                <p>Applikationer ska vara lugna och fokuserade. Notiser används sparsamt och funktioner utformas för att stödja mål snarare än beroende.</p>
+            </li>
+            
+            <li>
+                <h3>Tydliga gränser</h3>
+                <p>Varje applikation har ett specifikt syfte. Vi bygger verktyg med snäv omfattning som gör en sak riktigt bra.</p>
+            </li>
+        </ul>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Impressum</a>
+            <a href="legal/privacy.html">Integritet</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/principles.html",
+        "en": "../en/principles.html",
+        "fr": "../fr/principles.html",
+        "es": "../es/principles.html",
+        "it": "../it/principles.html",
+        "nl": "../nl/principles.html",
+        "sv": "../sv/principles.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+
+// Page navigation
+var pageNav = document.getElementById("page-nav-select");
+if (pageNav) {
+    pageNav.addEventListener("change", function() {
+        window.location.href = this.value;
+    });
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integritetsuttalande – Lœrn</title>
+    <meta name="description" content="Integritetsuttalande för Lœrn-applikationen.">
+    <link rel="canonical" href="https://jetztunddahanna.com/sv/projects/loern/privacy.html">
+    <link rel="stylesheet" href="../../../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="../../" class="brand">
+            <div class="brand-logo">
+                <img src="../../../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            
+            <select id="page-nav-select" aria-label="Start">
+                <option value="../../">Start</option>
+                <option value="../../about.html">Om oss</option>
+                <option value="../../projects.html">Projekt</option>
+                <option value="../../principles.html">Principer</option>
+                <option value="../../contact.html">Kontakt</option>
+            </select>
+            <a href="../../about.html">Om oss</a>
+            <a href="../../projects.html">Projekt</a>
+            <a href="../../principles.html">Principer</a>
+            <a href="../../contact.html">Kontakt</a>
+
+            <select id="lang-switch" aria-label="Välj språk">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+                <option value="sv" selected>SV</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow legal-content">
+        <h1>Integritetsuttalande för Lœrn-appen</h1>
+        <p><em>Senast uppdaterad: 5 februari 2026</em></p>
+        
+        <section>
+            <h2>Introduktion</h2>
+            <p>Det här integritetsuttalandet förklarar hur Lœrn ("vi", "vår" eller "appen") hanterar information. Lœrn är byggd med integritet som en grundprincip. Vi anser att dina studiedata alltid ska ligga under din kontroll.</p>
+            <p>Förutom när du uttryckligen väljer att exportera eller dela innehåll, skickar Lœrn inte dina data utanför din enhet.</p>
+        </section>
+
+        <section>
+            <h2>Grundläggande integritetsprinciper</h2>
+            <h3>Integritet först</h3>
+            <p>Lœrn är byggd från grunden för att skydda din integritet:</p>
+            <ul>
+                <li><strong>Offline-first:</strong> Centrala funktioner fungerar utan internetuppkoppling</li>
+                <li><strong>Inga användarkonton:</strong> Ingen registrering, ingen inloggning, inga lösenord</li>
+                <li><strong>Ingen spårning:</strong> Ingen beteendeanalys, ingen profilering</li>
+                <li><strong>Endast lokal lagring:</strong> Dina studiedata stannar på enheten om du inte uttryckligen exporterar eller delar</li>
+                <li><strong>Användarkontroll:</strong> Data lämnar bara enheten genom handlingar du själv initierar</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Data vi inte samlar in</h2>
+            <p>Vi samlar INTE in, lagrar eller överför:</p>
+            <ul>
+                <li>Personuppgifter (namn, e-postadress, telefonnummer, adress)</li>
+                <li>Användarkonton eller autentiseringsuppgifter</li>
+                <li>Studieinnehåll eller material som du skapar eller importerar</li>
+                <li>Studieförlopp, resultat eller statistik</li>
+                <li>Användningsanalys eller telemetri</li>
+                <li>Kraschrapporter eller diagnostikdata</li>
+                <li>Platsdata</li>
+                <li>Kontaktlistor eller sociala kopplingar</li>
+            </ul>
+            <p>För gratisanvändare kan annonsparter få begränsade tekniska data som krävs för att visa annonser (se avsnittet Annonsering nedan).</p>
+        </section>
+
+        <section>
+            <h2>Datalagring</h2>
+            <h3>Endast lokal lagring</h3>
+            <p>All studiedata lagras uteslutande på din enhet:</p>
+            <ul>
+                <li>Kortlekar och flashcards</li>
+                <li>Studieförlopp och statistik</li>
+                <li>Repetitionshistorik och data för spaced repetition</li>
+                <li>Preferenser och inställningar</li>
+                <li>Lokal profilinformation (profilnamn, ikon, språkpreferens)</li>
+            </ul>
+            <p>Dessa data lagras i en lokal SQLite-databas i appens privata lagring och skyddas av enhetens inbyggda säkerhetsmekanismer (iOS Data Protection, Android Keystore).</p>
+
+            <h3>Ingen molnsynk</h3>
+            <p>Lœrn erbjuder ingen molnsynk, molnbackup eller serverbaserad lagring. Vi driver inga servrar som tar emot eller lagrar dina studiedata.</p>
+        </section>
+
+        <section>
+            <h2>Internetanslutning</h2>
+            <h3>Offline-kärna</h3>
+            <p>Den centrala studiefunktionaliteten i Lœrn är helt offline och kräver inte nätverksåtkomst.</p>
+
+            <h3>Annonsering (endast gratisversion)</h3>
+            <p>Om du använder gratisversionen av Lœrn visar appen annonser. Endast annonsmodulen använder internet för att:</p>
+            <ul>
+                <li>Ladda annonsinnehåll</li>
+                <li>Rapportera annonsvisningar och interaktioner</li>
+                <li>Uppfylla krav från annonsnätverk</li>
+            </ul>
+            <p>Själva studiekärnan överför inte studieinnehåll, framsteg eller resultat.</p>
+
+            <h3>Annonsparter</h3>
+            <p>Gratisversionen använder Google AdMob. AdMob kan samla in viss information enligt sin egen integritetspolicy, vilket kan inkludera:</p>
+            <ul>
+                <li>Enhetens annonsidentifierare</li>
+                <li>IP-adress</li>
+                <li>Enhetstyp och operativsystem</li>
+                <li>Data om annonsinteraktion</li>
+            </ul>
+            <p>För detaljer om Googles datapraxis, se: <a href="https://policies.google.com/privacy" class="text-link" target="_blank" rel="noopener noreferrer">https://policies.google.com/privacy</a></p>
+
+            <h3>Premiumversion</h3>
+            <p>Om du köper premiumversionen (engångsköp):</p>
+            <ul>
+                <li>Alla annonser tas bort</li>
+                <li>Annonsmodulen initieras inte</li>
+                <li>Appen kräver normalt ingen internetåtkomst</li>
+                <li>Ingen nätverkskommunikation utförs av appen</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Köp i appen</h2>
+            <h3>Betalningshantering</h3>
+            <p>Premiumköp hanteras helt av Apple App Store eller Google Play Store.</p>
+            <ul>
+                <li>Vi samlar inte in eller lagrar betalningsinformation</li>
+                <li>Vi får inga kreditkorts- eller faktureringsuppgifter</li>
+                <li>Vi får endast en bekräftelse på att ett köp genomförts</li>
+            </ul>
+            <p>Premiumstatus lagras lokalt på din enhet. Köpet är kopplat till ditt App Store- eller Play Store-konto, inte till något Lœrn-konto.</p>
+        </section>
+
+        <section>
+            <h2>Import, export och delning</h2>
+            <h3>Lokal filbaserad import och export</h3>
+            <p>Lœrn låter dig importera och exportera kortlekar med JSON- eller ZIP-filer:</p>
+            <ul>
+                <li>Importerade filer behandlas lokalt på din enhet</li>
+                <li>Exporterade filer innehåller endast studieinnehåll (frågor, svar, metadata)</li>
+                <li>Exporterade filer innehåller som standard inga personliga identifierare</li>
+            </ul>
+
+            <h3>Delning som du initierar</h3>
+            <p>Du kan välja att dela exporterade filer med enhetens standardfunktioner för delning.</p>
+            <p>Viktiga förtydliganden:</p>
+            <ul>
+                <li>Data delas endast när du uttryckligen startar delning</li>
+                <li>Lœrn överför inte data automatiskt</li>
+                <li>Lœrn vet inte vem du delar data med</li>
+                <li>När data väl har delats hanteras den av mottagande app/tjänst/mottagare enligt deras egen integritetspraxis</li>
+            </ul>
+            <p>Du ansvarar själv för hur och var exporterade filer delas.</p>
+
+            <h3>Upphovsrätt och ansvar för innehåll</h3>
+            <p>Lœrn är ett verktyg, inte en innehållsleverantör. Du ansvarar för att:</p>
+            <ul>
+                <li>Säkerställa att du har rätt att använda importerat innehåll</li>
+                <li>Följa upphovsrättslagar när du delar exporterade kortlekar</li>
+                <li>Laglighet för material som lagras eller delas med appen</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Profiler</h2>
+            <h3>Stöd för flera profiler</h3>
+            <p>Lœrn stödjer flera lokala användarprofiler på en och samma enhet:</p>
+            <ul>
+                <li>Varje profil har isolerade studiedata</li>
+                <li>Profiler identifieras endast av ett namn och en ikon som du väljer</li>
+                <li>Profildata lagras lokalt och överförs aldrig av appen</li>
+                <li>Att ta bort en profil raderar dess data permanent från enheten</li>
+            </ul>
+
+            <h3>Premiumstatus</h3>
+            <p>Premiumköpsstatus gäller för alla profiler på samma enhet och butikskonto.</p>
+        </section>
+
+        <section>
+            <h2>Notiser (valfritt)</h2>
+            <h3>Studiepåminnelser</h3>
+            <p>Du kan valfritt aktivera studiepåminnelser:</p>
+            <ul>
+                <li>Påminnelser schemaläggs lokalt på din enhet</li>
+                <li>Inga externa servrar används för leverans av påminnelser</li>
+                <li>Du kan inaktivera påminnelser när som helst</li>
+                <li>Notisbehörigheter kan återkallas i enhetens inställningar</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Behörigheter</h2>
+            <p>Appen kan begära följande behörigheter:</p>
+            
+            <h3>Lagring (Android)</h3>
+            <ul>
+                <li><strong>Syfte:</strong> Import och export av kortleksfiler</li>
+                <li><strong>Omfattning:</strong> Endast filer du själv väljer</li>
+            </ul>
+
+            <h3>Internet (endast gratisversion)</h3>
+            <ul>
+                <li><strong>Syfte:</strong> Visa annonser</li>
+                <li><strong>Används inte:</strong> Premiumversionen</li>
+            </ul>
+
+            <h3>Notiser (valfritt)</h3>
+            <ul>
+                <li><strong>Syfte:</strong> Studiepåminnelser</li>
+                <li><strong>Kontroll:</strong> Du väljer frekvens och tidpunkt</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Tredjepartstjänster</h2>
+            <h3>Annonsering (endast gratisversion)</h3>
+            <p>Gratisversionen använder Google AdMob.</p>
+            <p>Vi använder inte:</p>
+            <ul>
+                <li>Analystjänster</li>
+                <li>Kraschrapporteringssystem</li>
+                <li>Molnlagringstjänster</li>
+                <li>Sociala medier-integrationer</li>
+                <li>Tredjeparts-SDK:er för spårning</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Barns integritet</h2>
+            <p>Lœrn är avsedd för universitetsstudenter och äldre elever. Vi samlar inte medvetet in personuppgifter från barn under 13 år (eller relevant ålder i din jurisdiktion).</p>
+            <p>Eftersom Lœrn inte samlar in persondata är den förenlig med regler som COPPA.</p>
+        </section>
+
+        <section>
+            <h2>Datasäkerhet</h2>
+            <h3>Enhetens lokala säkerhet</h3>
+            <p>Dina data skyddas av:</p>
+            <ul>
+                <li>Kryptering på enhetsnivå</li>
+                <li>App-sandboxing</li>
+                <li>Enhetens autentiseringsmekanismer</li>
+            </ul>
+
+            <h3>Ingen serverrisk</h3>
+            <p>Eftersom Lœrn inte lagrar data på servrar finns ingen risk för:</p>
+            <ul>
+                <li>Serverintrång</li>
+                <li>Molnläckor</li>
+                <li>Otillåten tredjepartsåtkomst</li>
+            </ul>
+
+            <h3>Ditt ansvar</h3>
+            <p>Du ansvarar för att:</p>
+            <ul>
+                <li>Skydda din enhet</li>
+                <li>Hantera enhetsbackuper (iCloud / Google backup)</li>
+                <li>Förvara exporterade filer säkert</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Dina rättigheter och kontroll</h2>
+            <p>Du har full kontroll över dina data:</p>
+            <ul>
+                <li>All studiedata lagras lokalt</li>
+                <li>Du kan exportera data när som helst</li>
+                <li>Du kan radera kortlekar eller profiler</li>
+                <li>Att avinstallera appen tar bort all lokal data</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Lagringstid</h2>
+            <h3>Endast på enheten</h3>
+            <p>Data finns kvar på din enhet tills du:</p>
+            <ul>
+                <li>Raderar innehåll eller profiler</li>
+                <li>Rensar appdata</li>
+                <li>Avinstallerar appen</li>
+            </ul>
+
+            <h3>Ingen serverlagring</h3>
+            <p>Vi lagrar ingen data på servrar eftersom vi inte driver några.</p>
+
+            <h3>Enhetsbackuper</h3>
+            <p>Om aktiverat kan ditt operativsystem säkerhetskopiera appdata enligt sina egna policys. Detta styrs av Apple eller Google, inte av Lœrn.</p>
+        </section>
+
+        <section>
+            <h2>Rättslig grund (GDPR)</h2>
+            <p>För användare inom EES:</p>
+            <ul>
+                <li>Vi behandlar inte personuppgifter som personuppgiftsansvarig</li>
+                <li>Annonsering (gratisversion) baseras på berättigat intresse</li>
+                <li>Du kan undvika annonser genom att köpa premiumversionen</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Kaliforniska integritetsrättigheter (CCPA)</h2>
+            <ul>
+                <li>Vi säljer inte personuppgifter</li>
+                <li>Vi delar inte personuppgifter för marknadsföring</li>
+                <li>De flesta CCPA-krav gäller inte eftersom vi inte samlar in data</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Internationella dataöverföringar</h2>
+            <p>Vi överför inte studiedata internationellt eftersom:</p>
+            <ul>
+                <li>Data lagras lokalt på din enhet</li>
+                <li>Vi driver inga servrar</li>
+                <li>Data lämnar bara enheten genom delning som du initierar</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Ändringar av detta uttalande</h2>
+            <p>Vi kan uppdatera detta uttalande för att återspegla app- eller lagändringar.</p>
+            <p>Vi informerar användare genom att:</p>
+            <ul>
+                <li>Uppdatera datumet "Senast uppdaterad"</li>
+                <li>Publicera den uppdaterade texten</li>
+                <li>Visa en notis i appen vid väsentliga ändringar</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Kontakt</h2>
+            <p>Om du har frågor om detta integritetsuttalande:</p>
+            <p>
+                E-post: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a><br>
+                Webb: <a href="https://jetztunddahanna.com" class="text-link">jetztunddahanna.com</a>
+            </p>
+            <p>Observera att vi inte kan komma åt dina studiedata, eftersom de lagras lokalt på din enhet.</p>
+        </section>
+
+        <section>
+            <h2>Vårt integritetslöfte</h2>
+            <p>Lœrn bygger på övertygelsen att lärande ska vara privat som standard. Dina data är under din kontroll, och du bestämmer om och när de delas.</p>
+        </section>
+
+        <section>
+            <h2>Sammanfattning (enkel svenska)</h2>
+            <ul>
+                <li>Dina studiedata stannar på din enhet</li>
+                <li>Vi samlar inte in personuppgifter</li>
+                <li>Vi spårar inte vad eller hur du pluggar</li>
+                <li>Gratisversionen visar annonser (AdMob kan samla in annonsrelaterade data)</li>
+                <li>Premiumversionen har inga annonser och ingen nätverksåtkomst</li>
+                <li>Du kan exportera och dela data om du vill</li>
+                <li>Att avinstallera appen raderar all lokal data</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="../../legal/imprint.html">Impressum</a>
+            <a href="../../legal/privacy.html">Integritet</a>
+        </div>
+    </footer>
+<script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../../../de/projects/loern/privacy.html",
+        "en": "../../../en/projects/loern/privacy.html",
+        "fr": "../../../fr/projects/loern/privacy.html",
+        "es": "../../../es/projects/loern/privacy.html",
+        "it": "../../../it/projects/loern/privacy.html",
+        "nl": "../../../nl/projects/loern/privacy.html",
+        "sv": "../../../sv/projects/loern/privacy.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+
+// Page navigation
+var pageNav = document.getElementById("page-nav-select");
+if (pageNav) {
+    pageNav.addEventListener("change", function() {
+        window.location.href = this.value;
+    });
+}
+</script>
+</body>
+</html>

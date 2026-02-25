@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om oss – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Ett litet, oberoende företag som bygger fokuserade applikationer med genomtänkt användning av AI.">
+    <link rel="canonical" href="https://jetztunddahanna.com/sv/about.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="./" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            
+            <select id="page-nav-select" aria-label="Start">
+                <option value="./">Start</option>
+                <option value="about.html" selected>Om oss</option>
+                <option value="projects.html">Projekt</option>
+                <option value="principles.html">Principer</option>
+                <option value="contact.html">Kontakt</option>
+            </select>
+            <a href="about.html">Om oss</a>
+            <a href="projects.html">Projekt</a>
+            <a href="principles.html">Principer</a>
+            <a href="contact.html">Kontakt</a>
+
+            <select id="lang-switch" aria-label="Välj språk">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+                <option value="sv" selected>SV</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow">
+        <h1>Om oss</h1>
+        
+        <section>
+            <h2>Perspektiv</h2>
+            <p>Jetzt &amp; Dahanna Technologies är ett litet, oberoende företag. Vi bygger applikationer, inte tjänster. Varje produkt speglar ett beslut om hur teknik bör fungera.</p>
+            <p>Vi tycker att bra mjukvara respekterar användare. Det betyder inga mörka mönster, inga prenumerationsfällor och ingen dataskörd. Det betyder att vara tydlig med vad ett verktyg gör och att låta människor behålla kontrollen.</p>
+        </section>
+
+        <section>
+            <h2>AI som ett verktyg</h2>
+            <p>AI kan vara användbart när det används med omsorg. Det kan hjälpa till att förtydliga, organisera och minska repetitivt arbete. Vi använder det där det ger tydligt värde och håller upplevelsen begriplig och under användarens kontroll.</p>
+        </section>
+
+        <section>
+            <h2>Hur vi bygger</h2>
+            <p>Vi fokuserar på ett projekt i taget. Vi bygger våra egna produkter i stället för att ta kunduppdrag. Det gör att vi kan fatta beslut utifrån vad som är rimligt, inte vad som säljer.</p>
+            <p>Vår affärsmodell är produkt-först. Vi tar betalt på ett transparent sätt när det är lämpligt och kan använda annonser för att stödja gratis funktioner, men vi säljer inte användardata.</p>
+        </section>
+
+        <section>
+            <h2>Vad vi bygger</h2>
+            <p>Vi bygger små, fokuserade applikationer med tydliga gränser—verktyg som hjälper människor att lära sig, arbeta och fatta beslut med AI på ett praktiskt sätt. Vi levererar produkter, itererar och håller omfattningen tajt.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Impressum</a>
+            <a href="legal/privacy.html">Integritet</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/about.html",
+        "en": "../en/about.html",
+        "fr": "../fr/about.html",
+        "es": "../es/about.html",
+        "it": "../it/about.html",
+        "nl": "../nl/about.html",
+        "sv": "../sv/about.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+
+// Page navigation
+var pageNav = document.getElementById("page-nav-select");
+if (pageNav) {
+    pageNav.addEventListener("change", function() {
+        window.location.href = this.value;
+    });
+}
+</script>
+</body>
+</html>
