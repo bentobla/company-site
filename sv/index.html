@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Vi bygger fokuserade, praktiska applikationer med AI där det ger tydligt värde. Bra AI är pragmatisk, återhållsam och användbar.">
+    <link rel="canonical" href="https://jetztunddahanna.com/sv/">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="./" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            
+            <select id="page-nav-select" aria-label="Start">
+                <option value="./" selected>Start</option>
+                <option value="about.html">Om oss</option>
+                <option value="projects.html">Projekt</option>
+                <option value="principles.html">Principer</option>
+                <option value="contact.html">Kontakt</option>
+            </select>
+            <a href="about.html">Om oss</a>
+            <a href="projects.html">Projekt</a>
+            <a href="principles.html">Principer</a>
+            <a href="contact.html">Kontakt</a>
+
+            <select id="lang-switch" aria-label="Välj språk">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+                <option value="sv" selected>SV</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page">
+        <section>
+            <h1>Vi bygger användbara applikationer med AI</h1>
+            <p class="lead">Vissa säger att AI kommer rädda oss. Andra säger att undergången är nära. Vi ser ett användbart verktyg—när det används med omsorg. Vi bygger fokuserade applikationer som hjälper människor att använda AI till sin fördel.</p>
+        </section>
+
+        <section>
+            <h2>Bra AI</h2>
+            <p>Vi ser AI som ett verktyg, inte en lösning på varje problem. Bra AI innebär att använda det med omdöme och återhållsamhet. Det innebär att bygga applikationer som förblir begripliga och som låter användaren behålla kontrollen.</p>
+            <p>Vi fokuserar på problem där AI faktiskt hjälper, och vi håller resultatet enkelt, begripligt och under användarens kontroll.</p>
+        </section>
+
+        <section>
+            <h2>Aktuellt projekt</h2>
+            <div class="project-card">
+                <span class="status-badge">Kommer snart till Play Store &amp; App Store</span>
+                <h3>lœrn</h3>
+                <p>Offline-flashcards: skapa dina egna kort, organisera kortlekar och plugga med aktiv återkallelse—inget konto, inget moln. Importera innehåll, även kort som skapats med din egen AI.</p>
+                <p><a href="projects/loern.html" class="text-link">Läs mer om lœrn</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Så arbetar vi</h2>
+            <p>Vi bygger applikationer som produkter, inte som tjänster. Vi fokuserar på att leverera och förbättra våra egna verktyg—var och en speglar vårt synsätt på genomtänkt, återhållsam teknik.</p>
+            <p><a href="principles.html" class="text-link">Läs våra principer</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Impressum</a>
+            <a href="legal/privacy.html">Integritet</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../de/",
+        "en": "../en/",
+        "fr": "../fr/",
+        "es": "../es/",
+        "it": "../it/",
+        "nl": "../nl/",
+        "sv": "../sv/"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+
+// Page navigation
+var pageNav = document.getElementById("page-nav-select");
+if (pageNav) {
+    pageNav.addEventListener("change", function() {
+        window.location.href = this.value;
+    });
+}
+</script>
+</body>
+</html>

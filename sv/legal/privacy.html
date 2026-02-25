@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integritetspolicy – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Information om hur vi hanterar personuppgifter och integritet.">
+    <link rel="canonical" href="https://jetztunddahanna.com/sv/legal/privacy.html">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <header class="site-header">
+        <a href="../" class="brand">
+            <div class="brand-logo">
+                <img src="../../company_logo.png" alt="Jetzt & Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            
+            <select id="page-nav-select" aria-label="Start">
+                <option value="../">Start</option>
+                <option value="../about.html">Om oss</option>
+                <option value="../projects.html">Projekt</option>
+                <option value="../principles.html">Principer</option>
+                <option value="../contact.html">Kontakt</option>
+            </select>
+            <a href="../about.html">Om oss</a>
+            <a href="../projects.html">Projekt</a>
+            <a href="../principles.html">Principer</a>
+            <a href="../contact.html">Kontakt</a>
+
+            <select id="lang-switch" aria-label="Välj språk">
+                <option value="de">DE</option>
+                <option value="en">EN</option>
+                <option value="fr">FR</option>
+                <option value="es">ES</option>
+                <option value="it">IT</option>
+                <option value="nl">NL</option>
+                <option value="sv" selected>SV</option>
+            </select>
+        </nav>
+    </header>
+
+    <main class="page narrow legal-content">
+        <h1>Integritetspolicy</h1>
+
+        <section>
+            <h2>Översikt</h2>
+            <p>
+                Den här webbplatsen drivs av Tobias Blankenhorn (se <a href="imprint.html" class="text-link">Impressum</a>). Vi tar integritet på allvar och behandlar personuppgifter i enlighet med tillämplig dataskyddslagstiftning.
+            </p>
+            <p>
+                I korthet: vi samlar inte in onödiga uppgifter. Vi använder inga spårningscookies och ingen analys som följer dig över tid.
+            </p>
+        </section>
+
+        <section>
+            <h2>Serverloggar</h2>
+            <p>
+                När du besöker webbplatsen kan vår webbserver (eller vår hosting-leverantör) automatiskt spara information i s.k. serverloggar. Dessa kan omfatta IP-adress, datum och tid, begärd sida, mängd data, webbläsare och operativsystem.
+            </p>
+            <p>
+                Behandlingen sker för att säkerställa drift, stabilitet och säkerhet (t.ex. för att upptäcka attacker). Loggarna används inte för att skapa profiler.
+            </p>
+        </section>
+
+        <section>
+            <h2>Kontakt via e-post</h2>
+            <p>
+                Om du kontaktar oss via e-post behandlar vi de uppgifter du skickar (t.ex. e-postadress och innehåll) i syfte att besvara din förfrågan.
+            </p>
+        </section>
+
+        <section>
+            <h2>Cookies</h2>
+            <p>
+                Den här webbplatsen använder inga cookies för spårning. Om cookies används av tekniska skäl (t.ex. av din webbläsare eller hostingplattformen) används de inte för marknadsföring.
+            </p>
+        </section>
+
+        <section>
+            <h2>Dina rättigheter</h2>
+            <p>
+                Du kan ha rätt till tillgång, rättelse, radering, begränsning av behandling och invändning, samt dataportabilitet. För att utöva dina rättigheter, kontakta oss via <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>Ändringar</h2>
+            <p>
+                Vi kan uppdatera denna integritetspolicy vid behov. Den senaste versionen publiceras på den här sidan.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="imprint.html">Impressum</a>
+            <a href="privacy.html">Integritet</a>
+        </div>
+    </footer>
+
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    var pages = {
+        "de": "../../de/legal/privacy.html",
+        "en": "../../en/legal/privacy.html",
+        "fr": "../../fr/legal/privacy.html",
+        "es": "../../es/legal/privacy.html",
+        "it": "../../it/legal/privacy.html",
+        "nl": "../../nl/legal/privacy.html",
+        "sv": "../../sv/legal/privacy.html"
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+
+// Page navigation
+var pageNav = document.getElementById("page-nav-select");
+if (pageNav) {
+    pageNav.addEventListener("change", function() {
+        window.location.href = this.value;
+    });
+}
+</script>
+</body>
+</html>
