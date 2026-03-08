@@ -6,9 +6,11 @@
     if (!header) return;
 
     // Ensure content never sits under the fixed header.
-    // Keep the existing desktop spacing as a minimum.
+    // Keep the existing spacing as a minimum (smaller on mobile).
     var headerHeight = header.offsetHeight || 0;
-    var desired = Math.max(160, headerHeight + 32);
+    var isMobile = window.matchMedia && window.matchMedia("(max-width: 768px)").matches;
+    var minTop = isMobile ? 110 : 160;
+    var desired = Math.max(minTop, headerHeight + 24);
     document.documentElement.style.setProperty("--page-top", desired + "px");
   }
 

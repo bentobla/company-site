@@ -621,7 +621,7 @@ section:last-child {
     }
     
     .page {
-        padding: 100px 1.25rem 3rem;
+        padding: var(--page-top, 100px) 1.25rem 3rem;
     }
     
     h1 {
