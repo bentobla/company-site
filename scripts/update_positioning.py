@@ -5,6 +5,7 @@ This performs targeted, deterministic replacements in a small set of pages:
 - */index.html
 - */about.html
 - */principles.html
+- */projects.html
 
 It intentionally does NOT touch contact pages or legal/privacy pages.
 
@@ -50,7 +51,8 @@ def main() -> int:
     targets: dict[Path, list[Replacement]] = {}
 
     def add(rel_path: str, *repls: Replacement) -> None:
-        targets[ROOT / rel_path] = list(repls)
+        path = ROOT / rel_path
+        targets.setdefault(path, []).extend(repls)
 
     # --- INDEX pages ---
     add(
@@ -604,6 +606,181 @@ def main() -> int:
             old='                <h3>Duidelijke grenzen</h3>\n                <p>Elke applicatie heeft een specifiek doel. We bouwen geen platforms die eindeloos uitbreiden. We bouwen hulpmiddelen die één ding goed doen.</p>',
             new='                <h3>Duidelijke grenzen</h3>\n                <p>Elke applicatie heeft een specifiek doel. We bouwen hulpmiddelen met een bewust strakke scope die één ding goed doen.</p>',
             label="nl:principles:boundaries",
+        ),
+    )
+
+    # --- PHASE 4: Content tightening & trust signals ---
+    # Home lead: make it more concrete (what we build + for whom).
+    add(
+        "en/index.html",
+        Replacement(
+            old='            <p class="lead">Some say AI will save us. Others say doomsday is near. We see a helpful tool—when used with care. We build focused applications that help people use AI to their advantage.</p>',
+            new='            <p class="lead">We build calm, focused products for learning and work. We use AI where it adds clear value—and keep the experience simple, understandable, and user-controlled.</p>',
+            label="en:index:lead:phase4",
+        ),
+    )
+    add(
+        "de/index.html",
+        Replacement(
+            old='            <p class="lead">Manche sagen, KI sei unser Retter. Andere sagen, der Untergang sei nah. Wir sehen ein hilfreiches Werkzeug – wenn es richtig eingesetzt wird. Wir bauen fokussierte Anwendungen, die Menschen helfen, KI zu ihrem Vorteil zu nutzen.</p>',
+            new='            <p class="lead">Wir bauen ruhige, fokussierte Produkte fürs Lernen und Arbeiten. Wir setzen KI dort ein, wo sie klaren Nutzen bringt – und halten alles einfach, verständlich und unter Kontrolle des Nutzers.</p>',
+            label="de:index:lead:phase4",
+        ),
+    )
+    add(
+        "fr/index.html",
+        Replacement(
+            old='            <p class="lead">Certains disent que l\'IA nous sauvera, d\'autres que la fin est proche. Nous y voyons surtout un outil utile — lorsqu\'il est bien utilisé. Nous construisons des applications ciblées qui aident les gens à tirer parti de l\'IA.</p>',
+            new='            <p class="lead">Nous construisons des produits calmes et ciblés pour apprendre et travailler. Nous utilisons l\'IA là où elle apporte une valeur claire — en gardant l\'expérience simple, compréhensible et sous le contrôle de l\'utilisateur.</p>',
+            label="fr:index:lead:phase4",
+        ),
+    )
+    add(
+        "es/index.html",
+        Replacement(
+            old='            <p class="lead">Algunos dicen que la IA será nuestro salvador; otros, que el fin está cerca. Nosotros la vemos como una herramienta útil, si se usa bien. Construimos aplicaciones enfocadas que ayudan a las personas a aprovechar la IA a su favor.</p>',
+            new='            <p class="lead">Construimos productos tranquilos y enfocados para aprender y trabajar. Usamos la IA donde aporta valor claro, manteniendo la experiencia simple, comprensible y bajo el control del usuario.</p>',
+            label="es:index:lead:phase4",
+        ),
+    )
+    add(
+        "it/index.html",
+        Replacement(
+            old='            <p class="lead">C\'è chi dice che l\'IA ci salverà e chi parla di fine imminente. Noi la vediamo come uno strumento utile, se usato bene. Costruiamo applicazioni mirate che aiutano le persone a usare l\'IA a proprio vantaggio.</p>',
+            new='            <p class="lead">Costruiamo prodotti calmi e mirati per imparare e lavorare. Usiamo l\'IA dove porta valore chiaro, mantenendo l\'esperienza semplice, comprensibile e sotto il controllo dell\'utente.</p>',
+            label="it:index:lead:phase4",
+        ),
+    )
+    add(
+        "nl/index.html",
+        Replacement(
+            old='            <p class="lead">Sommigen zeggen dat AI onze redder is, anderen dat het einde nabij is. Wij zien vooral een handig hulpmiddel—als je het goed inzet. We bouwen gerichte applicaties die mensen helpen AI in hun voordeel te gebruiken.</p>',
+            new='            <p class="lead">We bouwen rustige, gerichte producten om te leren en te werken. We gebruiken AI waar het duidelijke waarde toevoegt—en houden de ervaring simpel, begrijpelijk en onder controle van de gebruiker.</p>',
+            label="nl:index:lead:phase4",
+        ),
+    )
+    add(
+        "sv/index.html",
+        Replacement(
+            old='            <p class="lead">Vissa säger att AI kommer rädda oss. Andra säger att undergången är nära. Vi ser ett användbart verktyg—när det används med omsorg. Vi bygger fokuserade applikationer som hjälper människor att använda AI till sin fördel.</p>',
+            new='            <p class="lead">Vi bygger lugna, fokuserade produkter för lärande och arbete. Vi använder AI där det ger tydligt värde—och håller upplevelsen enkel, begriplig och under användarens kontroll.</p>',
+            label="sv:index:lead:phase4",
+        ),
+    )
+
+    # About: replace the redundant AI section with a short “what to expect” section.
+    add(
+        "en/about.html",
+        Replacement(
+            old='        <section>\n            <h2>AI as a tool</h2>\n            <p>AI can be useful when applied with care. It can help clarify, organize, and reduce repetitive work. We use it where it provides clear value, and keep the experience understandable and under the user\'s control.</p>\n        </section>',
+            new='        <section>\n            <h2>What to expect</h2>\n            <p><strong>Product-first:</strong> we build and maintain our own applications (no client work).</p>\n            <p><strong>Calm by default:</strong> clear boundaries, minimal notifications, no dark patterns.</p>\n            <p><strong>Privacy-minded:</strong> data minimization and transparent monetization.</p>\n        </section>',
+            label="en:about:expectations:phase4",
+        ),
+    )
+    add(
+        "de/about.html",
+        Replacement(
+            old='        <section>\n            <h2>KI als Werkzeug</h2>\n            <p>KI kann nützlich sein, wenn sie sorgfältig eingesetzt wird. Sie kann helfen, Dinge zu klären, zu organisieren und repetitive Arbeit zu reduzieren. Wir setzen sie dort ein, wo sie klaren Nutzen bringt, und gestalten Anwendungen so, dass sie verständlich bleiben und die Kontrolle beim Nutzer lassen.</p>\n        </section>',
+            new='        <section>\n            <h2>Was du erwarten kannst</h2>\n            <p><strong>Produktfokus:</strong> Wir entwickeln und pflegen eigene Anwendungen (keine Kundenprojekte).</p>\n            <p><strong>Ruhig standardmäßig:</strong> klare Grenzen, wenige Benachrichtigungen, keine Dark Patterns.</p>\n            <p><strong>Datenschutzbewusst:</strong> Datensparsamkeit und transparente Monetarisierung.</p>\n        </section>',
+            label="de:about:expectations:phase4",
+        ),
+    )
+    add(
+        "fr/about.html",
+        Replacement(
+            old='        <section>\n            <h2>L\'IA comme outil</h2>\n            <p>L\'IA peut être utile lorsqu\'elle est appliquée avec soin. Elle peut aider à clarifier, organiser et réduire le travail répétitif. Nous l\'utilisons là où elle apporte une valeur claire, tout en gardant l\'expérience compréhensible et sous le contrôle de l\'utilisateur.</p>\n        </section>',
+            new='        <section>\n            <h2>À quoi s\'attendre</h2>\n            <p><strong>Produit d\'abord :</strong> nous construisons et maintenons nos propres applications (pas de missions client).</p>\n            <p><strong>Calme par défaut :</strong> limites claires, peu de notifications, pas de dark patterns.</p>\n            <p><strong>Respect de la vie privée :</strong> minimisation des données et monétisation transparente.</p>\n        </section>',
+            label="fr:about:expectations:phase4",
+        ),
+    )
+    add(
+        "es/about.html",
+        Replacement(
+            old='        <section>\n            <h2>IA como herramienta</h2>\n            <p>La IA puede ser útil cuando se aplica con cuidado. Puede ayudar a aclarar, organizar y reducir el trabajo repetitivo. La usamos donde aporta valor claro, manteniendo la experiencia entendible y bajo control del usuario.</p>\n        </section>',
+            new='        <section>\n            <h2>Qué esperar</h2>\n            <p><strong>Producto primero:</strong> construimos y mantenemos nuestras propias aplicaciones (sin trabajo para clientes).</p>\n            <p><strong>Calma por defecto:</strong> límites claros, pocas notificaciones, sin dark patterns.</p>\n            <p><strong>Privacidad:</strong> minimización de datos y monetización transparente.</p>\n        </section>',
+            label="es:about:expectations:phase4",
+        ),
+    )
+    add(
+        "it/about.html",
+        Replacement(
+            old='        <section>\n            <h2>L\'IA come strumento</h2>\n            <p>L\'IA può essere utile quando applicata con cura. Può aiutare a chiarire, organizzare e ridurre il lavoro ripetitivo. Lausiamo dove apporta valore chiaro, mantenendo l\'esperienza comprensibile e sotto il controllo dell\'utente.</p>\n        </section>',
+            new='        <section>\n            <h2>Cosa aspettarsi</h2>\n            <p><strong>Prodotto prima di tutto:</strong> costruiamo e manteniamo le nostre applicazioni (niente lavori per clienti).</p>\n            <p><strong>Calmo per impostazione predefinita:</strong> confini chiari, poche notifiche, niente dark pattern.</p>\n            <p><strong>Privacy:</strong> minimizzazione dei dati e monetizzazione trasparente.</p>\n        </section>',
+            label="it:about:expectations:phase4",
+        ),
+    )
+    add(
+        "nl/about.html",
+        Replacement(
+            old='        <section>\n            <h2>AI als hulpmiddel</h2>\n            <p>AI kan nuttig zijn wanneer het zorgvuldig wordt toegepast. Het kan helpen om te verduidelijken, te organiseren en repetitief werk te verminderen. We gebruiken het waar het duidelijke waarde biedt, terwijl we de ervaring begrijpelijk houden en onder controle van de gebruiker.</p>\n        </section>',
+            new='        <section>\n            <h2>Wat je kunt verwachten</h2>\n            <p><strong>Product-first:</strong> we bouwen en onderhouden onze eigen applicaties (geen klantwerk).</p>\n            <p><strong>Standaard rustig:</strong> duidelijke grenzen, weinig meldingen, geen dark patterns.</p>\n            <p><strong>Privacy:</strong> dataminimalisatie en transparante monetisatie.</p>\n        </section>',
+            label="nl:about:expectations:phase4",
+        ),
+    )
+    add(
+        "sv/about.html",
+        Replacement(
+            old='        <section>\n            <h2>AI som ett verktyg</h2>\n            <p>AI kan vara användbart när det används med omsorg. Det kan hjälpa till att förtydliga, organisera och minska repetitivt arbete. Vi använder det där det ger tydligt värde och håller upplevelsen begriplig och under användarens kontroll.</p>\n        </section>',
+            new='        <section>\n            <h2>Vad du kan förvänta dig</h2>\n            <p><strong>Produkt först:</strong> vi bygger och underhåller våra egna applikationer (inget kundarbete).</p>\n            <p><strong>Lugnt som standard:</strong> tydliga gränser, få notiser, inga dark patterns.</p>\n            <p><strong>Integritet:</strong> dataminimering och transparent monetisering.</p>\n        </section>',
+            label="sv:about:expectations:phase4",
+        ),
+    )
+
+    # Projects: add quick trust signals under the lœrn card.
+    add(
+        "en/projects.html",
+        Replacement(
+            old='                <p>Offline flashcards: create your own cards, organize decks, and study with active recall—no account, no cloud. Import content, including cards generated with your own AI.</p>',
+            new='                <p>Offline flashcards: create your own cards, organize decks, and study with active recall—no account, no cloud. Import content, including cards generated with your own AI.</p>\n                <p>Offline-first. No account. Your learning data stays on your device.</p>',
+            label="en:projects:loern-trust:phase4",
+        ),
+    )
+    add(
+        "de/projects.html",
+        Replacement(
+            old='                <p>Offline Karteikarten-App: Erstelle eigene Lernkarten, organisiere Decks und lerne mit aktivem Wiederholen – ohne Konto und ohne Cloud. Inhalte kannst du importieren, auch wenn sie mit deiner eigenen KI erstellt wurden.</p>',
+            new='                <p>Offline Karteikarten-App: Erstelle eigene Lernkarten, organisiere Decks und lerne mit aktivem Wiederholen – ohne Konto und ohne Cloud. Inhalte kannst du importieren, auch wenn sie mit deiner eigenen KI erstellt wurden.</p>\n                <p>Offline-first. Kein Konto. Deine Lerndaten bleiben auf deinem Gerät.</p>',
+            label="de:projects:loern-trust:phase4",
+        ),
+    )
+    add(
+        "fr/projects.html",
+        Replacement(
+            old='                <p>Flashcards hors ligne : créez vos cartes, organisez des decks et révisez avec rappel actif — sans compte, sans cloud. Importez du contenu, y compris des cartes générées avec votre propre IA.</p>',
+            new='                <p>Flashcards hors ligne : créez vos cartes, organisez des decks et révisez avec rappel actif — sans compte, sans cloud. Importez du contenu, y compris des cartes générées avec votre propre IA.</p>\n                <p>Hors ligne d\'abord. Pas de compte. Vos données d\'apprentissage restent sur votre appareil.</p>',
+            label="fr:projects:loern-trust:phase4",
+        ),
+    )
+    add(
+        "es/projects.html",
+        Replacement(
+            old='                <p>Flashcards offline: crea tus tarjetas, organiza mazos y repasa con repetición activa — sin cuenta, sin nube. Importa contenido, incluso tarjetas generadas con tu propia IA.</p>',
+            new='                <p>Flashcards offline: crea tus tarjetas, organiza mazos y repasa con repetición activa — sin cuenta, sin nube. Importa contenido, incluso tarjetas generadas con tu propia IA.</p>\n                <p>Offline primero. Sin cuenta. Tus datos de aprendizaje se quedan en tu dispositivo.</p>',
+            label="es:projects:loern-trust:phase4",
+        ),
+    )
+    add(
+        "it/projects.html",
+        Replacement(
+            old='                <p>Flashcard offline: crea le tue schede, organizza i mazzi e ripassa con richiamo attivo — senza account, senza cloud. Importa contenuti, anche schede generate con la tua IA.</p>',
+            new='                <p>Flashcard offline: crea le tue schede, organizza i mazzi e ripassa con richiamo attivo — senza account, senza cloud. Importa contenuti, anche schede generate con la tua IA.</p>\n                <p>Offline prima di tutto. Nessun account. I tuoi dati di studio restano sul tuo dispositivo.</p>',
+            label="it:projects:loern-trust:phase4",
+        ),
+    )
+    add(
+        "nl/projects.html",
+        Replacement(
+            old='                <p>Offline flashcards: maak je eigen kaarten, organiseer decks en studeer met actieve herhaling — geen account, geen cloud. Importeer content, ook kaarten die met je eigen AI zijn gemaakt.</p>',
+            new='                <p>Offline flashcards: maak je eigen kaarten, organiseer decks en studeer met actieve herhaling — geen account, geen cloud. Importeer content, ook kaarten die met je eigen AI zijn gemaakt.</p>\n                <p>Offline-first. Geen account. Je leerdata blijft op je apparaat.</p>',
+            label="nl:projects:loern-trust:phase4",
+        ),
+    )
+    add(
+        "sv/projects.html",
+        Replacement(
+            old='                <p>Offline-flashcards: skapa dina egna kort, organisera kortlekar och plugga med aktiv återkallelse—inget konto, inget moln. Importera innehåll, även kort som skapats med din egen AI.</p>',
+            new='                <p>Offline-flashcards: skapa dina egna kort, organisera kortlekar och plugga med aktiv återkallelse—inget konto, inget moln. Importera innehåll, även kort som skapats med din egen AI.</p>\n                <p>Offline först. Inget konto. Dina studiedata stannar på din enhet.</p>',
+            label="sv:projects:loern-trust:phase4",
         ),
     )
 
