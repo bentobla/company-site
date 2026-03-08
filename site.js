@@ -1,6 +1,26 @@
 (function () {
   "use strict";
 
+  function updatePageTopPadding() {
+    var header = document.querySelector(".site-header");
+    if (!header) return;
+
+    // Ensure content never sits under the fixed header.
+    // Keep the existing desktop spacing as a minimum.
+    var headerHeight = header.offsetHeight || 0;
+    var desired = Math.max(160, headerHeight + 32);
+    document.documentElement.style.setProperty("--page-top", desired + "px");
+  }
+
+  // site.js is loaded at the end of <body>, but header height can change
+  // after layout/paint (e.g. wrapping, fonts). Update a few times.
+  updatePageTopPadding();
+  window.addEventListener("load", updatePageTopPadding);
+  window.addEventListener("resize", updatePageTopPadding);
+  window.addEventListener("orientationchange", updatePageTopPadding);
+  setTimeout(updatePageTopPadding, 0);
+  setTimeout(updatePageTopPadding, 250);
+
   function getPageKey(pathname) {
     // Normalize
     var p = (pathname || "/").toLowerCase();

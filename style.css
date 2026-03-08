@@ -5,6 +5,7 @@
     --text-muted: #606575;
     --border-subtle: rgba(11, 28, 61, 0.08);
     --measure: 72ch;
+    --page-top: 160px;
 }
 
 * {
@@ -222,7 +223,7 @@ button:focus-visible,
 .page {
     max-width: 1120px;
     margin: 0 auto;
-    padding: 160px 2rem 4rem;
+    padding: var(--page-top, 160px) 2rem 4rem;
 }
 
 .page.narrow {
