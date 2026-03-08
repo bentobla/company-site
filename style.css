@@ -130,12 +130,12 @@ button:focus-visible,
     white-space: nowrap;
 }
 
-.main-nav a:hover {
+.main-nav a:not(.nav-cta):hover {
     background: rgba(255, 255, 255, 0.12);
     border-color: rgba(248, 250, 252, 0.35);
 }
 
-.main-nav a.active {
+.main-nav a:not(.nav-cta).active {
     border-color: #ffb653;
     background: rgba(255, 255, 255, 0.10);
 }
@@ -164,7 +164,7 @@ button:focus-visible,
 }
 
 /* Orange Contact Button */
-.nav-cta {
+.main-nav a.nav-cta {
     background: #ffb653;
     color: #111827 !important;
     padding: 0.55rem 1.2rem;
@@ -175,7 +175,8 @@ button:focus-visible,
     transition: opacity 0.2s;
 }
 
-.nav-cta:hover {
+.main-nav a.nav-cta:hover,
+.main-nav a.nav-cta.active {
     opacity: 0.9;
 }
 
