@@ -10,6 +10,7 @@
 </head>
 <body>
     <header class="site-header">
+        <div class="header-content">
         <a href="./" class="brand">
             <div class="brand-logo">
                 <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
@@ -32,7 +33,7 @@
             <a href="about.html">Über uns</a>
             <a href="projects.html">Projekte</a>
             <a href="principles.html">Prinzipien</a>
-            <a href="contact.html">Kontakt</a>
+            <a href="contact.html" class="nav-cta">Kontakt</a>
 
             <select id="lang-switch" aria-label="Sprache wählen">
                 <option value="de" selected>DE</option>
@@ -44,6 +45,7 @@
                 <option value="sv">SV</option>
 </select>
         </nav>
+            </div>
     </header>
 
     <main class="page narrow">
@@ -69,11 +71,12 @@
             <a href="legal/privacy.html">Datenschutz</a>
         </div>
     </footer>
-
+    <script src="../site.js"></script>
     <script>
 // Language switcher
 document.getElementById("lang-switch").addEventListener("change", function() {
     var lang = this.value;
+    try { localStorage.setItem("jd_lang", lang); } catch (e) {}
     var pages = {
         "de": "../de/contact.html",
         "en": "../en/contact.html",

@@ -10,40 +10,42 @@
 </head>
 <body>
     <header class="site-header">
-        <a href="./" class="brand">
-            <div class="brand-logo">
-                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
-            </div>
-            <div class="brand-text">
-                <span class="brand-name">JETZT &amp; DAHANNA</span>
-                <span class="brand-tagline">Technologies</span>
-            </div>
-        </a>
+        <div class="header-content">
+            <a href="./" class="brand">
+                <div class="brand-logo">
+                    <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">JETZT &amp; DAHANNA</span>
+                    <span class="brand-tagline">Technologies</span>
+                </div>
+            </a>
 
-        <nav class="main-nav">
-            
-            <select id="page-nav-select" aria-label="Home">
-                <option value="./" selected>Home</option>
-                <option value="about.html">About</option>
-                <option value="projects.html">Projects</option>
-                <option value="principles.html">Principles</option>
-                <option value="contact.html">Contact</option>
-            </select>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="principles.html">Principles</a>
-            <a href="contact.html">Contact</a>
+            <nav class="main-nav">
+                
+                <select id="page-nav-select" aria-label="Home">
+                    <option value="./" selected>Home</option>
+                    <option value="about.html">About</option>
+                    <option value="projects.html">Projects</option>
+                    <option value="principles.html">Principles</option>
+                    <option value="contact.html">Contact</option>
+                </select>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="principles.html">Principles</a>
+                <a href="contact.html" class="nav-cta">Contact</a>
 
-            <select id="lang-switch" aria-label="Choose language">
-                <option value="de">DE</option>
-                <option value="en" selected>EN</option>
-                <option value="fr">FR</option>
-                <option value="es">ES</option>
-                <option value="it">IT</option>
-                <option value="nl">NL</option>
-                <option value="sv">SV</option>
-</select>
-        </nav>
+                <select id="lang-switch" aria-label="Choose language">
+                    <option value="de">DE</option>
+                    <option value="en" selected>EN</option>
+                    <option value="fr">FR</option>
+                    <option value="es">ES</option>
+                    <option value="it">IT</option>
+                    <option value="nl">NL</option>
+                    <option value="sv">SV</option>
+                </select>
+            </nav>
+        </div>
     </header>
 
     <main class="page">
@@ -81,11 +83,12 @@
             <a href="legal/privacy.html">Privacy</a>
         </div>
     </footer>
-
+    <script src="../site.js"></script>
     <script>
 // Language switcher
 document.getElementById("lang-switch").addEventListener("change", function() {
     var lang = this.value;
+    try { localStorage.setItem("jd_lang", lang); } catch (e) {}
     var pages = {
         "de": "../de/",
         "en": "../en/",
