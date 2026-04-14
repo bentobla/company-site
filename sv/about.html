@@ -44,6 +44,9 @@
                 <option value="it">IT</option>
                 <option value="nl">NL</option>
                 <option value="sv" selected>SV</option>
+                    <option value="pl">PL</option>
+                    <option value="pt-br">PT-BR</option>
+                    <option value="pt-pt">PT-PT</option>
             </select>
         </nav>
             </div>
@@ -96,7 +99,10 @@ document.getElementById("lang-switch").addEventListener("change", function() {
         "es": "../es/about.html",
         "it": "../it/about.html",
         "nl": "../nl/about.html",
-        "sv": "../sv/about.html"
+        "sv": "../sv/about.html",
+        "pl": "../pl/about.html",
+        "pt-br": "../pt-br/about.html",
+        "pt-pt": "../pt-pt/about.html"
     };
     if (pages[lang]) {
         window.location.href = pages[lang];

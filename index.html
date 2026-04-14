@@ -71,6 +71,9 @@
             if (code.startsWith("fr")) return "fr";
             if (code.startsWith("nl")) return "nl";
             if (code.startsWith("sv")) return "sv";
+            if (code.startsWith("pl")) return "pl";
+            if (code === "pt-br" || code.startsWith("pt-b")) return "pt-br";
+            if (code === "pt-pt" || code.startsWith("pt-p") || code.startsWith("pt")) return "pt-pt";
             return "en"; // Fallback
         }
 

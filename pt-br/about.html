@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Uma empresa pequena e independente criando aplicações focadas com uso criterioso de IA.">
+    <link rel="canonical" href="https://jetztunddahanna.com/pt-br/about.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Ir para o conteúdo</a>
+    <header class="site-header">
+        <div class="header-content">
+        <a href="./" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt &amp; Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            
+            <select id="page-nav-select" aria-label="Início">
+                <option value="./">Início</option>
+                <option value="about.html" selected>Sobre</option>
+                <option value="projects.html">Projetos</option>
+                <option value="principles.html">Princípios</option>
+                <option value="contact.html">Contato</option>
+            </select>
+            <a href="./about.html">Sobre</a>
+            <a href="./projects.html">Projetos</a>
+            <a href="./principles.html">Princípios</a>
+            <a href="./contact.html" class="nav-cta">Contato</a>
+
+            <select id="lang-switch" aria-label="Escolher idioma">
+                    <option value="de">DE</option>
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="es">ES</option>
+                    <option value="it">IT</option>
+                    <option value="nl">NL</option>
+                    <option value="sv">SV</option>
+                    <option value="pl">PL</option>
+                    <option value="pt-br" selected>PT-BR</option>
+                    <option value="pt-pt">PT-PT</option>
+</select>
+        </nav>
+        </div>
+    </header>
+
+    <main id="main" class="page narrow">
+        <h1>Sobre</h1>
+        
+        <section>
+            <h2>Perspectiva</h2>
+            <p>Jetzt &amp; Dahanna Technologies é uma empresa pequena e independente. Desenvolvemos aplicações, não serviços. Cada produto reflete uma decisão sobre como a tecnologia deveria funcionar.</p>
+            <p>Acreditamos que um bom software respeita os usuários. Isso significa sem padrões obscuros, sem armadilhas de assinatura e sem coleta de dados. Significa ser claro sobre o que uma ferramenta faz e deixar as pessoas no controle.</p>
+        </section>
+
+        <section>
+            <h2>O que esperar</h2>
+            <p><strong>Produto em primeiro lugar:</strong> desenvolvemos e mantemos nossas próprias aplicações (sem trabalho para clientes).</p>
+            <p><strong>Calmo por padrão:</strong> limites claros, notificações mínimas, sem padrões obscuros.</p>
+            <p><strong>Privacidade em primeiro lugar:</strong> minimização de dados e monetização transparente.</p>
+        </section>
+
+        <section>
+            <h2>Como desenvolvemos</h2>
+            <p>Focamos em um projeto por vez. Desenvolvemos nossos próprios produtos em vez de aceitar trabalho de clientes. Isso nos permite tomar decisões com base no que faz sentido, não no que vende.</p>
+            <p>Nosso modelo de negócios coloca o produto em primeiro lugar. Cobramos de forma transparente quando apropriado e podemos usar publicidade para suportar recursos gratuitos, mas não vendemos dados de usuários.</p>
+        </section>
+
+        <section>
+            <h2>O que desenvolvemos</h2>
+            <p>Desenvolvemos aplicações pequenas e focadas com limites claros — ferramentas que ajudam pessoas a aprender, trabalhar e tomar decisões com IA de forma prática. Lançamos produtos, iteramos e mantemos o escopo restrito.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Informações legais</a>
+            <a href="legal/privacy.html">Privacidade</a>
+        </div>
+    </footer>
+    <script src="../site.js"></script>
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    try { localStorage.setItem("jd_lang", lang); } catch (e) {}
+    var pages = {
+        "de": "../de/about.html",
+        "en": "../en/about.html",
+        "fr": "../fr/about.html",
+        "es": "../es/about.html",
+        "it": "../it/about.html",
+        "nl": "../nl/about.html",
+        "sv": "../sv/about.html",
+        "pl": "../pl/about.html",
+        "pt-br": "../pt-br/about.html",
+        "pt-pt": "../pt-pt/about.html",
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+
+// Page navigation
+var pageNav = document.getElementById("page-nav-select");
+if (pageNav) {
+    pageNav.addEventListener("change", function() {
+        window.location.href = this.value;
+    });
+}
+</script>
+</body>
+</html>

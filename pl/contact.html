@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Skontaktuj się z Jetzt & Dahanna Technologies.">
+    <link rel="canonical" href="https://jetztunddahanna.com/pl/contact.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+    <header class="site-header">
+        <div class="header-content">
+        <a href="./" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt &amp; Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            
+            <select id="page-nav-select" aria-label="Strona główna">
+                <option value="./">Strona główna</option>
+                <option value="about.html">O nas</option>
+                <option value="projects.html">Projekty</option>
+                <option value="principles.html">Zasady</option>
+                <option value="contact.html" selected>Kontakt</option>
+            </select>
+            <a href="./about.html">O nas</a>
+            <a href="./projects.html">Projekty</a>
+            <a href="./principles.html">Zasady</a>
+            <a href="./contact.html" class="nav-cta">Kontakt</a>
+
+            <select id="lang-switch" aria-label="Wybierz język">
+                    <option value="de">DE</option>
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="es">ES</option>
+                    <option value="it">IT</option>
+                    <option value="nl">NL</option>
+                    <option value="sv">SV</option>
+                    <option value="pl" selected>PL</option>
+                    <option value="pt-br">PT-BR</option>
+                    <option value="pt-pt">PT-PT</option>
+</select>
+        </nav>
+        </div>
+    </header>
+
+    <main id="main" class="page narrow">
+        <h1>Kontakt</h1>
+        
+        <section>
+            <p>W sprawie pytań, opinii lub zapytań dotyczących naszych aplikacji:</p>
+            
+            <div class="contact-info">
+                <p><a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Uwaga</h2>
+            <p>Nie oferujemy niestandardowego tworzenia oprogramowania, usług doradczych ani pracy dla klientów. Budujemy skupione aplikacje jako produkty.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Informacje prawne</a>
+            <a href="legal/privacy.html">Polityka prywatności</a>
+        </div>
+    </footer>
+    <script src="../site.js"></script>
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    try { localStorage.setItem("jd_lang", lang); } catch (e) {}
+    var pages = {
+        "de": "../de/contact.html",
+        "en": "../en/contact.html",
+        "fr": "../fr/contact.html",
+        "es": "../es/contact.html",
+        "it": "../it/contact.html",
+        "nl": "../nl/contact.html",
+        "sv": "../sv/contact.html",
+        "pl": "../pl/contact.html",
+        "pt-br": "../pt-br/contact.html",
+        "pt-pt": "../pt-pt/contact.html",
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+
+// Page navigation
+var pageNav = document.getElementById("page-nav-select");
+if (pageNav) {
+    pageNav.addEventListener("change", function() {
+        window.location.href = this.value;
+    });
+}
+</script>
+</body>
+</html>

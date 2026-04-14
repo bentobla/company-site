@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Criamos aplicações práticas e focadas usando inteligência artificial. Boa IA significa pragmática, comedida e útil.">
+    <link rel="canonical" href="https://jetztunddahanna.com/pt-br/">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Ir para o conteúdo</a>
+    <header class="site-header">
+        <div class="header-content">
+        <a href="./" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt &amp; Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            
+            <select id="page-nav-select" aria-label="Início">
+                <option value="./" selected>Início</option>
+                <option value="about.html">Sobre</option>
+                <option value="projects.html">Projetos</option>
+                <option value="principles.html">Princípios</option>
+                <option value="contact.html">Contato</option>
+            </select>
+            <a href="./about.html">Sobre</a>
+            <a href="./projects.html">Projetos</a>
+            <a href="./principles.html">Princípios</a>
+            <a href="./contact.html" class="nav-cta">Contato</a>
+
+            <select id="lang-switch" aria-label="Escolher idioma">
+                    <option value="de">DE</option>
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="es">ES</option>
+                    <option value="it">IT</option>
+                    <option value="nl">NL</option>
+                    <option value="sv">SV</option>
+                    <option value="pl">PL</option>
+                    <option value="pt-br" selected>PT-BR</option>
+                    <option value="pt-pt">PT-PT</option>
+</select>
+        </nav>
+        </div>
+    </header>
+
+    <main id="main" class="page">
+        <section>
+            <h1>Criamos aplicações úteis com IA</h1>
+            <p class="lead">Desenvolvemos produtos calmos e focados para aprender e trabalhar. Usamos IA onde ela agrega valor real — e mantemos a experiência simples, compreensível e sob controle do usuário.</p>
+        </section>
+
+        <section>
+            <h2>Boa IA</h2>
+            <p>Acreditamos que a IA é uma ferramenta, não uma solução para todo problema. Boa IA significa usá-la com critério e comedimento. Significa criar aplicações que permaneçam compreensíveis e mantenham os usuários no controle.</p>
+            <p>Focamos em problemas onde a IA realmente ajuda e mantemos o resultado simples, compreensível e sob controle do usuário.</p>
+        </section>
+
+        <section>
+            <h2>Projeto atual</h2>
+            <div class="project-card">
+                <div class="project-card-header">
+                    <div class="project-card-logo" aria-hidden="true">
+                        <img src="../Loern_full_white.png" alt="">
+                    </div>
+                    <h3 style="margin: 0;">Lœrn</h3>
+                </div>
+                <p>Flashcards offline: crie seus próprios cartões, organize decks e estude com recuperação ativa — sem conta, sem nuvem. Importe conteúdo, incluindo cartões gerados com sua própria IA.</p>
+                <div class="project-card-badges" aria-label="Baixar Lœrn">
+                    <a href="https://play.google.com/store/apps/details?id=com.jetztunddahanna.loern" target="_blank" rel="noopener noreferrer" aria-label="Disponível no Google Play" style="display: inline-flex; align-items: center; padding: 0; background: transparent; border: 0; text-decoration: none;">
+                        <img src="../Google%20Play%20Badge%20guidelines/Get%20it%20on%20Google%20Play%20Badges/Digital/svg/GetItOnGooglePlay_Badge_Web_color_Portuguese-Brazil.svg" alt="Disponível no Google Play">
+                    </a>
+                    <a href="https://apps.apple.com/app/l%C5%93rn/id6759726662" target="_blank" rel="noopener noreferrer" aria-label="Baixar na App Store" style="display: inline-flex; align-items: center; padding: 0; background: transparent; border: 0; text-decoration: none;">
+                        <img src="../Download-on-the-App-Store/PTBR/Download_on_App_Store/Black_lockup/SVG/Download_on_the_App_Store_Badge_PTBR_RGB_blk_092917.svg" alt="Baixar na App Store">
+                    </a></div>
+                <p><a href="projects/loern.html" class="text-link">Saiba mais sobre Lœrn</a></p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Como trabalhamos</h2>
+            <p>Desenvolvemos aplicações como produtos, não serviços. Focamos em lançar e aprimorar nossas próprias ferramentas — cada uma reflete nossa abordagem de tecnologia pensada e comedida.</p>
+            <p><a href="principles.html" class="text-link">Leia nossos princípios</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Informações legais</a>
+            <a href="legal/privacy.html">Privacidade</a>
+        </div>
+    </footer>
+    <script src="../site.js"></script>
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    try { localStorage.setItem("jd_lang", lang); } catch (e) {}
+    var pages = {
+        "de": "../de/",
+        "en": "../en/",
+        "fr": "../fr/",
+        "es": "../es/",
+        "it": "../it/",
+        "nl": "../nl/",
+        "sv": "../sv/",
+        "pl": "../pl/",
+        "pt-br": "../pt-br/",
+        "pt-pt": "../pt-pt/",
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+
+// Page navigation
+var pageNav = document.getElementById("page-nav-select");
+if (pageNav) {
+    pageNav.addEventListener("change", function() {
+        window.location.href = this.value;
+    });
+}
+</script>
+</body>
+</html>
