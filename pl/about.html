@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O nas – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Mała, niezależna firma tworząca skupione aplikacje z przemyślanym wykorzystaniem AI.">
+    <link rel="canonical" href="https://jetztunddahanna.com/pl/about.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Przejdź do treści</a>
+    <header class="site-header">
+        <div class="header-content">
+        <a href="./" class="brand">
+            <div class="brand-logo">
+                <img src="../company_logo.png" alt="Jetzt &amp; Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            
+            <select id="page-nav-select" aria-label="Strona główna">
+                <option value="./">Strona główna</option>
+                <option value="about.html" selected>O nas</option>
+                <option value="projects.html">Projekty</option>
+                <option value="principles.html">Zasady</option>
+                <option value="contact.html">Kontakt</option>
+            </select>
+            <a href="./about.html">O nas</a>
+            <a href="./projects.html">Projekty</a>
+            <a href="./principles.html">Zasady</a>
+            <a href="./contact.html" class="nav-cta">Kontakt</a>
+
+            <select id="lang-switch" aria-label="Wybierz język">
+                    <option value="de">DE</option>
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="es">ES</option>
+                    <option value="it">IT</option>
+                    <option value="nl">NL</option>
+                    <option value="sv">SV</option>
+                    <option value="pl" selected>PL</option>
+                    <option value="pt-br">PT-BR</option>
+                    <option value="pt-pt">PT-PT</option>
+</select>
+        </nav>
+        </div>
+    </header>
+
+    <main id="main" class="page narrow">
+        <h1>O nas</h1>
+        
+        <section>
+            <h2>Perspektywa</h2>
+            <p>Jetzt &amp; Dahanna Technologies to mała, niezależna firma. Budujemy aplikacje, nie usługi. Każdy produkt odzwierciedla decyzję o tym, jak powinna działać technologia.</p>
+            <p>Wierzymy, że dobre oprogramowanie szanuje użytkowników. Oznacza to brak ciemnych wzorców, pułapek subskrypcyjnych i zbierania danych. Oznacza jasność co do tego, co robi narzędzie, i pozostawienie ludziom kontroli.</p>
+        </section>
+
+        <section>
+            <h2>Czego oczekiwać</h2>
+            <p><strong>Produkt na pierwszym miejscu:</strong> budujemy i utrzymujemy własne aplikacje (brak pracy dla klientów).</p>
+            <p><strong>Spokój jako standard:</strong> wyraźne granice, minimalne powiadomienia, brak ciemnych wzorców.</p>
+            <p><strong>Prywatność przede wszystkim:</strong> minimalizacja danych i przejrzysta monetyzacja.</p>
+        </section>
+
+        <section>
+            <h2>Jak budujemy</h2>
+            <p>Skupiamy się na jednym projekcie na raz. Budujemy własne produkty zamiast przyjmować zlecenia od klientów. Dzięki temu możemy podejmować decyzje oparte na tym, co ma sens, a nie co się sprzedaje.</p>
+            <p>Nasz model biznesowy stawia produkt na pierwszym miejscu. Wyceniamy przejrzyście, gdy jest to odpowiednie, i możemy używać reklam do wspierania bezpłatnych funkcji, ale nie sprzedajemy danych użytkowników.</p>
+        </section>
+
+        <section>
+            <h2>Co budujemy</h2>
+            <p>Budujemy małe, skupione aplikacje z wyraźnymi granicami — narzędzia pomagające ludziom uczyć się, pracować i podejmować decyzje z AI w praktyczny sposób. Tworzymy produkty, rozwijamy je iteracyjnie i utrzymujemy wąski zakres.</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="legal/imprint.html">Informacje prawne</a>
+            <a href="legal/privacy.html">Polityka prywatności</a>
+        </div>
+    </footer>
+    <script src="../site.js"></script>
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    try { localStorage.setItem("jd_lang", lang); } catch (e) {}
+    var pages = {
+        "de": "../de/about.html",
+        "en": "../en/about.html",
+        "fr": "../fr/about.html",
+        "es": "../es/about.html",
+        "it": "../it/about.html",
+        "nl": "../nl/about.html",
+        "sv": "../sv/about.html",
+        "pl": "../pl/about.html",
+        "pt-br": "../pt-br/about.html",
+        "pt-pt": "../pt-pt/about.html",
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+
+// Page navigation
+var pageNav = document.getElementById("page-nav-select");
+if (pageNav) {
+    pageNav.addEventListener("change", function() {
+        window.location.href = this.value;
+    });
+}
+</script>
+</body>
+</html>

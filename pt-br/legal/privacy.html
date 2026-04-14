@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de privacidade – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Política de privacidade para jetztunddahanna.com.">
+    <link rel="canonical" href="https://jetztunddahanna.com/pt-br/legal/privacy.html">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Ir para o conteúdo</a>
+    <header class="site-header">
+        <div class="header-content">
+        <a href="../" class="brand">
+            <div class="brand-logo">
+                <img src="../../company_logo.png" alt="Jetzt &amp; Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            
+            <select id="page-nav-select" aria-label="Início">
+                <option value="../">Início</option>
+                <option value="../about.html">Sobre</option>
+                <option value="../projects.html">Projetos</option>
+                <option value="../principles.html">Princípios</option>
+                <option value="../contact.html">Contato</option>
+            </select>
+            <a href="../about.html">Sobre</a>
+            <a href="../projects.html">Projetos</a>
+            <a href="../principles.html">Princípios</a>
+            <a href="../contact.html" class="nav-cta">Contato</a>
+
+            <select id="lang-switch" aria-label="Escolher idioma">
+                    <option value="de">DE</option>
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="es">ES</option>
+                    <option value="it">IT</option>
+                    <option value="nl">NL</option>
+                    <option value="sv">SV</option>
+                    <option value="pl">PL</option>
+                    <option value="pt-br" selected>PT-BR</option>
+                    <option value="pt-pt">PT-PT</option>
+</select>
+        </nav>
+        </div>
+    </header>
+
+    <main id="main" class="page narrow legal-content">
+        <h1>Política de privacidade</h1>
+        
+        <section>
+            <h2>Geral</h2>
+            <p>Esta política de privacidade se aplica ao site jetztunddahanna.com.</p>
+            <p>Responsável pelo tratamento de dados:<br>
+            Tobias Blankenhorn<br>
+            Richard-Wagner-Str. 17/1<br>
+            71116 Gaertringen<br>
+            Alemanha<br>
+            E-mail: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+
+        <section>
+            <h2>Coleta de dados neste site</h2>
+            <p>Este site é um site estático hospedado no GitHub Pages. Não coletamos, armazenamos nem processamos dados pessoais por este site.</p>
+            <p>Não usamos cookies, ferramentas de análise ou quaisquer mecanismos de rastreamento.</p>
+        </section>
+
+        <section>
+            <h2>Arquivos de log do servidor</h2>
+            <p>O provedor de hospedagem (GitHub) pode coletar e armazenar automaticamente informações nos arquivos de log do servidor. Isso pode incluir:</p>
+            <ul>
+                <li>Tipo e versão do navegador</li>
+                <li>Sistema operacional</li>
+                <li>URL de referência</li>
+                <li>Nome do host do computador acessando</li>
+                <li>Hora da solicitação do servidor</li>
+                <li>Endereço IP</li>
+            </ul>
+            <p>Esses dados não são combinados com outras fontes de dados e são armazenados pelo GitHub de acordo com sua política de privacidade.</p>
+        </section>
+
+        <section>
+            <h2>Contato</h2>
+            <p>Se você nos contatar por e-mail, sua mensagem e os dados que você fornecer (incluindo endereço de e-mail e nome) serão armazenados para fins de processamento de sua consulta e para possíveis perguntas de acompanhamento. Não compartilhamos esses dados sem o seu consentimento.</p>
+        </section>
+
+        <section>
+            <h2>Seus direitos</h2>
+            <p>Você tem o direito de:</p>
+            <ul>
+                <li>Solicitar informações sobre dados pessoais armazenados</li>
+                <li>Solicitar correção de dados incorretos</li>
+                <li>Solicitar exclusão de seus dados</li>
+                <li>Solicitar restrição do processamento de dados</li>
+                <li>Contestar o processamento de dados</li>
+                <li>Solicitar portabilidade de dados</li>
+            </ul>
+            <p>Para exercer esses direitos, entre em contato: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="imprint.html">Informações legais</a>
+            <a href="privacy.html">Privacidade</a>
+        </div>
+    </footer>
+    <script src="../../site.js"></script>
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    try { localStorage.setItem("jd_lang", lang); } catch (e) {}
+    var pages = {
+        "de": "../../de/legal/privacy.html",
+        "en": "../../en/legal/privacy.html",
+        "fr": "../../fr/legal/privacy.html",
+        "es": "../../es/legal/privacy.html",
+        "it": "../../it/legal/privacy.html",
+        "nl": "../../nl/legal/privacy.html",
+        "sv": "../../sv/legal/privacy.html",
+        "pl": "../../pl/legal/privacy.html",
+        "pt-br": "../../pt-br/legal/privacy.html",
+        "pt-pt": "../../pt-pt/legal/privacy.html",
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+
+// Page navigation
+var pageNav = document.getElementById("page-nav-select");
+if (pageNav) {
+    pageNav.addEventListener("change", function() {
+        window.location.href = this.value;
+    });
+}
+</script>
+</body>
+</html>

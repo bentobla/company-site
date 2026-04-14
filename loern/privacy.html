@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Statement – Lœrn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <link rel="canonical" href="https://jetztunddahanna.com/en/projects/loern/privacy.html">
+    <meta http-equiv="refresh" content="3;url=/en/projects/loern/privacy.html">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at top left, #ffffff 0, #faf4e8 55%, #f2ecdf 100%);
+            color: #111827;
+        }
+        .box {
+            text-align: center;
+            padding: 1.5rem 2rem;
+            border-radius: 18px;
+            background: rgba(255,255,255,0.96);
+            box-shadow: 0 18px 40px rgba(6, 19, 46, 0.16);
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            max-width: 420px;
+        }
+        .box h1 { font-size: 1rem; margin-bottom: 0.5rem; }
+        .box p  { font-size: 0.85rem; color: #6b7280; margin: 0.2rem 0; }
+        .box a  { color: #0b1c3d; font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h1>Redirecting…</h1>
+    <p>Opening the Lœrn privacy statement in your language.</p>
+    <p>If nothing happens: <a href="/en/projects/loern/privacy.html">English version</a></p>
+</div>
+
+<script>
+(function () {
+    var stored = null;
+    try { stored = localStorage.getItem("jd_lang"); } catch (e) {}
+
+    function mapLang(code) {
+        if (!code) return "en";
+        code = code.toLowerCase();
+        if (code.startsWith("de")) return "de";
+        if (code.startsWith("en")) return "en";
+        if (code.startsWith("it")) return "it";
+        if (code.startsWith("es")) return "es";
+        if (code.startsWith("fr")) return "fr";
+        if (code.startsWith("nl")) return "nl";
+        if (code.startsWith("sv")) return "sv";
+        if (code.startsWith("pl")) return "pl";
+        if (code === "pt-br" || code.startsWith("pt-b")) return "pt-br";
+        if (code === "pt-pt" || code.startsWith("pt-p") || code.startsWith("pt")) return "pt-pt";
+        return "en";
+    }
+
+    var lang = stored || mapLang(navigator.language || navigator.userLanguage);
+    window.location.replace("/" + lang + "/projects/loern/privacy.html");
+})();
+</script>
+</body>
+</html>

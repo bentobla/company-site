@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações legais – Jetzt &amp; Dahanna Technologies</title>
+    <meta name="description" content="Informações legais.">
+    <link rel="canonical" href="https://jetztunddahanna.com/pt-pt/legal/imprint.html">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Ir para o conteúdo</a>
+    <header class="site-header">
+        <div class="header-content">
+        <a href="../" class="brand">
+            <div class="brand-logo">
+                <img src="../../company_logo.png" alt="Jetzt &amp; Dahanna Technologies">
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">JETZT &amp; DAHANNA</span>
+                <span class="brand-tagline">Technologies</span>
+            </div>
+        </a>
+
+        <nav class="main-nav">
+            
+            <select id="page-nav-select" aria-label="Início">
+                <option value="../">Início</option>
+                <option value="../about.html">Sobre</option>
+                <option value="../projects.html">Projetos</option>
+                <option value="../principles.html">Princípios</option>
+                <option value="../contact.html">Contacto</option>
+            </select>
+            <a href="../about.html">Sobre</a>
+            <a href="../projects.html">Projetos</a>
+            <a href="../principles.html">Princípios</a>
+            <a href="../contact.html" class="nav-cta">Contacto</a>
+
+            <select id="lang-switch" aria-label="Escolher idioma">
+                    <option value="de">DE</option>
+                    <option value="en">EN</option>
+                    <option value="fr">FR</option>
+                    <option value="es">ES</option>
+                    <option value="it">IT</option>
+                    <option value="nl">NL</option>
+                    <option value="sv">SV</option>
+                    <option value="pl">PL</option>
+                    <option value="pt-br">PT-BR</option>
+                    <option value="pt-pt" selected>PT-PT</option>
+</select>
+        </nav>
+        </div>
+    </header>
+
+    <main id="main" class="page narrow legal-content">
+        <h1>Informações legais</h1>
+        
+        <section>
+            <h2>Informações conforme § 5 TMG</h2>
+            <p>
+                Tobias Blankenhorn<br>
+                Richard-Wagner-Str. 17/1<br>
+                71116 Gaertringen<br>
+                Germany
+            </p>
+        </section>
+
+        <section>
+            <h2>Contacto</h2>
+            <p>Email: <a href="mailto:info@jetztunddahanna.com" class="text-link">info@jetztunddahanna.com</a></p>
+        </section>
+
+        <section>
+            <h2>Número de identificação de IVA</h2>
+            <p>Número de identificação fiscal de IVA conforme § 27a UStG:<br>
+            DE459368102</p>
+        </section>
+
+        <section>
+            <h2>Responsável pelo conteúdo</h2>
+            <p>Tobias Blankenhorn (morada acima)</p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-links">
+            <a href="imprint.html">Informações legais</a>
+            <a href="privacy.html">Privacidade</a>
+        </div>
+    </footer>
+    <script src="../../site.js"></script>
+    <script>
+// Language switcher
+document.getElementById("lang-switch").addEventListener("change", function() {
+    var lang = this.value;
+    try { localStorage.setItem("jd_lang", lang); } catch (e) {}
+    var pages = {
+        "de": "../../de/legal/imprint.html",
+        "en": "../../en/legal/imprint.html",
+        "fr": "../../fr/legal/imprint.html",
+        "es": "../../es/legal/imprint.html",
+        "it": "../../it/legal/imprint.html",
+        "nl": "../../nl/legal/imprint.html",
+        "sv": "../../sv/legal/imprint.html",
+        "pl": "../../pl/legal/imprint.html",
+        "pt-br": "../../pt-br/legal/imprint.html",
+        "pt-pt": "../../pt-pt/legal/imprint.html",
+    };
+    if (pages[lang]) {
+        window.location.href = pages[lang];
+    }
+});
+
+// Page navigation
+var pageNav = document.getElementById("page-nav-select");
+if (pageNav) {
+    pageNav.addEventListener("change", function() {
+        window.location.href = this.value;
+    });
+}
+</script>
+</body>
+</html>

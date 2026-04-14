@@ -44,6 +44,9 @@
                 <option value="it">IT</option>
                 <option value="nl">NL</option>
                 <option value="sv" selected>SV</option>
+                    <option value="pl">PL</option>
+                    <option value="pt-br">PT-BR</option>
+                    <option value="pt-pt">PT-PT</option>
             </select>
         </nav>
             </div>
@@ -70,7 +73,7 @@
                     </div>
                     <h3 style="margin: 0;">Lœrn</h3>
                 </div>
-                <p>Offline-flashcards: skapa dina egna kort, organisera kortlekar och plugga med aktiv återkallelse—inget konto, inget moln. Importera innehåll, även kort som skapats med din egen AI.</p>
+                <p>Offline-studiekort: skapa dina egna kort, organisera kortlekar och plugga med aktiv återkallelse—inget konto, inget moln. Importera innehåll, även kort som skapats med din egen AI.</p>
                 <div class="project-card-badges" aria-label="Ladda ner Lœrn">
                     <a href="https://play.google.com/store/apps/details?id=com.jetztunddahanna.loern" target="_blank" rel="noopener noreferrer" aria-label="Hämta på Google Play" style="display: inline-flex; align-items: center; padding: 0; background: transparent; border: 0; text-decoration: none;">
                         <img src="../Google%20Play%20Badge%20guidelines/Get%20it%20on%20Google%20Play%20Badges/Digital/svg/GetItOnGooglePlay_Badge_Web_color_Swedish.svg" alt="Hämta på Google Play">
@@ -92,7 +95,7 @@
 
     <footer class="site-footer">
         <div class="footer-links">
-            <a href="legal/imprint.html">Impressum</a>
+            <a href="legal/imprint.html">Juridisk information</a>
             <a href="legal/privacy.html">Integritet</a>
         </div>
     </footer>
@@ -109,7 +112,10 @@ document.getElementById("lang-switch").addEventListener("change", function() {
         "es": "../es/",
         "it": "../it/",
         "nl": "../nl/",
-        "sv": "../sv/"
+        "sv": "../sv/",
+        "pl": "../pl/",
+        "pt-br": "../pt-br/",
+        "pt-pt": "../pt-pt/"
     };
     if (pages[lang]) {
         window.location.href = pages[lang];
