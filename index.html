@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <link rel="canonical" href="https://jetztunddahanna.com/en/">
-    <meta http-equiv="refresh" content="3;url=/en/">
+    <noscript><meta http-equiv="refresh" content="3;url=/en/"></noscript>
     <style>
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -61,7 +61,7 @@
         } catch (e) {}
 
         function mapLang(code) {
-            if (!code) return "en";
+            if (!code) return null;
             code = code.toLowerCase();
 
             if (code.startsWith("de")) return "de";
@@ -74,10 +74,21 @@
             if (code.startsWith("pl")) return "pl";
             if (code === "pt-br" || code.startsWith("pt-b")) return "pt-br";
             if (code === "pt-pt" || code.startsWith("pt-p") || code.startsWith("pt")) return "pt-pt";
-            return "en"; // Fallback
+            return null;
         }
 
-        var targetLang = stored || mapLang(navigator.language || navigator.userLanguage);
+        function detectLang() {
+            // Scan the full preference list (navigator.languages) first
+            var langs = navigator.languages || [];
+            for (var i = 0; i < langs.length; i++) {
+                var match = mapLang(langs[i]);
+                if (match) return match;
+            }
+            // Legacy fallback for older browsers
+            return mapLang(navigator.language || navigator.userLanguage) || "en";
+        }
+
+        var targetLang = stored || detectLang();
         var targetPath = "/" + targetLang + "/";
 
         // Direkt weiterleiten

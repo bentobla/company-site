@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex">
     <link rel="canonical" href="https://jetztunddahanna.com/en/projects/loern/privacy.html">
-    <meta http-equiv="refresh" content="3;url=/en/projects/loern/privacy.html">
+    <noscript><meta http-equiv="refresh" content="3;url=/en/projects/loern/privacy.html"></noscript>
     <style>
         body {
             font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -46,7 +46,7 @@
     try { stored = localStorage.getItem("jd_lang"); } catch (e) {}
 
     function mapLang(code) {
-        if (!code) return "en";
+        if (!code) return null;
         code = code.toLowerCase();
         if (code.startsWith("de")) return "de";
         if (code.startsWith("en")) return "en";
@@ -58,10 +58,19 @@
         if (code.startsWith("pl")) return "pl";
         if (code === "pt-br" || code.startsWith("pt-b")) return "pt-br";
         if (code === "pt-pt" || code.startsWith("pt-p") || code.startsWith("pt")) return "pt-pt";
-        return "en";
+        return null;
     }
 
-    var lang = stored || mapLang(navigator.language || navigator.userLanguage);
+    function detectLang() {
+        var langs = navigator.languages || [];
+        for (var i = 0; i < langs.length; i++) {
+            var match = mapLang(langs[i]);
+            if (match) return match;
+        }
+        return mapLang(navigator.language || navigator.userLanguage) || "en";
+    }
+
+    var lang = stored || detectLang();
     window.location.replace("/" + lang + "/projects/loern/privacy.html");
 })();
 </script>
