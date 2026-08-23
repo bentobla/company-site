@@ -15,6 +15,14 @@ body {
   color: var(--ink);
 }
 
+a:focus-visible,
+select:focus-visible,
+button:focus-visible,
+.btn:focus-visible,
+.loern-btn:focus-visible {
+  outline-color: var(--brand-accent);
+}
+
 .site-header {
   background: rgba(17,36,63,.955);
   backdrop-filter: blur(18px);
@@ -35,10 +43,16 @@ body {
   background: rgba(255,255,255,.08);
   border-color: rgba(255,255,255,.12);
 }
+.main-nav a:not(.nav-cta).active { border-color: var(--brand-accent); }
 .main-nav a.nav-cta {
   background: var(--brand-accent);
   box-shadow: 0 4px 18px rgba(232,166,93,.24);
 }
+#page-nav-select {
+  background-color: var(--brand-accent);
+  box-shadow: 0 4px 18px rgba(232,166,93,.24);
+}
+#lang-switch:focus { border-color: var(--brand-accent); }
 
 .page { padding-bottom: 6rem; }
 .page.narrow { max-width: 920px; }
@@ -47,12 +61,6 @@ h1 {
   letter-spacing: -.035em;
   line-height: 1.06;
   font-weight: 650;
-}
-body > .page > section:first-child > h1,
-main.page > section:first-child > h1 {
-  font-size: clamp(2.6rem, 5.5vw, 4.35rem);
-  letter-spacing: -.045em;
-  line-height: 1.02;
 }
 h2 {
   font-size: clamp(1.65rem, 3vw, 2.25rem);
@@ -122,7 +130,12 @@ section { margin-bottom: 5.25rem; }
   letter-spacing: .02em;
   margin-bottom: 1rem;
 }
-.sudoku-hero h1 { margin-bottom: 1rem; }
+.sudoku-hero h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.7rem,5.5vw,4.35rem);
+  letter-spacing: -.045em;
+  line-height: 1.02;
+}
 .sudoku-hero p {
   font-size: 1.16rem;
   color: var(--muted);
@@ -190,7 +203,7 @@ section { margin-bottom: 5.25rem; }
 .project-card-badges a { max-width:100%; }
 .project-card-badges img { max-width:100%; object-fit:contain; }
 
-/* Tablet / narrow desktop: use the compact navigation before labels start wrapping. */
+/* Tablet / narrow desktop: use compact navigation before labels start wrapping. */
 @media (max-width: 920px) {
   .main-nav > a { display:none !important; }
   #page-nav-select { display:block !important; }
@@ -225,9 +238,7 @@ section { margin-bottom: 5.25rem; }
   .project-card { padding:1.25rem; }
   .project-card-badges { gap:.5rem; }
   .project-card-badges img { height:40px; }
-  h1, body > .page > section:first-child > h1, main.page > section:first-child > h1 {
-    font-size:clamp(2.15rem,11vw,2.8rem);
-  }
+  h1, .sudoku-hero h1 { font-size:clamp(2.15rem,11vw,2.8rem); }
 }
 
 @media (prefers-reduced-motion: reduce) {
