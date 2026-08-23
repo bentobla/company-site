@@ -1,18 +1,10 @@
 (function () {
   "use strict";
 
-  // Keep the original stylesheet stable and layer the refreshed design on top.
-  // This makes the visual update easy to review and roll back independently.
-  var refresh = document.createElement("link");
-  refresh.rel = "stylesheet";
-  var script = document.currentScript;
-  var src = script && script.src ? script.src : "";
-  refresh.href = src ? new URL("refresh.css", src).href : "/refresh.css";
-  document.head.appendChild(refresh);
-
   function updatePageTopPadding() {
     var header = document.querySelector(".site-header");
     if (!header) return;
+
     var headerHeight = header.offsetHeight || 0;
     var isMobile = window.matchMedia && window.matchMedia("(max-width: 768px)").matches;
     var minTop = isMobile ? 104 : 140;
@@ -57,8 +49,10 @@
 
   var key = getPageKey(window.location.pathname);
   if (!key) return;
+
   var links = document.querySelectorAll(".main-nav a");
   if (!links || links.length === 0) return;
+
   clearActive(links);
   if (key === "about") setActiveBySuffix(links, "about.html");
   if (key === "projects") setActiveBySuffix(links, "projects.html");
