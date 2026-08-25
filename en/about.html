@@ -4,118 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About – Jetzt &amp; Dahanna Technologies</title>
-    <meta name="description" content="A small, independent company building focused applications with thoughtful use of AI.">
+    <meta name="description" content="Jetzt & Dahanna Technologies is Tobias Blankenhorn's independent one-person software studio near Stuttgart, building focused and thoughtful applications.">
     <link rel="canonical" href="https://jetztunddahanna.com/en/about.html">
     <link rel="stylesheet" href="../style.css">
+    <style>
+      .about-intro{display:grid;grid-template-columns:minmax(0,1fr) 210px;gap:clamp(2rem,5vw,4rem);align-items:center;margin-bottom:5.25rem}.about-intro .lead{margin-bottom:0}.founder-portrait{width:210px;aspect-ratio:4/5;overflow:hidden;border-radius:24px;border:1px solid var(--border-subtle);background:var(--surface-strong);box-shadow:var(--shadow-soft)}.founder-portrait img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 35%}@media(max-width:768px){.about-intro{grid-template-columns:1fr;gap:1.75rem}.founder-portrait{width:min(58vw,220px);justify-self:start}.about-intro .lead{margin-bottom:0}}@media(max-width:420px){.founder-portrait{width:min(68vw,210px);border-radius:20px}}
+    </style>
 </head>
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-        <div class="header-content">
-        <a href="./" class="brand">
-            <div class="brand-logo">
-                <img src="../company_logo.png" alt="Jetzt & Dahanna Technologies">
-            </div>
-            <div class="brand-text">
-                <span class="brand-name">JETZT &amp; DAHANNA</span>
-                <span class="brand-tagline">Technologies</span>
-            </div>
-        </a>
-
-        <nav class="main-nav">
-            
-            <select id="page-nav-select" aria-label="Home">
-                <option value="./">Home</option>
-                <option value="about.html" selected>About</option>
-                <option value="projects.html">Projects</option>
-                <option value="principles.html">Principles</option>
-                <option value="contact.html">Contact</option>
-            </select>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="principles.html">Principles</a>
-            <a href="contact.html" class="nav-cta">Contact</a>
-
-            <select id="lang-switch" aria-label="Choose language">
-                <option value="de">DE</option>
-                <option value="en" selected>EN</option>
-                <option value="fr">FR</option>
-                <option value="es">ES</option>
-                <option value="it">IT</option>
-                <option value="nl">NL</option>
-                <option value="sv">SV</option>
-                    <option value="pl">PL</option>
-                    <option value="pt-br">PT-BR</option>
-                    <option value="pt-pt">PT-PT</option>
-</select>
-        </nav>
-        </div>
-    </header>
-
-    <main id="main" class="page narrow">
-        <h1>About</h1>
-        
-        <section>
-            <h2>Perspective</h2>
-            <p>Jetzt &amp; Dahanna Technologies is a small, independent company. We build applications, not services. Each product reflects a decision about how technology should work.</p>
-            <p>We believe good software respects users. That means no dark patterns, no subscription traps, and no data harvesting. It means being clear about what a tool does and letting people stay in control.</p>
-        </section>
-
-        <section>
-            <h2>What to expect</h2>
-            <p><strong>Product-first:</strong> we build and maintain our own applications (no client work).</p>
-            <p><strong>Calm by default:</strong> clear boundaries, minimal notifications, no dark patterns.</p>
-            <p><strong>Privacy-minded:</strong> data minimization and transparent monetization.</p>
-        </section>
-
-        <section>
-            <h2>How we build</h2>
-            <p>We focus on one project at a time. We build our own products rather than taking on client work. This allows us to make decisions based on what makes sense, not what sells.</p>
-            <p>Our business model is product-first. We charge transparently when appropriate and may use advertising to support free features, but we don't sell user data.</p>
-        </section>
-
-        <section>
-            <h2>What we build</h2>
-            <p>We build small, focused applications with clear boundaries—tools that help people learn, work, and make decisions with AI in a practical way. We ship products, iterate, and keep the scope tight.</p>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="footer-links">
-            <a href="legal/imprint.html">Imprint</a>
-            <a href="legal/privacy.html">Privacy</a>
-        </div>
-    </footer>
-    <script src="../site.js"></script>
-    <script>
-// Language switcher
-document.getElementById("lang-switch").addEventListener("change", function() {
-    var lang = this.value;
-    try { localStorage.setItem("jd_lang", lang); } catch (e) {}
-    var pages = {
-        "de": "../de/about.html",
-        "en": "../en/about.html",
-        "fr": "../fr/about.html",
-        "es": "../es/about.html",
-        "it": "../it/about.html",
-        "nl": "../nl/about.html",
-        "sv": "../sv/about.html",
-        "pl": "../pl/about.html",
-        "pt-br": "../pt-br/about.html",
-        "pt-pt": "../pt-pt/about.html"
-    };
-    if (pages[lang]) {
-        window.location.href = pages[lang];
-    }
-});
-
-// Page navigation
-var pageNav = document.getElementById("page-nav-select");
-if (pageNav) {
-    pageNav.addEventListener("change", function() {
-        window.location.href = this.value;
-    });
-}
-</script>
-</body>
-</html>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><div class="header-content"><a href="./" class="brand"><div class="brand-logo"><img src="../company_logo.png" alt="Jetzt & Dahanna Technologies"></div><div class="brand-text"><span class="brand-name">JETZT &amp; DAHANNA</span><span class="brand-tagline">Technologies</span></div></a><nav class="main-nav"><select id="page-nav-select" aria-label="Navigation"><option value="./">Home</option><option value="about.html" selected>About</option><option value="projects.html">Projects</option><option value="principles.html">Principles</option><option value="contact.html">Contact</option></select><a href="about.html">About</a><a href="projects.html">Projects</a><a href="principles.html">Principles</a><a href="contact.html" class="nav-cta">Contact</a><select id="lang-switch" aria-label="Choose language"><option value="de">DE</option><option value="en" selected>EN</option><option value="fr">FR</option><option value="es">ES</option><option value="it">IT</option><option value="nl">NL</option><option value="sv">SV</option><option value="pl">PL</option><option value="pt-br">PT-BR</option><option value="pt-pt">PT-PT</option></select></nav></div></header>
+<main id="main" class="page narrow about-page">
+<div class="about-intro"><div><h1>About</h1><p class="lead">Jetzt &amp; Dahanna Technologies is an independent one-person software studio run by Tobias Blankenhorn near Stuttgart, in the Swabian part of southern Germany.</p></div><figure class="founder-portrait"><img src="../pictures/portrait.png" alt="Tobias Blankenhorn" loading="eager"></figure></div>
+<section><h2>Why this studio exists</h2><p>I started building small apps because I kept coming across things that felt as if they could be simpler, fairer, and more focused. I wanted to make products that do a clear job well, with technology and business choices that support that job rather than distract from it.</p><p>The idea behind Jetzt &amp; Dahanna is straightforward: understand the job, design the experience carefully, use technology where it genuinely helps, and leave out what does not.</p></section>
+<section><h2>Who is behind it</h2><p>I'm <strong>Tobias Blankenhorn</strong>. In my main profession, I work as a Voice UX Engineer in the automotive industry. I hold a Master's degree in Behavioral Science from Radboud University in Nijmegen, where I studied at the Behavioral Science Institute and focused in part on human–machine interaction.</p><p>That background still shapes how I approach software. I'm interested in what technology actually does for the person using it: whether an interaction is understandable, whether a feature earns its complexity, and whether the business model treats people fairly.</p></section>
+<section><h2>Small on purpose</h2><p>Jetzt &amp; Dahanna is a small independent studio, built alongside my main profession and focused on its own products rather than client work.</p><p>Being independent lets me keep infrastructure simple, keep product scope deliberate, and make decisions around what the product itself needs. That includes being careful about recurring services and costs when a simpler approach works just as well.</p></section>
+<section><h2>Why “Jetzt &amp; Dahanna”?</h2><p><em>Jetzt &amp; Dahanna</em> roughly means <strong>“now &amp; here”</strong> in Swabian dialect. It is a small nod to where the studio comes from — near Stuttgart, in Swabia — but the meaning also fits the way I like to build software: start with the real need in front of you, solve it thoughtfully, and keep the focus on what is useful here and now.</p><p>So the name is both a local signature and a reminder to keep things grounded, practical, and focused on the people actually using them.</p></section>
+</main><footer class="site-footer"><div class="footer-links"><a href="legal/imprint.html">Imprint</a><a href="legal/privacy.html">Privacy</a></div></footer><script src="../site.js"></script><script>document.getElementById('lang-switch').addEventListener('change',function(){var l=this.value;try{localStorage.setItem('jd_lang',l)}catch(e){}location.href='../'+l+'/about.html'});var p=document.getElementById('page-nav-select');if(p)p.addEventListener('change',function(){location.href=this.value});</script>
+</body></html>
