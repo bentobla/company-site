@@ -27,4 +27,36 @@ body { background: radial-gradient(circle at 12% 0%, rgba(121,169,157,.12), tran
 .site-header { top:.75rem; left:50%; right:auto; width:min(calc(100% - 2rem),1120px); transform:translateX(-50%); border-radius:18px; padding:.62rem .8rem .62rem 1rem; background:rgba(250,250,247,.88); border:1px solid rgba(32,39,37,.09); box-shadow:0 12px 36px rgba(32,39,37,.08); backdrop-filter:blur(18px) saturate(130%); -webkit-backdrop-filter:blur(18px) saturate(130%); }
 .brand-name{color:#24302d;letter-spacing:.085em}.brand-tagline{color:#7a827f}.brand-logo img{border-radius:10px}.main-nav a{color:#46504c;padding:.48rem .82rem}.main-nav a:not(.nav-cta):hover,.main-nav a:not(.nav-cta).active{color:#1f2a27;background:rgba(36,54,50,.055);border-color:transparent}.main-nav a:not(.nav-cta).active{box-shadow:inset 0 -2px 0 var(--accent)}.main-nav a.nav-cta{background:#243632;color:#fff!important;box-shadow:none}.main-nav a.nav-cta:hover{background:#172521;opacity:1}#lang-switch{background:transparent;color:#4f5955;border-color:rgba(32,39,37,.16)}#lang-switch:hover{background:rgba(36,54,50,.05)}#page-nav-select{background-color:#243632;color:#fff;box-shadow:none;background-image:url('data:image/svg+xml;utf8,<svg fill="%23ffffff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>')}
 .page{padding-top:132px}h1,h2,h3{color:#202725}.home-page>section:first-child{min-height:min(68vh,620px);display:flex;flex-direction:column;justify-content:center;padding:clamp(2rem,7vw,6rem) 0 clamp(3rem,8vw,6rem);margin-bottom:1rem}.home-page>section:first-child::before{content:var(--studio-kicker);display:inline-block;width:fit-content;max-width:100%;margin-bottom:1.4rem;padding:.38rem .72rem;border-radius:999px;border:1px solid rgba(32,39,37,.12);background:rgba(255,255,255,.58);color:#65706b;font-size:.78rem;font-weight:600;letter-spacing:.035em;line-height:1.35}.home-page>section:first-child>h1{max-width:12ch;font-size:clamp(3.2rem,8vw,6.4rem);font-weight:620;letter-spacing:-.06em;line-height:.94;margin-bottom:1.8rem}.home-page>section:first-child>.lead{max-width:52ch!important;font-size:clamp(1.18rem,2.1vw,1.55rem);color:#69736f}.home-page section:not(:first-child){padding:clamp(2rem,5vw,3.6rem) 0}.home-page h2{max-width:18ch}.product-grid{gap:1.4rem}.project-card{background:rgba(255,255,255,.70);border-color:rgba(32,39,37,.08);box-shadow:0 14px 40px rgba(32,39,37,.055)}.product-grid .project-card:first-child{background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(99,102,241,.065));border-color:rgba(99,102,241,.14)}.product-grid .project-card:last-child{background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(85,127,159,.075));border-color:rgba(85,127,159,.15)}.project-card p{color:#68716d}.text-link{color:#314a43}.site-footer{border-color:rgba(32,39,37,.09);color:#747d79}.footer-links a{color:#747d79}
+
+/* Product app icons: use the artwork edge-to-edge and give both apps the same subtle elevation. */
+.project-card-logo.loern-mark,
+.project-card-logo.sudoku-mark {
+  padding: 0;
+  border: 1px solid rgba(32,39,37,.14);
+  box-shadow: 0 8px 20px rgba(32,39,37,.10);
+}
+.project-card-logo.loern-mark { background: #fff; }
+.project-card-logo.loern-mark img {
+  content: url('pictures/loern-icon.png');
+}
+.project-card-logo.loern-mark img,
+.project-card-logo.sudoku-mark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.loern-logo-card {
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(32,39,37,.12);
+  box-shadow: 0 18px 42px rgba(32,39,37,.12);
+}
+.loern-logo-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
 @media(max-width:920px){.site-header{width:min(calc(100% - 1.2rem),1120px);top:.6rem}}@media(max-width:768px){.site-header{left:.6rem;right:.6rem;width:auto;transform:none;top:.55rem}.page{padding-top:108px}.home-page>section:first-child{min-height:auto;padding-top:2.5rem}.home-page>section:first-child>h1{font-size:clamp(3rem,15vw,4.8rem)}}@media(max-width:420px){.site-header{padding:.55rem .65rem}.header-content{gap:.45rem}.brand-logo img{height:36px}.main-nav{gap:.35rem}#page-nav-select{max-width:38vw;padding:.5rem 1.9rem .5rem .75rem;text-overflow:ellipsis}#lang-switch{padding:.32rem .55rem;max-width:72px}.home-page>section:first-child::before{border-radius:14px}}@media(prefers-reduced-transparency:reduce){.site-header{background:#fafaf7;backdrop-filter:none;-webkit-backdrop-filter:none}}
