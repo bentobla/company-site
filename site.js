@@ -28,6 +28,18 @@
     return parts.slice(1).join("/");
   }
 
+  function ensureAppPrivacyNoindex() {
+    var p = (window.location.pathname || "/").toLowerCase();
+    if (!p.endsWith("/projects/loern/privacy.html") && !p.endsWith("/projects/sudoku/privacy.html")) return;
+    var robots = document.querySelector('meta[name="robots"]');
+    if (!robots) {
+      robots = document.createElement("meta");
+      robots.name = "robots";
+      document.head.appendChild(robots);
+    }
+    robots.content = "noindex,follow";
+  }
+
   function addHreflangLinks() {
     var relativePath = getLocalizedRelativePath(window.location.pathname);
     if (relativePath === null) return;
@@ -122,6 +134,7 @@
     if (app) appendJsonLd(app);
   }
 
+  ensureAppPrivacyNoindex();
   addHreflangLinks();
   addStructuredData();
 
