@@ -1,33 +1,6 @@
 (function () {
   "use strict";
 
-  var SEO_LOCALES = [
-    { path: "de", hreflang: "de" },
-    { path: "en", hreflang: "en" },
-    { path: "fr", hreflang: "fr" },
-    { path: "es", hreflang: "es" },
-    { path: "it", hreflang: "it" },
-    { path: "nl", hreflang: "nl" },
-    { path: "sv", hreflang: "sv" },
-    { path: "pl", hreflang: "pl" },
-    { path: "pt-br", hreflang: "pt-BR" },
-    { path: "pt-pt", hreflang: "pt-PT" }
-  ];
-
-  function getLocalizedRelativePath(pathname) {
-    var parts = (pathname || "/").split("/").filter(Boolean);
-    if (!parts.length) return null;
-    var localeFound = false;
-    for (var i = 0; i < SEO_LOCALES.length; i++) {
-      if (SEO_LOCALES[i].path === parts[0].toLowerCase()) {
-        localeFound = true;
-        break;
-      }
-    }
-    if (!localeFound) return null;
-    return parts.slice(1).join("/");
-  }
-
   function ensureAppPrivacyNoindex() {
     var p = (window.location.pathname || "/").toLowerCase();
     if (!p.endsWith("/projects/loern/privacy.html") && !p.endsWith("/projects/sudoku/privacy.html")) return;
@@ -38,36 +11,6 @@
       document.head.appendChild(robots);
     }
     robots.content = "noindex,follow";
-  }
-
-  function addHreflangLinks() {
-    var relativePath = getLocalizedRelativePath(window.location.pathname);
-    if (relativePath === null) return;
-    var supported = {
-      "": true,
-      "about.html": true,
-      "contact.html": true,
-      "principles.html": true,
-      "projects.html": true,
-      "projects/loern.html": true,
-      "projects/sudoku.html": true
-    };
-    if (!supported[relativePath]) return;
-
-    var base = "https://jetztunddahanna.com/";
-    for (var i = 0; i < SEO_LOCALES.length; i++) {
-      var locale = SEO_LOCALES[i];
-      var link = document.createElement("link");
-      link.rel = "alternate";
-      link.hreflang = locale.hreflang;
-      link.href = base + locale.path + "/" + relativePath;
-      document.head.appendChild(link);
-    }
-    var fallback = document.createElement("link");
-    fallback.rel = "alternate";
-    fallback.hreflang = "x-default";
-    fallback.href = base + "en/" + relativePath;
-    document.head.appendChild(fallback);
   }
 
   function appendJsonLd(data) {
@@ -135,7 +78,6 @@
   }
 
   ensureAppPrivacyNoindex();
-  addHreflangLinks();
   addStructuredData();
 
   function updatePageTopPadding() {
