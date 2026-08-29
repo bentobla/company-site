@@ -1,0 +1,30 @@
+lastmod: 2026-08-29
+locales:
+  - path: de
+    hreflang: de
+  - path: en
+    hreflang: en
+  - path: fr
+    hreflang: fr
+  - path: es
+    hreflang: es
+  - path: it
+    hreflang: it
+  - path: nl
+    hreflang: nl
+  - path: sv
+    hreflang: sv
+  - path: pl
+    hreflang: pl
+  - path: pt-br
+    hreflang: pt-BR
+  - path: pt-pt
+    hreflang: pt-PT
+pages:
+  - path: ""
+  - path: about.html
+  - path: contact.html
+  - path: principles.html
+  - path: projects.html
+  - path: projects/loern.html
+  - path: projects/sudoku.html

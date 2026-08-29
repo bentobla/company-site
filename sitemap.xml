@@ -1,72 +1,19 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://jetztunddahanna.com/de/</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/de/about.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/de/contact.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/de/principles.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/de/projects.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/de/projects/loern.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/de/projects/loern/privacy.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/de/legal/imprint.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/de/legal/privacy.html</loc><lastmod>2026-02-25</lastmod></url>
-
-  <url><loc>https://jetztunddahanna.com/en/</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/en/about.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/en/contact.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/en/principles.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/en/projects.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/en/projects/loern.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/en/projects/loern/privacy.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/en/legal/imprint.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/en/legal/privacy.html</loc><lastmod>2026-02-25</lastmod></url>
-
-  <url><loc>https://jetztunddahanna.com/es/</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/es/about.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/es/contact.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/es/principles.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/es/projects.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/es/projects/loern.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/es/projects/loern/privacy.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/es/legal/imprint.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/es/legal/privacy.html</loc><lastmod>2026-02-25</lastmod></url>
-
-  <url><loc>https://jetztunddahanna.com/fr/</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/fr/about.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/fr/contact.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/fr/principles.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/fr/projects.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/fr/projects/loern.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/fr/projects/loern/privacy.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/fr/legal/imprint.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/fr/legal/privacy.html</loc><lastmod>2026-02-25</lastmod></url>
-
-  <url><loc>https://jetztunddahanna.com/it/</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/it/about.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/it/contact.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/it/principles.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/it/projects.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/it/projects/loern.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/it/projects/loern/privacy.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/it/legal/imprint.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/it/legal/privacy.html</loc><lastmod>2026-02-25</lastmod></url>
-
-  <url><loc>https://jetztunddahanna.com/nl/</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/nl/about.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/nl/contact.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/nl/principles.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/nl/projects.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/nl/projects/loern.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/nl/projects/loern/privacy.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/nl/legal/imprint.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/nl/legal/privacy.html</loc><lastmod>2026-02-25</lastmod></url>
-
-  <url><loc>https://jetztunddahanna.com/sv/</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/sv/about.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/sv/contact.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/sv/principles.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/sv/projects.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/sv/projects/loern.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/sv/projects/loern/privacy.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/sv/legal/imprint.html</loc><lastmod>2026-02-25</lastmod></url>
-  <url><loc>https://jetztunddahanna.com/sv/legal/privacy.html</loc><lastmod>2026-02-25</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{% assign base = 'https://jetztunddahanna.com' %}
+{% for page in site.data.seo.pages %}
+  {% for locale in site.data.seo.locales %}
+  <url>
+    <loc>{{ base }}/{{ locale.path }}/{% if page.path != '' %}{{ page.path }}{% endif %}</loc>
+    <lastmod>{{ site.data.seo.lastmod }}</lastmod>
+    {% for alt in site.data.seo.locales %}
+    <xhtml:link rel="alternate" hreflang="{{ alt.hreflang }}" href="{{ base }}/{{ alt.path }}/{% if page.path != '' %}{{ page.path }}{% endif %}" />
+    {% endfor %}
+    <xhtml:link rel="alternate" hreflang="x-default" href="{{ base }}/en/{% if page.path != '' %}{{ page.path }}{% endif %}" />
+  </url>
+  {% endfor %}
+{% endfor %}
 </urlset>
