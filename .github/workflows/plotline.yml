@@ -18,4 +18,4 @@ jobs:
       - run: node --check plotline-delete.js
       - run: node --test tests/plotline-delete.test.cjs
       - run: python3 scripts/verify_plotline_links.py
-      - run: python3 scripts/verify_protected_links.py
+      - run: python3 scripts/verify_protected_links.py --ref origin/main
