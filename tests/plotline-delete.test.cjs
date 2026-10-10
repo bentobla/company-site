@@ -5,12 +5,12 @@ const fs = require('node:fs');
 const {webcrypto} = require('node:crypto');
 const source = fs.readFileSync('plotline-delete.js', 'utf8');
 const owner = '11111111-1111-4111-a111-111111111111';
-function fixture(overrides={}, handler=()=>Response.json({})) {
+function fixture(overrides={}, handler=()=>Response.json({}), AppleID) {
   const nodes = new Map(), requests=[]; let googleCallback;
   function node(id) { if (!nodes.has(id)) nodes.set(id, {hidden:true, checked:false, disabled:true,textContent:'',listeners:{},addEventListener(type,fn){this.listeners[type]=fn;},replaceChildren(){}}); return nodes.get(id); }
   const google={accounts:{id:{initialize(value){googleCallback=value.callback;assert.equal(value.auto_select,false);},renderButton(){}}}};
-  const window={PLOTLINE_CONFIG:Object.freeze({enabled:true,apiBase:'https://api.example.test',googleClientId:'public-id',...overrides}),google};
-  const context=vm.createContext({window,google,crypto:webcrypto,Uint8Array,URL,Blob,AbortSignal,setTimeout,document:{documentElement:{lang:'en'},getElementById:node,head:{appendChild(){throw Error('Unexpected SDK load');}},createElement(){return {}; }},fetch:async(url,options)=>{requests.push({url,options});assert.equal(options.credentials,'omit');assert.equal(options.redirect,'error');return handler(url,options);}});
+  const window={AppleID,PLOTLINE_CONFIG:Object.freeze({enabled:true,apiBase:'https://api.example.test',googleClientId:'public-id',...overrides}),google};
+  const context=vm.createContext({window,google,AppleID,crypto:webcrypto,Uint8Array,URL,Blob,AbortSignal,setTimeout,document:{documentElement:{lang:'en'},getElementById:node,head:{appendChild(){throw Error('Unexpected SDK load');}},createElement(){return {}; }},fetch:async(url,options)=>{requests.push({url,options});assert.equal(options.credentials,'omit');assert.equal(options.redirect,'error');return handler(url,options);}});
   vm.runInContext(source,context);
   return {node,requests,click:async id=>node(id).listeners.click?.(),change:async(id,event)=>node(id).listeners.change?.(event),login:async()=>{await node('google-start').listeners.click();await googleCallback({credential:'id-token'});}};
 }
@@ -49,4 +49,20 @@ test('receipt import rejects another API origin before making any request',async
 });
 test('cancel clears identity and logs out without requesting deletion',async()=>{
  const f=fixture({},auth);await f.login();await f.click('cancel');assert.equal(f.requests.at(-1).url,'https://api.example.test/v2/auth/logout');f.node('confirm-delete').checked=true;await f.click('delete-account');assert.equal(f.requests.filter(r=>r.options.method==='DELETE').length,0);
+});
+
+test('Apple web login exchanges its code and binds the popup state and nonce',async()=>{
+ let setup;
+ const apple={auth:{init(options){setup=options;},signIn:async()=>({authorization:{state:setup.state,id_token:'apple-id-token',code:'one-use-code'}})}};
+ const f=fixture({appleClientId:'services-id',appleRedirectURI:'https://site.example.test/deletion'},url=>auth(url),apple);
+ await f.click('apple-start');
+ assert.equal(setup.clientId,'services-id');assert.equal(setup.nonce,'a'.repeat(64));assert.match(setup.state,/^[a-f0-9]{64}$/);
+ const login=JSON.parse(f.requests.find(r=>r.url.endsWith('/auth/login')).options.body);
+ assert.equal(login.provider,'apple');assert.equal(login.web,true);assert.equal(login.authorizationCode,'one-use-code');assert.equal(login.idToken,'apple-id-token');
+ assert.equal(f.node('confirmation').hidden,false);assert.equal(f.requests.filter(r=>r.options.method==='DELETE').length,0);
+});
+test('Apple popup state mismatch never creates an app login or deletes data',async()=>{
+ const apple={auth:{init(){},signIn:async()=>({authorization:{state:'foreign-state',id_token:'untrusted',code:'untrusted'}})}};
+ const f=fixture({appleClientId:'services-id',appleRedirectURI:'https://site.example.test/deletion'},auth,apple);
+ await f.click('apple-start');assert.equal(f.requests.length,1);assert.equal(f.node('confirmation').hidden,true);assert.match(f.node('result').textContent,/could not be confirmed/);
 });
