@@ -16,4 +16,6 @@ layout: null
   </url>
   {% endfor %}
 {% endfor %}
+<url><loc>https://jetztunddahanna.com/de/projects/plotline.html</loc><lastmod>2026-10-10</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://jetztunddahanna.com/de/projects/plotline.html"/><xhtml:link rel="alternate" hreflang="en" href="https://jetztunddahanna.com/en/projects/plotline.html"/></url>
+<url><loc>https://jetztunddahanna.com/en/projects/plotline.html</loc><lastmod>2026-10-10</lastmod><xhtml:link rel="alternate" hreflang="de" href="https://jetztunddahanna.com/de/projects/plotline.html"/><xhtml:link rel="alternate" hreflang="en" href="https://jetztunddahanna.com/en/projects/plotline.html"/></url>
 </urlset>
