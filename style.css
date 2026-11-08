@@ -36,9 +36,6 @@ body { background: radial-gradient(circle at 12% 0%, rgba(121,169,157,.12), tran
   box-shadow: 0 8px 20px rgba(32,39,37,.10);
 }
 .project-card-logo.loern-mark { background: #fff; }
-.project-card-logo.loern-mark img {
-  content: url('pictures/loern-icon.png');
-}
 .project-card-logo.loern-mark img,
 .project-card-logo.sudoku-mark img {
   width: 100%;
@@ -60,3 +57,16 @@ body { background: radial-gradient(circle at 12% 0%, rgba(121,169,157,.12), tran
 }
 
 @media(max-width:920px){.site-header{width:min(calc(100% - 1.2rem),1120px);top:.6rem}}@media(max-width:768px){.site-header{left:.6rem;right:.6rem;width:auto;transform:none;top:.55rem}.page{padding-top:108px}.home-page>section:first-child{min-height:auto;padding-top:2.5rem}.home-page>section:first-child>h1{font-size:clamp(3rem,15vw,4.8rem)}}@media(max-width:420px){.site-header{padding:.55rem .65rem}.header-content{gap:.45rem}.brand-logo img{height:36px}.main-nav{gap:.35rem}#page-nav-select{max-width:38vw;padding:.5rem 1.9rem .5rem .75rem;text-overflow:ellipsis}#lang-switch{padding:.32rem .55rem;max-width:72px}.home-page>section:first-child::before{border-radius:14px}}@media(prefers-reduced-transparency:reduce){.site-header{background:#fafaf7;backdrop-filter:none;-webkit-backdrop-filter:none}}
+
+/* Three released products; keep cards comfortable on tablets and phones. */
+.product-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.project-card-logo.tower-mark { padding:0; border:1px solid rgba(32,39,37,.14); box-shadow:0 8px 20px rgba(32,39,37,.10); }
+.project-card-logo.tower-mark img { width:100%; height:100%; object-fit:cover; }
+.release-label { color:var(--accent-ink); font-size:.9rem; font-weight:600; }
+.tower-hero { display:grid; grid-template-columns:minmax(0,1.6fr) minmax(0,1fr); gap:clamp(2rem,5vw,4rem); align-items:center; padding:clamp(1.5rem,4vw,3rem); border:1px solid var(--border-subtle); border-radius:24px; background:linear-gradient(135deg,#edf3f0,#fffaf0); }
+.tower-hero h1 { font-size:clamp(3.5rem,8vw,6rem); letter-spacing:-.05em; margin-bottom:.5rem; }
+.tower-hero h2 { font-size:clamp(1.4rem,3vw,2rem); }
+.tower-hero-icon { display:block; width:100%; max-width:280px; height:auto; border-radius:24%; justify-self:center; box-shadow:0 18px 42px rgba(32,39,37,.12); }
+@media(max-width:1000px) { .product-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:768px) { .tower-hero { grid-template-columns:1fr; } .tower-hero-icon { width:144px; grid-row:1; justify-self:start; } }
+@media(max-width:768px) { .product-grid { grid-template-columns:1fr; } }
