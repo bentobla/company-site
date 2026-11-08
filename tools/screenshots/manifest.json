@@ -1,0 +1,362 @@
+{
+  "captured_at": "2026-11-08",
+  "dimensions": [
+    1080,
+    2160
+  ],
+  "logical_size": [
+    432,
+    864
+  ],
+  "flutter": "3.47.9",
+  "godot": "4.5.2",
+  "source_commits": {
+    "loern": "209f679bd9624e99d09c5325cecd052f2a069ee6",
+    "sudoku": "014925f162a8d08ad01efa63fd3afbfb587960df",
+    "tower": "e7daf19d67acb45329611ae454fce59aa4120cd3"
+  },
+  "locale_fallbacks": {
+    "sudoku": {
+      "sv": "en",
+      "pt-pt": "pt-br"
+    }
+  },
+  "images": [
+    {
+      "path": "pictures/apps/loern/de/choice.webp",
+      "sha256": "b30bf717f0f55e41c5c836ca3859ab22b46c730ad8a955317b0b9892497d7a20"
+    },
+    {
+      "path": "pictures/apps/loern/de/flashcard.webp",
+      "sha256": "cd2ba4d645cd2917c303e5e49a007d4b58d3ca5774bd99d6995ba06af2b455f0"
+    },
+    {
+      "path": "pictures/apps/loern/de/result.webp",
+      "sha256": "6d0d981fe85b483944bf8c73c033469b5921fe474261d0de733adf67e9f9e315"
+    },
+    {
+      "path": "pictures/apps/loern/en/choice.webp",
+      "sha256": "40095d900e67ce2e788e025533d45a599bc4dfa7ca744ad19c449b64628e61e0"
+    },
+    {
+      "path": "pictures/apps/loern/en/flashcard.webp",
+      "sha256": "49e73fd2439a9fa480b07925ab9af313946769b5c608588b1cee802e12fa010d"
+    },
+    {
+      "path": "pictures/apps/loern/en/result.webp",
+      "sha256": "87f01c93d2987c8b5bf2bbad81ac51fcbff0af10cfc79e2c89a8e5d5d6db23e3"
+    },
+    {
+      "path": "pictures/apps/loern/es/choice.webp",
+      "sha256": "ed4fd531a10aac7c917c56165b63d01c588776c989f16540835e25fbcb421eec"
+    },
+    {
+      "path": "pictures/apps/loern/es/flashcard.webp",
+      "sha256": "dd531a2114ecb46fef76006261ad7807a7eaece03784713ab404a5e180097a15"
+    },
+    {
+      "path": "pictures/apps/loern/es/result.webp",
+      "sha256": "0f6862abf2833654f6eca7d126ffcf1ad2ca84e43fcea3f1b4c50db51d790a03"
+    },
+    {
+      "path": "pictures/apps/loern/fr/choice.webp",
+      "sha256": "5ef8bc9ba37c545ea6ca2e97deed67541a1c5f2d93a70ce128d68c3058ac467b"
+    },
+    {
+      "path": "pictures/apps/loern/fr/flashcard.webp",
+      "sha256": "dae989e5f757f3e6c29c0af04dd0ff5a6a050800ee8a169da318b97edcf56ec3"
+    },
+    {
+      "path": "pictures/apps/loern/fr/result.webp",
+      "sha256": "5092bff7c2c10b56b99d2fdd7740d1e029844a42be288c05947bb147e1170252"
+    },
+    {
+      "path": "pictures/apps/loern/it/choice.webp",
+      "sha256": "0ec36b681edb8f787b6238e6865287e43516e59364d349635ed281fb5b959d97"
+    },
+    {
+      "path": "pictures/apps/loern/it/flashcard.webp",
+      "sha256": "47192ee0c5f5aafde9784dbc4a1f96663126b8665e1e42453f8ca9ab82c30bf1"
+    },
+    {
+      "path": "pictures/apps/loern/it/result.webp",
+      "sha256": "228dfd33b8dff84990c40c1a498fc67b445d2852a87e78a154d7c62bc2b754ae"
+    },
+    {
+      "path": "pictures/apps/loern/nl/choice.webp",
+      "sha256": "713a1e658da398d3a1934d3aff3a3b114ed9f6dd7f0d53b393c92786bed4c781"
+    },
+    {
+      "path": "pictures/apps/loern/nl/flashcard.webp",
+      "sha256": "f1b70a7af3bf7a1100bf9c63e85f02375f1bab36b87846909773375db33af06b"
+    },
+    {
+      "path": "pictures/apps/loern/nl/result.webp",
+      "sha256": "fba08c05b4d7f6843966cac34fbc36ef09ae0d602754d4d3dd20c076dfb9b753"
+    },
+    {
+      "path": "pictures/apps/loern/pl/choice.webp",
+      "sha256": "5f279e5d28691e48b716d001839e0d8ebb68160797cada42a4f458a84b55b87b"
+    },
+    {
+      "path": "pictures/apps/loern/pl/flashcard.webp",
+      "sha256": "dafc6e7c1dedba064188636384863b1bc412249a05a5f71999127a3c156488ac"
+    },
+    {
+      "path": "pictures/apps/loern/pl/result.webp",
+      "sha256": "ebbe5d43fabbd57afb032b75dfd37b89b1bc7a5663fb729d791fa775fc20d821"
+    },
+    {
+      "path": "pictures/apps/loern/pt-br/choice.webp",
+      "sha256": "6b5c3903bafc28711a909f3f216f00b7f78c7fa3e06ce608ae21472903de4316"
+    },
+    {
+      "path": "pictures/apps/loern/pt-br/flashcard.webp",
+      "sha256": "466e6c6361269ece0b65f644739c321668d6ab226d252f6f0adbd742ca7e1b38"
+    },
+    {
+      "path": "pictures/apps/loern/pt-br/result.webp",
+      "sha256": "ca6b550f4b646d4e70edcd20b3a6b29c7240960ab89f525877eba7f0211eb97d"
+    },
+    {
+      "path": "pictures/apps/loern/pt-pt/choice.webp",
+      "sha256": "3cca90c50c73c9b6467cfc5a5c34287c564850618a93944e3a770bebd9c4db4f"
+    },
+    {
+      "path": "pictures/apps/loern/pt-pt/flashcard.webp",
+      "sha256": "ed3885456b9f416c9bec8bf29f1fbadb83ebcc878286759ff09a192b28ab19a7"
+    },
+    {
+      "path": "pictures/apps/loern/pt-pt/result.webp",
+      "sha256": "4b1a4b49a439075b5b88054261d8e0f7d2b7b58962b5e86adcd193af271b3467"
+    },
+    {
+      "path": "pictures/apps/loern/sv/choice.webp",
+      "sha256": "1fc4e67ebb115b8fb8794ae907ee997fa51361c484cd993c3e6046099e10fe6e"
+    },
+    {
+      "path": "pictures/apps/loern/sv/flashcard.webp",
+      "sha256": "d49c520f7a24ba1d0beaa9283a13838ffb57426c5986baf18614adaa0123093a"
+    },
+    {
+      "path": "pictures/apps/loern/sv/result.webp",
+      "sha256": "9aae0ca4c28a1703eba5b26abe3b6ff7b9fb3c2f26d015124437ca21ed09526c"
+    },
+    {
+      "path": "pictures/apps/sudoku/de/difficulty.webp",
+      "sha256": "04612801667b2ff14bce33688db18ecf2a0e1aa006098e82a90cb6456f58fb4b"
+    },
+    {
+      "path": "pictures/apps/sudoku/de/game.webp",
+      "sha256": "d852ba77e80b8db284de068b2e4e29b4ff18e8a18ecc6d4d43ff24e4163d4f35"
+    },
+    {
+      "path": "pictures/apps/sudoku/de/home.webp",
+      "sha256": "f294e112695b575ea6587550903c84cd606445e5189f3ee28816e0e6de7e748c"
+    },
+    {
+      "path": "pictures/apps/sudoku/en/difficulty.webp",
+      "sha256": "6bfcd4b16952df89e6a44b72423f1b15400db94a9e120bfb33fdd93296439383"
+    },
+    {
+      "path": "pictures/apps/sudoku/en/game.webp",
+      "sha256": "13b2644e754cae32cb6b80345de05537a7295f6f1ee1d04e22d5df5487a1db2c"
+    },
+    {
+      "path": "pictures/apps/sudoku/en/home.webp",
+      "sha256": "1f879668e31919e39fe3a3ffb1abd19d31b1e02551e12c44e80569364b58b096"
+    },
+    {
+      "path": "pictures/apps/sudoku/es/difficulty.webp",
+      "sha256": "4c43bec710203dfceecbdb9f0eaee4e553e145669094e12718f9902a0e62d1bd"
+    },
+    {
+      "path": "pictures/apps/sudoku/es/game.webp",
+      "sha256": "1d56ee2b1974efdf2f4beaec7c135d6b9e5d364e68ff80916f75a1793e05af89"
+    },
+    {
+      "path": "pictures/apps/sudoku/es/home.webp",
+      "sha256": "3a7f311277eca212a1b971bbea3abc7797b94f2374c4d50a1709cd388bb9e9b8"
+    },
+    {
+      "path": "pictures/apps/sudoku/fr/difficulty.webp",
+      "sha256": "702cfa1d511d713077e3313b2d0155f6184b69073207907eee4949a853e8fe6f"
+    },
+    {
+      "path": "pictures/apps/sudoku/fr/game.webp",
+      "sha256": "13b2644e754cae32cb6b80345de05537a7295f6f1ee1d04e22d5df5487a1db2c"
+    },
+    {
+      "path": "pictures/apps/sudoku/fr/home.webp",
+      "sha256": "0e90d1983b11da1f3a6365386561c6f9f6e137c9f2013eb0f395f5f188977eba"
+    },
+    {
+      "path": "pictures/apps/sudoku/it/difficulty.webp",
+      "sha256": "f99b6c79c91dd97a286c58a51140d0a561df5486cc7d1c6cb697e5b2acc87ab0"
+    },
+    {
+      "path": "pictures/apps/sudoku/it/game.webp",
+      "sha256": "f2fbbbe0489ec1617b0446c956997230b15d70745bda6a308604050994abb074"
+    },
+    {
+      "path": "pictures/apps/sudoku/it/home.webp",
+      "sha256": "573618103ebd158a6fb9e8f941fc13f992c8fa593ad5eb7b8579efacd6cbbbb4"
+    },
+    {
+      "path": "pictures/apps/sudoku/nl/difficulty.webp",
+      "sha256": "2acbd5e9fa1987049350851aeb5d528e928a0921593a136ad4a98c7a6264287f"
+    },
+    {
+      "path": "pictures/apps/sudoku/nl/game.webp",
+      "sha256": "8fd29f9f12c7f2f73e590c858828bd8a4cc3fd18ced02e82a62f825b9316ef7a"
+    },
+    {
+      "path": "pictures/apps/sudoku/nl/home.webp",
+      "sha256": "fd430944fba57bc74887fd7fd15e8cc839f327d6dd44ca8fdc04a41503171126"
+    },
+    {
+      "path": "pictures/apps/sudoku/pl/difficulty.webp",
+      "sha256": "eba7fa4e7d779de9914122d84b184779224ebd8c0da7acaafb89fa520e2fcdc9"
+    },
+    {
+      "path": "pictures/apps/sudoku/pl/game.webp",
+      "sha256": "6081ce5218a60dad7dbf6173a5b6c925dcc6ccf9db499037ce9d54d63c233d82"
+    },
+    {
+      "path": "pictures/apps/sudoku/pl/home.webp",
+      "sha256": "8685c3ca3f4246463f69cf03296a72e9a466121b3d884a194c3100e1ae4f5b8e"
+    },
+    {
+      "path": "pictures/apps/sudoku/pt-br/difficulty.webp",
+      "sha256": "3d5dfadecdac6dab947a509c1fb461f9296a912051773b5645174fe194c44029"
+    },
+    {
+      "path": "pictures/apps/sudoku/pt-br/game.webp",
+      "sha256": "2092cc78c5d2c1c4ee05d5352340f8fb1a2e340ec620c5e108e381b5ba6df4ec"
+    },
+    {
+      "path": "pictures/apps/sudoku/pt-br/home.webp",
+      "sha256": "a3fcd209253cc5d7bb2d0083c54966b395663df4a6d454f58c0377834a95142f"
+    },
+    {
+      "path": "pictures/apps/tower/de/airports.webp",
+      "sha256": "c737b0ad76590b3288081bdb6ec696e142903ecc82934642d45bb272241f1816"
+    },
+    {
+      "path": "pictures/apps/tower/de/briefing.webp",
+      "sha256": "075308ba474d52afe964f2f2b022bf6d72e76ca71084f87c12b1e003917faf22"
+    },
+    {
+      "path": "pictures/apps/tower/de/game.webp",
+      "sha256": "05fdad6ffcd1950f2595ae45b3cd926df95ee02e0ed45ca964cfc37afb42458a"
+    },
+    {
+      "path": "pictures/apps/tower/en/airports.webp",
+      "sha256": "875a35e305b2f90965cb3f5c9d87f642b729617df97a3bfe0c49affefa7bdadb"
+    },
+    {
+      "path": "pictures/apps/tower/en/briefing.webp",
+      "sha256": "c5c096f96f446823b3c637461cc90343b5f5d30f47dd97091388cedf111c20fb"
+    },
+    {
+      "path": "pictures/apps/tower/en/game.webp",
+      "sha256": "b934aa0aa899b85d770e046554961297249fee7fcedec644e262f2db271b9acd"
+    },
+    {
+      "path": "pictures/apps/tower/es/airports.webp",
+      "sha256": "418958b330b00c754cde457d825688b2169db912187e5c5faeedc8d47b75b99a"
+    },
+    {
+      "path": "pictures/apps/tower/es/briefing.webp",
+      "sha256": "bf8e180fd938eb32c87080e2128f9fdeaaa9035e977678426fcc1983ceaefc76"
+    },
+    {
+      "path": "pictures/apps/tower/es/game.webp",
+      "sha256": "ce91723a24eec8a438440bf3c1eb58cc0d5c50295ed6e5671daf08b2c14e1a30"
+    },
+    {
+      "path": "pictures/apps/tower/fr/airports.webp",
+      "sha256": "bee49378faf943ed098336bebd8ae6d97fcfa3b243e9a903ad2e53f53d2f1520"
+    },
+    {
+      "path": "pictures/apps/tower/fr/briefing.webp",
+      "sha256": "6f9088135635bbd655fa6ef8fe481127772b0ad5639f9f89987fe683c88d6891"
+    },
+    {
+      "path": "pictures/apps/tower/fr/game.webp",
+      "sha256": "a8aa3ccd9b50ecb4975e647782d7d0025357a6a3ed7ef7c42fe281f36678f45f"
+    },
+    {
+      "path": "pictures/apps/tower/it/airports.webp",
+      "sha256": "c48aae0ba0ae525b298e73acaf897187d4bea71f147ef53ecef8b421f617ba4b"
+    },
+    {
+      "path": "pictures/apps/tower/it/briefing.webp",
+      "sha256": "33dd776355f4e4fe72338ea524676adcf14f9f870bebd1a81189921771f96c44"
+    },
+    {
+      "path": "pictures/apps/tower/it/game.webp",
+      "sha256": "f1142fb5dc78ec6b604e227c4f5ce043e37255b49857e973ae472980ee821c43"
+    },
+    {
+      "path": "pictures/apps/tower/nl/airports.webp",
+      "sha256": "09885059f1f898acf329f7672aec3d631460a7f1a63c1965b0e25272c6eec9f8"
+    },
+    {
+      "path": "pictures/apps/tower/nl/briefing.webp",
+      "sha256": "650b5610b7ad3cbb6157f102b9562fe344b41a838e93ffa167ad76ea0be4cbad"
+    },
+    {
+      "path": "pictures/apps/tower/nl/game.webp",
+      "sha256": "4be35fea04ea102222266f6ada9a8793b8e21ea4c5e02336abc9702015a2dfed"
+    },
+    {
+      "path": "pictures/apps/tower/pl/airports.webp",
+      "sha256": "9562870809272348da5c25ce91a06dc9a23aaec0ebd407bda54b81b286c58198"
+    },
+    {
+      "path": "pictures/apps/tower/pl/briefing.webp",
+      "sha256": "657f0e4c80789b3b1138211a97e2cc208bf08b9f1149b69c14606dcac2ae7b9f"
+    },
+    {
+      "path": "pictures/apps/tower/pl/game.webp",
+      "sha256": "66b1d5d6a817eb7d11045f50c199f75bf49789e0c8809417631761fb1995e229"
+    },
+    {
+      "path": "pictures/apps/tower/pt-br/airports.webp",
+      "sha256": "fd5e75bc1aa44c87c0c9803ffe27694f615287f1c6e9f15ad11c63633952a380"
+    },
+    {
+      "path": "pictures/apps/tower/pt-br/briefing.webp",
+      "sha256": "6a92e5c0acec938e2817590a28bea401fbf5fdd78e172932c830a514145dcd40"
+    },
+    {
+      "path": "pictures/apps/tower/pt-br/game.webp",
+      "sha256": "3c6f473da9cbfa66fc5bda430ba45e3557c4fd23b7fba0188a6ac34a6b688606"
+    },
+    {
+      "path": "pictures/apps/tower/pt-pt/airports.webp",
+      "sha256": "2cc6c256223233826bc7c3009bfcec94111df44c161932d66af2902e625087dc"
+    },
+    {
+      "path": "pictures/apps/tower/pt-pt/briefing.webp",
+      "sha256": "e75087da93d2a2e1d51ad42496b9cc2f09baa1a75a0151d3fdce2d5ff7c27cc1"
+    },
+    {
+      "path": "pictures/apps/tower/pt-pt/game.webp",
+      "sha256": "7bfcaf1ae96d4b06b912171ac197abb68c95a8476b83a4e4fd92f322925bd52b"
+    },
+    {
+      "path": "pictures/apps/tower/sv/airports.webp",
+      "sha256": "ba4bfeb68b7ea6e09affa4602a1a095e913c0ffac9a5a667e062698af910abef"
+    },
+    {
+      "path": "pictures/apps/tower/sv/briefing.webp",
+      "sha256": "f0188faf80c555b9d726fe9f0dc5fa45f8a0047baa0d4614153716cf9a023dbc"
+    },
+    {
+      "path": "pictures/apps/tower/sv/game.webp",
+      "sha256": "a6263277ebb0b76ee0f6d608854e9162bbd5cc6a4b42ee2f0aad0b18b5fab6bc"
+    }
+  ]
+}
