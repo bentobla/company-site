@@ -3,7 +3,7 @@
 
   function ensureAppPrivacyNoindex() {
     var p = (window.location.pathname || "/").toLowerCase();
-    if (!p.endsWith("/projects/loern/privacy.html") && !p.endsWith("/projects/sudoku/privacy.html")) return;
+    if (!p.endsWith("/projects/loern/privacy.html") && !p.endsWith("/projects/sudoku/privacy.html") && !p.endsWith("/projects/plotline/privacy.html") && !p.endsWith("/projects/plotline/delete.html")) return;
     var robots = document.querySelector('meta[name="robots"]');
     if (!robots) {
       robots = document.createElement("meta");
