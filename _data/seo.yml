@@ -1,4 +1,4 @@
-lastmod: 2026-08-29
+lastmod: 2026-11-08
 locales:
   - path: de
     hreflang: de
@@ -28,3 +28,4 @@ pages:
   - path: projects.html
   - path: projects/loern.html
   - path: projects/sudoku.html
+  - path: projects/tower.html

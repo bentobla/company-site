@@ -49,7 +49,7 @@
         "isAccessibleForFree": true,
         "url": url,
         "description": description,
-        "image": "https://jetztunddahanna.com/Loern_full_white.png",
+        "image": "https://jetztunddahanna.com/pictures/loern-icon.png",
         "sameAs": [
           "https://play.google.com/store/apps/details?id=com.jetztunddahanna.loern",
           "https://apps.apple.com/app/l%C5%93rn/id6759726662"
@@ -66,11 +66,26 @@
         "isAccessibleForFree": true,
         "url": url,
         "description": description,
-        "image": "https://jetztunddahanna.com/pictures/icon.png",
+        "image": "https://jetztunddahanna.com/pictures/sudoku-icon.png",
         "sameAs": [
           "https://play.google.com/store/apps/details?id=com.jetztunddahanna.sudoku",
           "https://apps.apple.com/de/app/sud%C3%B8ku/id6793129578"
         ],
+        "author": organization
+      };
+    }
+    if (p.endsWith("/projects/tower.html")) {
+      app = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "tøwer",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Android",
+        "isAccessibleForFree": true,
+        "url": url,
+        "description": description,
+        "image": "https://jetztunddahanna.com/pictures/tower-icon.png",
+        "sameAs": ["https://play.google.com/store/apps/details?id=com.jetztunddahanna.tower"],
         "author": organization
       };
     }
