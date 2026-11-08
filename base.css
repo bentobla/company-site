@@ -88,6 +88,11 @@ button:focus-visible,
   gap: 1rem;
   min-width: 0;
 }
+/* Preserve the original brand artwork in Chromium automatic dark mode. */
+.brand-logo,
+.brand-logo img {
+  color-scheme: only light;
+}
 .brand-logo img {
   height: 42px;
   width: auto;
