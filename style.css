@@ -70,3 +70,27 @@ body { background: radial-gradient(circle at 12% 0%, rgba(121,169,157,.12), tran
 @media(max-width:1000px) { .product-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
 @media(max-width:768px) { .tower-hero { grid-template-columns:1fr; } .tower-hero-icon { width:144px; grid-row:1; justify-self:start; } }
 @media(max-width:768px) { .product-grid { grid-template-columns:1fr; } }
+
+/* App detail pages: smaller brand marks and clear, consistently sized captures. */
+.loern-hero { display:block; background:var(--surface); border-color:var(--border-subtle); }
+.loern-hero > div { max-width:64ch; }
+.app-detail-brand { display:flex; align-items:center; gap:1rem; margin:1rem 0 1.4rem; }
+.app-detail-brand img { display:block; width:56px; height:56px; border-radius:14px; flex:none; }
+.app-detail-brand h1 { margin:0; }
+.tower-hero { display:block; }
+.tower-hero .lead { max-width:64ch; }
+.sudoku-hero { display:block; }
+.sudoku-hero > div { max-width:68ch; }
+.sudoku-app-icon { width:48px; height:48px; flex-basis:48px; border-radius:12px; }
+.app-gallery { margin-top:3rem; }
+.app-screenshots { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(.8rem,2vw,1.4rem); align-items:start; }
+.app-shot { margin:0; min-width:0; }
+.app-shot a { display:block; overflow:hidden; border-radius:18px; border:1px solid var(--border-subtle); background:var(--surface); box-shadow:var(--shadow-soft); }
+.app-shot img { color-scheme:only light; display:block; width:100%; height:auto; aspect-ratio:1/2; object-fit:contain; }
+.app-shot figcaption { color:var(--text-main); font-size:.95rem; line-height:1.5; margin:.85rem .2rem 0; }
+.app-gallery-note { color:var(--text-muted); font-size:.9rem; margin-top:1rem; }
+@media(max-width:640px) {
+ .app-screenshots { grid-template-columns:1fr; gap:2rem; }
+ .app-shot { width:min(100%,320px); justify-self:center; }
+ .app-detail-brand img { width:48px; height:48px; border-radius:12px; }
+}
