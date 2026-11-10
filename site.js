@@ -49,7 +49,7 @@
         "isAccessibleForFree": true,
         "url": url,
         "description": description,
-        "image": "https://jetztunddahanna.com/pictures/loern-icon.png",
+        "image": "https://jetztunddahanna.com/pictures/loern-icon-7d9d53a.png",
         "sameAs": [
           "https://play.google.com/store/apps/details?id=com.jetztunddahanna.loern",
           "https://apps.apple.com/app/l%C5%93rn/id6759726662"
@@ -152,4 +152,58 @@
   if (key === "projects") setActiveBySuffix(links, "projects.html");
   if (key === "principles") setActiveBySuffix(links, "principles.html");
   if (key === "contact") setActiveBySuffix(links, "contact.html");
+})();
+
+// Progressive enhancement: original app artwork stays available without motion,
+// JavaScript, IntersectionObserver, or a successful animation-image request.
+(function () {
+  "use strict";
+  if (!window.matchMedia || !window.IntersectionObserver) return;
+  var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (reducedMotion.matches) return;
+
+  var icons = document.querySelectorAll('img[src*="pictures/loern-icon"], img[src*="pictures/sudoku-icon"], img[src*="pictures/tower-icon"]');
+  if (!icons.length) return;
+  var wrappers = [];
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      observer.unobserve(entry.target);
+      if (reducedMotion.matches) return;
+      var icon = entry.target;
+      var app = /\/(loern|sudoku|tower)-icon/.exec(icon.src)[1];
+      var wrapper = document.createElement("span");
+      wrapper.className = "app-brand-motion";
+      icon.parentNode.insertBefore(wrapper, icon);
+      wrapper.appendChild(icon);
+      wrappers.push(wrapper);
+
+      var animation = new Image();
+      animation.className = "app-brand-animation";
+      animation.alt = "";
+      animation.setAttribute("aria-hidden", "true");
+      animation.onload = function () {
+        if (!reducedMotion.matches && animation.parentNode === wrapper) wrapper.classList.add("is-playing");
+      };
+      animation.onerror = function () {
+        wrapper.classList.remove("is-playing");
+        animation.remove();
+      };
+      wrapper.appendChild(animation);
+      animation.src = new URL("brand/" + app + "-splash.svg", icon.src).href;
+    });
+  }, { threshold: 0.35 });
+  icons.forEach(function (icon) { observer.observe(icon); });
+
+  function disableMotion(event) {
+    if (!event.matches) return;
+    observer.disconnect();
+    wrappers.forEach(function (wrapper) {
+      wrapper.classList.remove("is-playing");
+      var animation = wrapper.querySelector(".app-brand-animation");
+      if (animation) animation.remove();
+    });
+  }
+  if (reducedMotion.addEventListener) reducedMotion.addEventListener("change", disableMotion);
+  else if (reducedMotion.addListener) reducedMotion.addListener(disableMotion);
 })();
